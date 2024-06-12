@@ -1,0 +1,12 @@
+.pw-details {
+  background-color: $oc-gray-1;
+  border: 1px solid $border;
+  border-radius: 0.25rem;
+  color: $oc-gray-9;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+}
+
+.pw-details > summary {
+  cursor: pointer;
+}

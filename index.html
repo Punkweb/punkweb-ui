@@ -8,102 +8,115 @@
   </head>
   <body>
     <div class="pw-container">
-      <h1 class="my-4">Avatar</h1>
-      <h4 class="my-2">Image</h4>
-      <div class="flex align-center gap-4">
-        <div class="pw-avatar xs">
-          <img class="pw-avatar-image" src="/static/punkweb.png" />
+      <h1>PunkwebUI</h1>
+      <h2>Components</h2>
+      <details class="pw-details">
+        <summary>Avatar</summary>
+        <h4>Image</h4>
+        <div class="flex align-center gap-2">
+          <div class="pw-avatar xs">
+            <img class="pw-avatar-image" src="/static/punkweb.png" />
+          </div>
+          <div class="pw-avatar sm">
+            <img class="pw-avatar-image" src="/static/punkweb.png" />
+          </div>
+          <div class="pw-avatar md">
+            <img class="pw-avatar-image" src="/static/punkweb.png" />
+          </div>
+          <div class="pw-avatar lg">
+            <img class="pw-avatar-image" src="/static/punkweb.png" />
+          </div>
+          <div class="pw-avatar xl">
+            <img class="pw-avatar-image" src="/static/punkweb.png" />
+          </div>
         </div>
-        <div class="pw-avatar sm">
-          <img class="pw-avatar-image" src="/static/punkweb.png" />
+        <h4>Fallback</h4>
+        <div class="flex align-center gap-2">
+          <div class="pw-avatar xs">
+            <div class="pw-avatar-fallback">PW</div>
+          </div>
+          <div class="pw-avatar sm">
+            <div class="pw-avatar-fallback">PW</div>
+          </div>
+          <div class="pw-avatar md">
+            <div class="pw-avatar-fallback">PW</div>
+          </div>
+          <div class="pw-avatar lg">
+            <div class="pw-avatar-fallback">PW</div>
+          </div>
+          <div class="pw-avatar xl">
+            <div class="pw-avatar-fallback">PW</div>
+          </div>
         </div>
-        <div class="pw-avatar md">
-          <img class="pw-avatar-image" src="/static/punkweb.png" />
+      </details>
+      <details class="pw-details">
+        <summary>Button</summary>
+        <h4>Variants</h4>
+        <div class="flex align-center gap-2">
+          <button class="pw-button default">Default</button>
+          <button class="pw-button outlined">Outlined</button>
+          <button class="pw-button ghost">Ghost</button>
+          <button class="pw-button raised">Raised</button>
         </div>
-        <div class="pw-avatar lg">
-          <img class="pw-avatar-image" src="/static/punkweb.png" />
+        <h4>Colors</h4>
+        <div class="flex align-center gap-2">
+          <button class="pw-button default indigo">Default</button>
+          <button class="pw-button outlined indigo">Outlined</button>
+          <button class="pw-button ghost indigo">Ghost</button>
+          <button class="pw-button raised indigo">Raised</button>
         </div>
-        <div class="pw-avatar xl">
-          <img class="pw-avatar-image" src="/static/punkweb.png" />
+      </details>
+      <details class="pw-details">
+        <summary>Callout</summary>
+        <h4>Default</h4>
+        <div class="pw-callout">
+          <h4>Header</h4>
+          <p>Content</p>
         </div>
-      </div>
-      <h4 class="my-2">Fallback</h4>
-      <div class="flex align-center gap-4">
-        <div class="pw-avatar xs">
-          <div class="pw-avatar-fallback">PW</div>
+        <h4>Colors</h4>
+        <div class="pw-callout indigo">
+          <h4>Header</h4>
+          <p>Content</p>
         </div>
-        <div class="pw-avatar sm">
-          <div class="pw-avatar-fallback">PW</div>
+      </details>
+      <details class="pw-details">
+        <summary>Card</summary>
+        <h4>Default</h4>
+        <div class="pw-card">
+          <h4>Header</h4>
+          <p>Content</p>
         </div>
-        <div class="pw-avatar md">
-          <div class="pw-avatar-fallback">PW</div>
-        </div>
-        <div class="pw-avatar lg">
-          <div class="pw-avatar-fallback">PW</div>
-        </div>
-        <div class="pw-avatar xl">
-          <div class="pw-avatar-fallback">PW</div>
-        </div>
-      </div>
-
-      <h1 class="my-4">Button</h1>
-      <h4 class="my-2">Variants</h4>
-      <div class="flex align-center gap-4">
-        <button class="pw-button default">Default</button>
-        <button class="pw-button outlined">Outlined</button>
-        <button class="pw-button ghost">Ghost</button>
-        <button class="pw-button raised">Raised</button>
-      </div>
-      <h4 class="my-2">Colors</h4>
-      <div class="flex align-center gap-4">
-        <button class="pw-button default indigo">Button</button>
-        <button class="pw-button outlined indigo">Button</button>
-        <button class="pw-button ghost indigo">Button</button>
-        <button class="pw-button raised indigo">Button</button>
-      </div>
-
-      <h1 class="my-4">Callout</h1>
-      <h4 class="my-2">Default</h4>
-      <div class="pw-callout">
-        <h4>Header</h4>
-        <p>Content</p>
-      </div>
-      <h4 class="my-2">Colors</h4>
-      <div class="pw-callout red">
-        <h4>Header</h4>
-        <p>Content</p>
-      </div>
-
-      <h1 class="my-4">Card</h1>
-      <h4 class="my-2">Default</h4>
-      <div class="pw-card">
-        <h4>Header</h4>
-        <p>Content</p>
-      </div>
-
-      <h1 class="my-4">Input</h1>
-      <h4 class="my-2">Default</h4>
-      <input class="pw-input" type="text" placeholder="Placeholder" />
-      <h4 class="my-2">Label</h4>
-      <label class="pw-input-label" for="label-example">Username</label>
-      <input
-        class="pw-input"
-        id="label-example"
-        type="text"
-        placeholder="Placeholder"
-      />
-      <h4 class="my-2">Invalid</h4>
-      <input class="pw-input invalid" type="text" placeholder="Placeholder" />
-      <h4 class="my-2">Disabled</h4>
-      <input class="pw-input" type="text" placeholder="Placeholder" disabled />
-      <h4 class="my-2">Textarea</h4>
-      <textarea class="pw-input" placeholder="Placeholder"></textarea>
-      <h4 class="my-2">Select</h4>
-      <select class="pw-input">
-        <option value="1">Option 1</option>
-        <option value="2">Option 2</option>
-        <option value="3">Option 3</option>
-      </select>
+      </details>
+      <details class="pw-details">
+        <summary>Input</summary>
+        <h4>Default</h4>
+        <input class="pw-input" type="text" placeholder="Placeholder" />
+        <h4>Label</h4>
+        <label class="pw-input-label" for="label-example">Username</label>
+        <input
+          class="pw-input"
+          id="label-example"
+          type="text"
+          placeholder="Placeholder"
+        />
+        <h4>Invalid</h4>
+        <input class="pw-input invalid" type="text" placeholder="Placeholder" />
+        <h4>Disabled</h4>
+        <input
+          class="pw-input"
+          type="text"
+          placeholder="Placeholder"
+          disabled
+        />
+        <h4>Textarea</h4>
+        <textarea class="pw-input" placeholder="Placeholder"></textarea>
+        <h4>Select</h4>
+        <select class="pw-input">
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </select>
+      </details>
     </div>
   </body>
 </html>
