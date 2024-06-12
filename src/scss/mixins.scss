@@ -1,0 +1,136 @@
+// Font weight
+@mixin font-light {
+  font-weight: 300;
+}
+@mixin font-normal {
+  font-weight: 400;
+}
+@mixin font-medium {
+  font-weight: 500;
+}
+@mixin font-semi-bold {
+  font-weight: 700;
+}
+@mixin font-bold {
+  font-weight: 700;
+}
+@mixin font-black {
+  font-weight: 900;
+}
+
+// Shadow
+@mixin shadow-none {
+  box-shadow: none;
+}
+@mixin shadow-xs {
+  box-shadow: 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.25);
+}
+@mixin shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.25);
+}
+@mixin shadow-md {
+  box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.25);
+}
+@mixin shadow-lg {
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.25);
+}
+@mixin shadow-xl {
+  box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.25);
+}
+
+// Border radius
+@mixin radius-none {
+  border-radius: 0;
+}
+@mixin radius-xs {
+  border-radius: 0.125rem; // 2px
+}
+@mixin radius-sm {
+  border-radius: 0.25rem; // 4px
+}
+@mixin radius-md {
+  border-radius: 0.5rem; // 8px
+}
+@mixin radius-lg {
+  border-radius: 0.75rem; // 12px
+}
+@mixin radius-xl {
+  border-radius: 1rem; // 16px
+}
+
+// Transition
+@mixin transition {
+  transition: all 0.3s ease;
+}
+@mixin transition-fast {
+  transition: all 0.15s ease;
+}
+@mixin transition-slow {
+  transition: all 0.5s ease;
+}
+
+// Flex
+@mixin flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+// Scrollbar
+@mixin scrollbar {
+  &::-webkit-scrollbar {
+    height: 0.5rem;
+    width: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    @include radius-md;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @include radius-md;
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+// Text
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Breakpoints
+
+$breakpoints: (
+  "xxs": 320px,
+  "xs": 480px,
+  "sm": 768px,
+  "md": 1024px,
+  "lg": 1280px,
+  "xl": 1440px,
+  "xxl": 1920px,
+);
+
+@mixin breakpoint($size) {
+  @if map_has_key($breakpoints, $size) {
+    $width: map_get($breakpoints, $size);
+
+    @media only screen and (max-width: $width) {
+      @content;
+    }
+  }
+}

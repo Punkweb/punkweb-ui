@@ -1,0 +1,20 @@
+{
+  "name": "punkweb-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server",
+    "dist": "sass --watch src/scss/punkweb-ui.scss dist/css/punkweb-ui.min.css --style compressed",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "open-color": "^1.9.1",
+    "sass": "^1.77.5"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

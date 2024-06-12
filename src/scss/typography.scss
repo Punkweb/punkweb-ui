@@ -1,0 +1,39 @@
+// General typography styles
+html,
+body {
+  @include font-normal;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 1rem;
+}
+h5 {
+  font-size: 0.875rem;
+}
+h6 {
+  font-size: 0.75rem;
+}
+
+.error {
+  @include font-bold;
+  color: $oc-red-9;
+  font-size: 0.875rem;
+}
+
+.hint {
+  @include font-normal;
+  color: $oc-gray-7;
+  font-size: 0.75rem;
+}

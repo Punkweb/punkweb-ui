@@ -1,0 +1,55 @@
+@mixin avatar-size($size, $font-size) {
+  font-size: $font-size;
+  height: $size;
+  width: $size;
+}
+
+.pw-avatar {
+  align-items: center;
+  border-radius: 100%;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 0.875rem;
+  justify-content: center;
+  overflow: hidden;
+  user-select: none;
+  vertical-align: middle;
+  height: 2rem;
+  width: 2rem;
+
+  &.xs {
+    @include avatar-size(1.5rem, 0.75rem);
+  }
+  &.sm {
+    @include avatar-size(2rem, 1rem);
+  }
+  &.md {
+    @include avatar-size(3rem, 1.25rem);
+  }
+  &.lg {
+    @include avatar-size(4rem, 1.5rem);
+  }
+  &.xl {
+    @include avatar-size(6rem, 2rem);
+  }
+
+  &-image {
+    border-radius: inherit;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  &-fallback {
+    @include font-medium;
+    align-items: center;
+    background-color: $oc-gray-9;
+    color: white;
+    display: flex;
+    justify-content: center;
+    line-height: 1;
+    text-transform: uppercase;
+    height: 100%;
+    width: 100%;
+  }
+}
