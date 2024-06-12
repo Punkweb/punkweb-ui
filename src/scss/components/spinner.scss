@@ -1,0 +1,66 @@
+@mixin spinner-size($border-width, $size) {
+  border-width: $border-width;
+  height: $size;
+  width: $size;
+}
+
+.pw-spinner {
+  &:before {
+    animation: spin 1s linear infinite;
+    border: 0.5rem solid $oc-gray-3;
+    border-bottom-color: $oc-indigo-9;
+    border-radius: 50%;
+    border-top-color: $oc-indigo-9;
+    content: "";
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+  }
+
+  &-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.25rem;
+  }
+
+  &.xs {
+    &:before {
+      @include spinner-size(0.25rem, 1rem);
+    }
+  }
+
+  &.sm {
+    &:before {
+      @include spinner-size(0.375rem, 1.5rem);
+    }
+  }
+
+  &.md {
+    &:before {
+      @include spinner-size(0.5rem, 2rem);
+    }
+  }
+
+  &.lg {
+    &:before {
+      @include spinner-size(0.625rem, 2.5rem);
+    }
+  }
+
+  &.xl {
+    &:before {
+      @include spinner-size(0.75rem, 3rem);
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
