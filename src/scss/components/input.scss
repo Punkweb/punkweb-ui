@@ -1,17 +1,8 @@
-.pw-input-container {
-  display: inline-block;
-
-  &.fluid {
-    width: 100%;
-  }
-}
-
 .pw-input-label {
-  @include font-medium;
+  @include font-bold;
   color: $oc-gray-9;
   display: block;
   font-size: 0.875rem;
-  margin-bottom: 0.25rem;
 }
 
 .pw-input {
