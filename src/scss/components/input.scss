@@ -1,0 +1,51 @@
+.pw-input-container {
+  display: inline-block;
+
+  &.fluid {
+    width: 100%;
+  }
+}
+
+.pw-input-label {
+  @include font-medium;
+  color: $oc-gray-9;
+  display: block;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.pw-input {
+  @include radius-sm;
+  @include transition-fast;
+  border: 1px solid $border;
+  outline: none;
+  padding: 0.5rem 1rem;
+
+  &:disabled {
+    background-color: $oc-gray-3;
+    cursor: not-allowed;
+  }
+
+  &:not(:disabled) {
+    &:hover {
+      border-color: $oc-gray-6;
+    }
+    &:focus,
+    &:active {
+      border-color: oc-get-color("indigo", "9");
+    }
+    &:invalid {
+      background-color: $oc-red-0;
+      border-color: $oc-red-9;
+    }
+  }
+
+  &.fluid {
+    width: 100%;
+  }
+
+  &.invalid {
+    background-color: $oc-red-0;
+    border-color: $oc-red-9;
+  }
+}
