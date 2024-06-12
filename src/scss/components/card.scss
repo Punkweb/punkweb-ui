@@ -1,0 +1,13 @@
+.pw-card {
+  @include radius-sm;
+  @include shadow-md;
+
+  background-color: white;
+  border: 1px solid $border;
+  min-width: 16rem;
+  padding: 1rem;
+
+  &.fluid {
+    width: 100%;
+  }
+}

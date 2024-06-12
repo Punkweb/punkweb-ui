@@ -7,47 +7,79 @@
     <link rel="stylesheet" href="dist/css/punkweb-ui.min.css" />
   </head>
   <body>
-    <div class="pw-avatar xs">
-      <img class="pw-avatar-image" src="/static/punkweb.png" />
-    </div>
-    <div class="pw-avatar sm">
-      <img class="pw-avatar-image" src="/static/punkweb.png" />
-    </div>
-    <div class="pw-avatar md">
-      <img class="pw-avatar-image" src="/static/punkweb.png" />
-    </div>
-    <div class="pw-avatar lg">
-      <img class="pw-avatar-image" src="/static/punkweb.png" />
-    </div>
-    <div class="pw-avatar xl">
-      <img class="pw-avatar-image" src="/static/punkweb.png" />
-    </div>
-    <div class="pw-avatar xs">
-      <div class="pw-avatar-fallback">PW</div>
-    </div>
-    <div class="pw-avatar sm">
-      <div class="pw-avatar-fallback">PW</div>
-    </div>
-    <div class="pw-avatar md">
-      <div class="pw-avatar-fallback">PW</div>
-    </div>
-    <div class="pw-avatar lg">
-      <div class="pw-avatar-fallback">PW</div>
-    </div>
-    <div class="pw-avatar xl">
-      <div class="pw-avatar-fallback">PW</div>
-    </div>
+    <div class="pw-container">
+      <h1 class="my-4">Avatar</h1>
+      <h4 class="my-2">Image</h4>
+      <div class="flex align-center gap-4">
+        <div class="pw-avatar xs">
+          <img class="pw-avatar-image" src="/static/punkweb.png" />
+        </div>
+        <div class="pw-avatar sm">
+          <img class="pw-avatar-image" src="/static/punkweb.png" />
+        </div>
+        <div class="pw-avatar md">
+          <img class="pw-avatar-image" src="/static/punkweb.png" />
+        </div>
+        <div class="pw-avatar lg">
+          <img class="pw-avatar-image" src="/static/punkweb.png" />
+        </div>
+        <div class="pw-avatar xl">
+          <img class="pw-avatar-image" src="/static/punkweb.png" />
+        </div>
+      </div>
+      <h4 class="my-2">Fallback</h4>
+      <div class="flex align-center gap-4">
+        <div class="pw-avatar xs">
+          <div class="pw-avatar-fallback">PW</div>
+        </div>
+        <div class="pw-avatar sm">
+          <div class="pw-avatar-fallback">PW</div>
+        </div>
+        <div class="pw-avatar md">
+          <div class="pw-avatar-fallback">PW</div>
+        </div>
+        <div class="pw-avatar lg">
+          <div class="pw-avatar-fallback">PW</div>
+        </div>
+        <div class="pw-avatar xl">
+          <div class="pw-avatar-fallback">PW</div>
+        </div>
+      </div>
 
-    <hr />
+      <h1 class="my-4">Button</h1>
+      <h4 class="my-2">Variants</h4>
+      <div class="flex align-center gap-4">
+        <button class="pw-button default">Default</button>
+        <button class="pw-button outlined">Outlined</button>
+        <button class="pw-button ghost">Ghost</button>
+        <button class="pw-button raised">Raised</button>
+      </div>
+      <h4 class="my-2">Colors</h4>
+      <div class="flex align-center gap-4">
+        <button class="pw-button default indigo">Button</button>
+        <button class="pw-button outlined indigo">Button</button>
+        <button class="pw-button ghost indigo">Button</button>
+        <button class="pw-button raised indigo">Button</button>
+      </div>
 
-    <button class="pw-button default">Button</button>
-    <button class="pw-button outlined">Button</button>
-    <button class="pw-button ghost">Button</button>
-    <button class="pw-button raised">Button</button>
+      <h1 class="my-4">Callout</h1>
+      <h4 class="my-2">Default</h4>
+      <div class="pw-callout">
+        <h4>Header</h4>
+        <p>Content</p>
+      </div>
+      <h4 class="my-2">Colors</h4>
+      <div class="pw-callout red">
+        <h4>Header</h4>
+        <p>Content</p>
+      </div>
 
-    <button class="pw-button default indigo">Button</button>
-    <button class="pw-button outlined indigo">Button</button>
-    <button class="pw-button ghost indigo">Button</button>
-    <button class="pw-button raised indigo">Button</button>
+      <h1 class="my-4">Card</h1>
+      <h4 class="my-2">Default</h4>
+      <div class="pw-card">
+        <h4>Header</h4>
+        <p>Content</p>
+      </div>
+    </div>
   </body>
 </html>
