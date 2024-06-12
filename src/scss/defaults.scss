@@ -1,11 +1,9 @@
 // This file contains css resets for default browser styles.
 // Changes here can affect the entire application, so be careful when making changes.
 
-// remove default margin and padding from all elements, and set box-sizing to border-box
+// set box-sizing to border-box
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 
   &:before,
   &:after {
@@ -17,6 +15,8 @@
 body {
   line-height: 1;
   min-width: 20rem;
+  margin: 0;
+  padding: 0;
 }
 
 // set cursor to pointer on buttons
