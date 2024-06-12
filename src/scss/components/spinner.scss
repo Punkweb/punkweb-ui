@@ -6,7 +6,7 @@
 
 .pw-spinner {
   &:before {
-    animation: spin 1s linear infinite;
+    animation: spin 1.5s linear infinite;
     border: 0.5rem solid $oc-gray-3;
     border-bottom-color: $oc-indigo-9;
     border-radius: 50%;
