@@ -9,28 +9,28 @@
   border-radius: 100%;
   cursor: pointer;
   display: inline-flex;
-  font-size: 0.875rem;
+  font-size: 2rem;
   justify-content: center;
   overflow: hidden;
   user-select: none;
   vertical-align: middle;
-  height: 2rem;
-  width: 2rem;
+  height: 6rem;
+  width: 6rem;
 
   &.xs {
-    @include avatar-size(1.5rem, 0.75rem);
+    @include avatar-size(2rem, 0.75rem);
   }
   &.sm {
-    @include avatar-size(2rem, 1rem);
+    @include avatar-size(4rem, 1.25rem);
   }
   &.md {
-    @include avatar-size(3rem, 1.25rem);
+    @include avatar-size(6rem, 2rem);
   }
   &.lg {
-    @include avatar-size(4rem, 1.5rem);
+    @include avatar-size(8rem, 2.75rem);
   }
   &.xl {
-    @include avatar-size(6rem, 2rem);
+    @include avatar-size(12rem, 4rem);
   }
 
   &-image {
