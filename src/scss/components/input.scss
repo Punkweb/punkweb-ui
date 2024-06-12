@@ -34,10 +34,6 @@
     &:active {
       border-color: oc-get-color("indigo", "9");
     }
-    &:invalid {
-      background-color: $oc-red-0;
-      border-color: $oc-red-9;
-    }
   }
 
   &.fluid {
