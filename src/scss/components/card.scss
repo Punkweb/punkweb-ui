@@ -4,10 +4,22 @@
 
   background-color: white;
   border: 1px solid $border;
+  overflow: hidden;
   min-width: 16rem;
-  padding: 1rem;
 
   &.fluid {
     width: 100%;
+  }
+
+  &-header {
+    background-color: $oc-gray-1;
+    border-bottom: 1px solid $border;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem;
+  }
+
+  &-content {
+    padding: 1rem;
   }
 }
