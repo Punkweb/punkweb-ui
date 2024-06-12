@@ -14,56 +14,104 @@
         <summary>Avatar</summary>
         <h4>Image</h4>
         <div class="flex align-center gap-2">
-          <div class="pw-avatar xs">
-            <img class="pw-avatar-image" src="/static/punkweb.png" />
-          </div>
-          <div class="pw-avatar sm">
-            <img class="pw-avatar-image" src="/static/punkweb.png" />
-          </div>
-          <div class="pw-avatar md">
-            <img class="pw-avatar-image" src="/static/punkweb.png" />
-          </div>
-          <div class="pw-avatar lg">
-            <img class="pw-avatar-image" src="/static/punkweb.png" />
-          </div>
-          <div class="pw-avatar xl">
+          <div class="pw-avatar">
             <img class="pw-avatar-image" src="/static/punkweb.png" />
           </div>
         </div>
         <h4>Fallback</h4>
         <div class="flex align-center gap-2">
-          <div class="pw-avatar xs">
+          <div class="pw-avatar">
             <div class="pw-avatar-fallback">PW</div>
+          </div>
+        </div>
+        <h4>Sizes</h4>
+        <div class="flex align-center gap-2">
+          <div class="pw-avatar xs">
+            <img class="pw-avatar-image" src="/static/punkweb.png" />
           </div>
           <div class="pw-avatar sm">
-            <div class="pw-avatar-fallback">PW</div>
+            <img class="pw-avatar-image" src="/static/punkweb.png" />
           </div>
-          <div class="pw-avatar md">
-            <div class="pw-avatar-fallback">PW</div>
+          <div class="pw-avatar mg">
+            <img class="pw-avatar-image" src="/static/punkweb.png" />
           </div>
           <div class="pw-avatar lg">
-            <div class="pw-avatar-fallback">PW</div>
+            <img class="pw-avatar-image" src="/static/punkweb.png" />
           </div>
           <div class="pw-avatar xl">
-            <div class="pw-avatar-fallback">PW</div>
+            <img class="pw-avatar-image" src="/static/punkweb.png" />
           </div>
+        </div>
+      </details>
+      <details class="pw-details">
+        <summary>Badge</summary>
+        <h4>Default</h4>
+        <div class="flex align-center gap-2">
+          <div class="pw-badge">Badge</div>
+        </div>
+        <h4>Colors</h4>
+        <div class="flex align-center gap-2">
+          <div class="pw-badge red">Badge</div>
+          <div class="pw-badge orange">Badge</div>
+          <div class="pw-badge yellow">Badge</div>
+          <div class="pw-badge green">Badge</div>
+          <div class="pw-badge blue">Badge</div>
+          <div class="pw-badge indigo">Badge</div>
+          <div class="pw-badge violet">Badge</div>
+        </div>
+        <h4>Rounded</h4>
+        <div class="flex align-center gap-2">
+          <div class="pw-badge rounded">Badge</div>
+        </div>
+        <h4>Sizes</h4>
+        <div class="flex align-center gap-2">
+          <div class="pw-badge xs">Badge</div>
+          <div class="pw-badge sm">Badge</div>
+          <div class="pw-badge mg">Badge</div>
+          <div class="pw-badge lg">Badge</div>
+          <div class="pw-badge xl">Badge</div>
         </div>
       </details>
       <details class="pw-details">
         <summary>Button</summary>
         <h4>Variants</h4>
-        <div class="flex align-center gap-2">
-          <button class="pw-button default">Default</button>
-          <button class="pw-button outlined">Outlined</button>
-          <button class="pw-button ghost">Ghost</button>
-          <button class="pw-button raised">Raised</button>
+        <div class="flex flex-column gap-2">
+          <div class="flex align-center gap-2">
+            <button class="pw-button default">Default</button>
+            <button class="pw-button outlined">Outlined</button>
+            <button class="pw-button ghost">Ghost</button>
+            <button class="pw-button raised">Raised</button>
+          </div>
+          <div class="flex align-center gap-2">
+            <button class="pw-button default indigo">Default</button>
+            <button class="pw-button outlined indigo">Outlined</button>
+            <button class="pw-button ghost indigo">Ghost</button>
+            <button class="pw-button raised indigo">Raised</button>
+          </div>
         </div>
         <h4>Colors</h4>
+        <div class="grid grid-columns-3 gap-4">
+          <button class="pw-button raised">Default</button>
+          <button class="pw-button raised red">Red</button>
+          <button class="pw-button raised orange">Orange</button>
+          <button class="pw-button raised yellow">Yellow</button>
+          <button class="pw-button raised green">Green</button>
+          <button class="pw-button raised teal">Teal</button>
+          <button class="pw-button raised blue">Blue</button>
+          <button class="pw-button raised indigo">Indigo</button>
+          <button class="pw-button raised violet">Violet</button>
+        </div>
+        <h4>Sizes</h4>
         <div class="flex align-center gap-2">
-          <button class="pw-button default indigo">Default</button>
-          <button class="pw-button outlined indigo">Outlined</button>
-          <button class="pw-button ghost indigo">Ghost</button>
-          <button class="pw-button raised indigo">Raised</button>
+          <button class="pw-button raised xs">Button</button>
+          <button class="pw-button raised sm">Button</button>
+          <button class="pw-button raised mg">Button</button>
+          <button class="pw-button raised lg">Button</button>
+          <button class="pw-button raised xl">Button</button>
+        </div>
+        <h4>Rounded</h4>
+        <div class="flex align-center gap-2">
+          <button class="pw-button raised rounded">Button</button>
         </div>
       </details>
       <details class="pw-details">
@@ -71,12 +119,50 @@
         <h4>Default</h4>
         <div class="pw-callout">
           <h4>Header</h4>
-          <p>Content</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            rhoncus tempor neque, sed malesuada eros dapibus vel. Aliquam in
+            ligula vitae tortor porttitor laoreet iaculis finibus est.
+          </p>
         </div>
         <h4>Colors</h4>
-        <div class="pw-callout indigo">
-          <h4>Header</h4>
-          <p>Content</p>
+        <div class="grid grid-columns-3 gap-4">
+          <div class="pw-callout">
+            <h4>Header</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="pw-callout red">
+            <h4>Header</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="pw-callout orange">
+            <h4>Header</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="pw-callout yellow">
+            <h4>Header</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="pw-callout green">
+            <h4>Header</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="pw-callout teal">
+            <h4>Header</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="pw-callout blue">
+            <h4>Header</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="pw-callout indigo">
+            <h4>Header</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div class="pw-callout violet">
+            <h4>Header</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
         </div>
       </details>
       <details class="pw-details">
@@ -86,37 +172,68 @@
           <h4>Header</h4>
           <p>Content</p>
         </div>
+        <h4>Square</h4>
+        <div class="pw-card radius-none">
+          <h4>Header</h4>
+          <p>Content</p>
+        </div>
+        <h4>Shadow</h4>
+        <div class="grid grid-columns-3 gap-8 my-12">
+          <div class="pw-card shadow-none">
+            <h4>Header</h4>
+            <p>Content</p>
+          </div>
+          <div class="pw-card shadow-xs">
+            <h4>Header</h4>
+            <p>Content</p>
+          </div>
+          <div class="pw-card shadow-sm">
+            <h4>Header</h4>
+            <p>Content</p>
+          </div>
+          <div class="pw-card shadow-md">
+            <h4>Header</h4>
+            <p>Content</p>
+          </div>
+          <div class="pw-card shadow-lg">
+            <h4>Header</h4>
+            <p>Content</p>
+          </div>
+          <div class="pw-card shadow-xl">
+            <h4>Header</h4>
+            <p>Content</p>
+          </div>
+        </div>
       </details>
       <details class="pw-details">
         <summary>Input</summary>
         <h4>Default</h4>
-        <input class="pw-input" type="text" placeholder="Placeholder" />
+        <input class="pw-input" />
+        <h4>Placeholder</h4>
+        <input class="pw-input" placeholder="Placeholder" />
+        <h4>Invalid</h4>
+        <input class="pw-input invalid" />
+        <h4>Disabled</h4>
+        <input class="pw-input" disabled />
+        <h4>Rounded</h4>
+        <input class="pw-input rounded" />
         <h4>Label</h4>
         <label class="pw-input-label" for="label-example">Username</label>
-        <input
-          class="pw-input"
-          id="label-example"
-          type="text"
-          placeholder="Placeholder"
-        />
+        <input class="pw-input" id="label-example" />
         <h4>Hint</h4>
-        <input
-          class="pw-input"
-          id="label-example"
-          type="text"
-          placeholder="Placeholder"
-        />
+        <input class="pw-input" />
         <p class="hint">Password must contain 8 characters</p>
-        <h4>Invalid</h4>
-        <input class="pw-input invalid" type="text" placeholder="Placeholder" />
+        <h4>Error</h4>
+        <input class="pw-input" />
         <p class="error">Password must contain 8 characters</p>
-        <h4>Disabled</h4>
-        <input
-          class="pw-input"
-          type="text"
-          placeholder="Placeholder"
-          disabled
-        />
+        <h4>Sizes</h4>
+        <div class="flex align-start gap-2">
+          <input class="pw-input xs" placeholder="Extra Small" />
+          <input class="pw-input sm" placeholder="Small" />
+          <input class="pw-input mg" placeholder="Medium" />
+          <input class="pw-input lg" placeholder="Large" />
+          <input class="pw-input xl" placeholder="Extra Large" />
+        </div>
         <h4>Textarea</h4>
         <textarea class="pw-input" placeholder="Placeholder"></textarea>
         <h4>Select</h4>
