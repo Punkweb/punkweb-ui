@@ -1,1 +1,37 @@
+$oc-color-list: (
+  "gray",
+  "red",
+  "pink",
+  "grape",
+  "violet",
+  "indigo",
+  "blue",
+  "cyan",
+  "teal",
+  "green",
+  "lime",
+  "yellow",
+  "orange"
+);
+
+$oc-color-map: (
+  "gray": $oc-gray-list,
+  "red": $oc-red-list,
+  "pink": $oc-pink-list,
+  "grape": $oc-grape-list,
+  "violet": $oc-violet-list,
+  "indigo": $oc-indigo-list,
+  "blue": $oc-blue-list,
+  "cyan": $oc-cyan-list,
+  "teal": $oc-teal-list,
+  "green": $oc-green-list,
+  "lime": $oc-lime-list,
+  "yellow": $oc-yellow-list,
+  "orange": $oc-orange-list,
+);
+
+@function oc-get-color($color-name, $index: "5") {
+  @return map-get(map-get($oc-color-map, $color-name), $index);
+}
+
 $border: $oc-gray-4;
