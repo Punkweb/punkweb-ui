@@ -1,0 +1,33 @@
+.pw-breadcrumb {
+  background-color: $oc-gray-1;
+  border-radius: 0.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 0 1rem 0;
+  padding: 0.75rem 1rem;
+
+  &-item {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 24rem;
+
+    a {
+      color: $oc-indigo-9;
+    }
+
+    &:not(:first-of-type)::before {
+      color: var(--breadcrumb-separator);
+      content: "›";
+      display: inline-block;
+      padding: 0 0.5rem;
+      pointer-events: none;
+    }
+
+    &.active {
+      color: $oc-gray-9;
+    }
+  }
+}
