@@ -6,6 +6,7 @@ CSS Framework for Punkweb.
 
 ```bash
 npm install
-npm run dist # Watch css files for changes
-npm start # Run lite-server for hot reloading
+npm start
 ```
+
+This will watch css files for changes and run lite-server for hot reloading
