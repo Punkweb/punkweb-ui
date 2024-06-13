@@ -43,19 +43,19 @@
   border-radius: 0;
 }
 @mixin radius-xs {
-  border-radius: 0.125rem; // 2px
+  border-radius: 0.125rem;
 }
 @mixin radius-sm {
-  border-radius: 0.25rem; // 4px
+  border-radius: 0.25rem;
 }
 @mixin radius-md {
-  border-radius: 0.5rem; // 8px
+  border-radius: 0.5rem;
 }
 @mixin radius-lg {
-  border-radius: 0.75rem; // 12px
+  border-radius: 0.75rem;
 }
 @mixin radius-xl {
-  border-radius: 1rem; // 16px
+  border-radius: 1rem;
 }
 
 // Transition

@@ -1,0 +1,9 @@
+:root {
+  @each $map, $color in $oc-color-list {
+    @each $key, $value in $map {
+      --oc-#{$color}-#{$key}: #{$value};
+      --oc-#{$color}-#{$key}-rgb: #{red($value)}, #{green($value)},
+        #{blue($value)};
+    }
+  }
+}

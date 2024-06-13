@@ -15,11 +15,11 @@
     max-width: 24rem;
 
     a {
-      color: $oc-primary-9;
+      color: $oc-indigo-9;
     }
 
     &:not(:first-of-type)::before {
-      color: var(--breadcrumb-separator);
+      color: $oc-gray-6;
       content: "›";
       display: inline-block;
       padding: 0 0.5rem;

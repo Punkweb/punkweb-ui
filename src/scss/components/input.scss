@@ -8,7 +8,7 @@
 .pw-input {
   @include radius-sm;
   @include transition-fast;
-  border: 1px solid $border;
+  border: 1px solid $oc-gray-4;
   outline: none;
   padding: 0.5rem 1rem;
 
@@ -23,7 +23,7 @@
     }
     &:focus,
     &:active {
-      border-color: $oc-primary-9;
+      border-color: $oc-indigo-9;
     }
   }
 

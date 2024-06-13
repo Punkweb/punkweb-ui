@@ -3,7 +3,7 @@
   @include shadow-md;
 
   background-color: white;
-  border: 1px solid $border;
+  border: 1px solid $oc-gray-4;
   overflow: hidden;
   min-width: 16rem;
 
@@ -13,7 +13,7 @@
 
   &-header {
     background-color: $oc-gray-1;
-    border-bottom: 1px solid $border;
+    border-bottom: 1px solid $oc-gray-4;
     font-size: 1rem;
     font-weight: 700;
     padding: 1rem;

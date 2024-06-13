@@ -7,10 +7,10 @@
 .pw-spinner {
   &:before {
     animation: spin 1.5s linear infinite;
-    border: 0.5rem solid $oc-gray-3;
-    border-bottom-color: $oc-primary-9;
+    border: 0.25rem solid $oc-gray-3;
+    border-bottom-color: $oc-indigo-9;
     border-radius: 50%;
-    border-top-color: $oc-primary-9;
+    border-top-color: $oc-indigo-9;
     content: "";
     display: inline-block;
     height: 2rem;
@@ -27,31 +27,31 @@
 
   &.xs {
     &:before {
-      @include spinner-size(0.25rem, 1rem);
+      @include spinner-size(0.125rem, 1rem);
     }
   }
 
   &.sm {
     &:before {
-      @include spinner-size(0.375rem, 1.5rem);
+      @include spinner-size(0.1875rem, 1.5rem);
     }
   }
 
   &.md {
     &:before {
-      @include spinner-size(0.5rem, 2rem);
+      @include spinner-size(0.25rem, 2rem);
     }
   }
 
   &.lg {
     &:before {
-      @include spinner-size(0.625rem, 2.5rem);
+      @include spinner-size(0.3125rem, 2.5rem);
     }
   }
 
   &.xl {
     &:before {
-      @include spinner-size(0.75rem, 3rem);
+      @include spinner-size(0.375rem, 3rem);
     }
   }
 }

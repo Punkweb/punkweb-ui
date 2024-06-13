@@ -36,10 +36,10 @@
     border-radius: 2rem;
   }
 
-  @each $name, $values in $oc-color-list {
-    &.#{$name} {
-      background-color: oc-get-color($name, "1");
-      color: oc-get-color($name, "9");
+  @each $map, $color in $oc-color-list {
+    &.#{$color} {
+      background-color: map-get($map, "1");
+      color: map-get($map, "9");
     }
   }
 }
