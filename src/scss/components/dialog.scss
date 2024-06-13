@@ -8,14 +8,14 @@
 
   animation: zoomIn 150ms ease;
 
-  &-portal {
+  &-container {
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 2rem;
 
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -56,24 +56,7 @@
     display: flex;
     justify-content: flex-end;
     gap: 1rem;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes zoomIn {
-  0% {
-    transform: scale(0.9);
-  }
-  100% {
-    transform: scale(1);
+    margin-top: 1rem;
   }
 }
 
