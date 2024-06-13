@@ -1,14 +1,26 @@
-@mixin button-size($font-size, $padding) {
-  font-size: $font-size;
-  padding: $padding;
+@mixin icon-button-size($size, $icon-size) {
+  height: $size;
+  line-height: $size;
+  max-height: $size;
+  max-width: $size;
+  min-height: $size;
+  min-width: $size;
+  width: $size;
+
+  .material-icons,
+  .material-symbols,
+  .material-symbols-outlined {
+    font-size: $icon-size;
+  }
 }
 
-.pw-button {
-  @include font-medium;
+.pw-icon-button {
+  @include font-bold;
   @include radius-sm;
   @include transition-fast;
-  @include button-size(1rem, 0.5rem 1rem);
+  @include icon-button-size(2rem, 1.25rem);
   display: inline-block;
+  padding: 0;
   text-align: center;
 
   &:disabled {
@@ -18,32 +30,34 @@
     cursor: not-allowed;
   }
 
-  &.fluid {
-    width: 100%;
+  .material-icons,
+  .material-symbols,
+  .material-symbols-outlined {
+    display: block;
   }
 
   &.rounded {
-    border-radius: 2rem;
+    border-radius: 100%;
   }
 
   &.xs {
-    @include button-size(0.75rem, 0.25rem 0.5rem);
+    @include icon-button-size(1.5rem, 1rem);
   }
 
   &.sm {
-    @include button-size(0.875rem, 0.375rem 0.75rem);
+    @include icon-button-size(1.75rem, 1.125rem);
   }
 
   &.md {
-    @include button-size(1rem, 0.5rem 1rem);
+    @include icon-button-size(2rem, 1.25rem);
   }
 
   &.lg {
-    @include button-size(1.125rem, 0.625rem 1.25rem);
+    @include icon-button-size(2.5rem, 1.5rem);
   }
 
   &.xl {
-    @include button-size(1.25rem, 0.75rem 1.5rem);
+    @include icon-button-size(3rem, 1.75rem);
   }
 
   &.default {
