@@ -23,7 +23,7 @@
     }
     &:focus,
     &:active {
-      border-color: oc-get-color("indigo", "9");
+      border-color: $oc-primary-9;
     }
   }
 

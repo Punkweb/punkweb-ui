@@ -30,8 +30,8 @@
 
     &.active .pw-pagination-link {
       color: white;
-      background-color: $oc-indigo-9;
-      border-color: $oc-indigo-9;
+      background-color: $oc-primary-9;
+      border-color: $oc-primary-9;
       z-index: 1;
     }
 
@@ -45,7 +45,7 @@
   }
 
   &-link {
-    color: $oc-indigo-9;
+    color: $oc-primary-9;
     display: block;
     padding: 0.25rem 0.5rem;
 
