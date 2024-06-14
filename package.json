@@ -2,10 +2,14 @@
   "name": "punkweb-ui",
   "version": "0.1.0",
   "description": "CSS framework for Punkweb",
+  "files": [
+    "dist/css/*.{css,map}",
+    "scss/**/*.scss"
+  ],
   "scripts": {
     "start": "npm-run-all --parallel server watch",
     "server": "lite-server",
-    "watch": "sass --watch src/scss/punkweb-ui.scss dist/css/punkweb-ui.min.css --style compressed"
+    "watch": "sass --watch scss/punkweb-ui.scss dist/css/punkweb-ui.min.css --style compressed"
   },
   "author": "Punkweb (https://github.com/Punkweb/)",
   "license": "BSD-3-Clause",
