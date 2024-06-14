@@ -8,9 +8,9 @@
   &:before {
     animation: spin 1.5s linear infinite;
     border: 0.25rem solid $oc-gray-3;
-    border-bottom-color: $oc-indigo-9;
+    border-bottom-color: var(--primary-9);
     border-radius: 50%;
-    border-top-color: $oc-indigo-9;
+    border-top-color: var(--primary-9);
     content: "";
     display: inline-block;
     height: 2rem;

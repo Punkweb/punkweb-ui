@@ -29,9 +29,9 @@
     }
 
     &.active .pw-pagination-link {
+      background-color: var(--primary-9);
+      border-color: var(--primary-9);
       color: white;
-      background-color: $oc-indigo-9;
-      border-color: $oc-indigo-9;
       z-index: 1;
     }
 
@@ -45,7 +45,7 @@
   }
 
   &-link {
-    color: $oc-indigo-9;
+    color: var(--primary-9);
     display: block;
     padding: 0.25rem 0.5rem;
 

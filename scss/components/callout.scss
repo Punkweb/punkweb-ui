@@ -13,4 +13,10 @@
       color: map-get($map, "9");
     }
   }
+
+  &.primary {
+    background-color: var(--primary-0);
+    border-color: var(--primary-4);
+    color: var(--primary-9);
+  }
 }

@@ -33,7 +33,8 @@ npm install punkweb-ui
 #### Individual components
 
 ```scss
-@import "punkweb-ui/scss/mixins"; // required for most components
+@import "open-color/open-color"; // required
+@import "punkweb-ui/scss/mixins"; // required
 @import "punkweb-ui/scss/components/buttons";
 ```
 

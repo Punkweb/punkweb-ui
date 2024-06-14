@@ -89,6 +89,19 @@
         }
       }
     }
+
+    &.primary {
+      color: var(--primary-9);
+
+      &:not(:disabled) {
+        &:hover {
+          background-color: var(--primary-0);
+        }
+        &:active {
+          background-color: var(--primary-1);
+        }
+      }
+    }
   }
 
   &.outlined {
@@ -116,6 +129,20 @@
           &:active {
             background-color: map-get($map, "1");
           }
+        }
+      }
+    }
+
+    &.primary {
+      border: 1px solid var(--primary-9);
+      color: var(--primary-9);
+
+      &:not(:disabled) {
+        &:hover {
+          background-color: var(--primary-0);
+        }
+        &:active {
+          background-color: var(--primary-1);
         }
       }
     }
@@ -155,6 +182,23 @@
         }
       }
     }
+
+    &.primary {
+      border: 1px solid var(--primary-9);
+      color: var(--primary-9);
+
+      &:not(:disabled) {
+        &:hover {
+          background-color: var(--primary-9);
+          color: white;
+        }
+        &:active {
+          @include shadow-sm;
+          background-color: var(--primary-9);
+          color: white;
+        }
+      }
+    }
   }
 
   &.raised {
@@ -176,6 +220,11 @@
         background-color: map-get($map, "9");
         color: white;
       }
+    }
+
+    &.primary {
+      background-color: var(--primary-9);
+      color: white;
     }
   }
 }
