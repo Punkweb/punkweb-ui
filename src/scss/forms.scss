@@ -1,0 +1,28 @@
+.pw-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  &-group {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  &-actions {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+
+    &.end {
+      justify-content: end;
+    }
+  }
+
+  &.inline {
+    align-items: end;
+    flex-direction: row;
+    justify-content: end;
+  }
+}
