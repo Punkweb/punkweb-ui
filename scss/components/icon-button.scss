@@ -20,6 +20,7 @@
   @include transition-fast;
   @include icon-button-size(2rem, 1.25rem);
   align-items: center;
+  color: $oc-gray-9;
   cursor: pointer;
   display: inline-flex;
   justify-content: center;
@@ -31,6 +32,15 @@
     border-color: $oc-gray-0 !important;
     color: $oc-gray-5 !important;
     cursor: not-allowed;
+  }
+
+  &:not(:disabled) {
+    &:hover {
+      background-color: $oc-gray-0;
+    }
+    &:active {
+      background-color: $oc-gray-1;
+    }
   }
 
   .material-icons,
@@ -63,43 +73,30 @@
     @include icon-button-size(3rem, 1.75rem);
   }
 
-  &.default {
-    color: $oc-gray-9;
-
-    &:not(:disabled) {
-      &:hover {
-        background-color: $oc-gray-0;
-      }
-      &:active {
-        background-color: $oc-gray-1;
-      }
-    }
-
-    @each $map, $color in $oc-color-list {
-      &.#{$color} {
-        color: map-get($map, "9");
-
-        &:not(:disabled) {
-          &:hover {
-            background-color: map-get($map, "0");
-          }
-          &:active {
-            background-color: map-get($map, "1");
-          }
-        }
-      }
-    }
-
-    &.primary {
-      color: var(--primary-9);
+  @each $map, $color in $oc-color-list {
+    &.#{$color} {
+      color: map-get($map, "9");
 
       &:not(:disabled) {
         &:hover {
-          background-color: var(--primary-0);
+          background-color: map-get($map, "0");
         }
         &:active {
-          background-color: var(--primary-1);
+          background-color: map-get($map, "1");
         }
+      }
+    }
+  }
+
+  &.primary {
+    color: var(--primary-9);
+
+    &:not(:disabled) {
+      &:hover {
+        background-color: var(--primary-0);
+      }
+      &:active {
+        background-color: var(--primary-1);
       }
     }
   }
@@ -209,9 +206,11 @@
     &:not(:disabled) {
       &:hover {
         @include shadow-sm;
+        background-color: $oc-gray-9;
       }
       &:active {
         @include shadow-md;
+        background-color: $oc-gray-9;
       }
     }
 
@@ -219,12 +218,30 @@
       &.#{$color} {
         background-color: map-get($map, "9");
         color: white;
+
+        &:not(:disabled) {
+          &:hover {
+            background-color: map-get($map, "9");
+          }
+          &:active {
+            background-color: map-get($map, "9");
+          }
+        }
       }
     }
 
     &.primary {
       background-color: var(--primary-9);
       color: white;
+
+      &:not(:disabled) {
+        &:hover {
+          background-color: var(--primary-9);
+        }
+        &:active {
+          background-color: var(--primary-9);
+        }
+      }
     }
   }
 }
