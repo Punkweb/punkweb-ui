@@ -2,18 +2,14 @@
 // Changes here can have unintended consequences.
 
 // set box-sizing to border-box
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-
-  &:before,
-  &:after {
-    box-sizing: border-box;
-  }
 }
 
 // set body min width to 20rem and reset line height
 body {
-  line-height: 1;
   min-width: 20rem;
   margin: 0;
   padding: 0;
