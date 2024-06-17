@@ -36,7 +36,7 @@
           <div class="pw-avatar sm">
             <img class="pw-avatar-image" src="/static/punkweb.png" />
           </div>
-          <div class="pw-avatar mg">
+          <div class="pw-avatar md">
             <img class="pw-avatar-image" src="/static/punkweb.png" />
           </div>
           <div class="pw-avatar lg">
@@ -72,7 +72,7 @@
         <div class="flex align-center gap-2">
           <div class="pw-badge xs">Badge</div>
           <div class="pw-badge sm">Badge</div>
-          <div class="pw-badge mg">Badge</div>
+          <div class="pw-badge md">Badge</div>
           <div class="pw-badge lg">Badge</div>
           <div class="pw-badge xl">Badge</div>
         </div>
@@ -136,7 +136,7 @@
         <div class="flex align-center gap-2">
           <button class="pw-button raised xs">Button</button>
           <button class="pw-button raised sm">Button</button>
-          <button class="pw-button raised mg">Button</button>
+          <button class="pw-button raised md">Button</button>
           <button class="pw-button raised lg">Button</button>
           <button class="pw-button raised xl">Button</button>
         </div>
@@ -297,6 +297,142 @@
         </div>
       </details>
       <details class="pw-details">
+        <summary>Form</summary>
+        <h4>Default</h4>
+        <form class="pw-form my-12" style="width: 320px">
+          <div class="pw-form-group">
+            <label class="pw-input-label" for="email">Email address</label>
+            <input
+              class="pw-input fluid"
+              id="email"
+              name="email"
+              type="email"
+            />
+            <div class="hint">
+              We'll never share your email with anyone else.
+            </div>
+          </div>
+          <div class="pw-form-group">
+            <label class="pw-input-label" for="password">Password</label>
+            <input
+              class="pw-input fluid"
+              id="password"
+              name="password"
+              type="password"
+            />
+          </div>
+          <div class="pw-form-group check">
+            <label class="pw-input-label">Remember me</label>
+            <input type="checkbox" name="remember" />
+          </div>
+          <div class="pw-form-actions">
+            <button class="pw-button raised primary fluid" type="submit">
+              Login
+            </button>
+          </div>
+        </form>
+        <h4>Inline</h4>
+        <form class="pw-form inline my-12">
+          <div class="pw-form-group">
+            <label class="pw-input-label" for="search">Search</label>
+            <input class="pw-input" id="search" name="search" type="email" />
+          </div>
+          <div class="pw-form-group">
+            <label class="pw-input-label" for="sort">Sort</label>
+            <select class="pw-input" id="sort" name="sort">
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+            </select>
+          </div>
+          <div class="pw-form-actions">
+            <button class="pw-button raised primary" type="submit">
+              Login
+            </button>
+          </div>
+        </form>
+        <h4>Columns</h4>
+        <form class="pw-form my-12" style="width: 768px">
+          <div class="pw-form-row">
+            <div class="flex-1">
+              <div class="pw-form-group">
+                <label class="pw-input-label" for="firstname">
+                  First Name
+                </label>
+                <input
+                  class="pw-input fluid"
+                  id="firstname"
+                  name="firstname"
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="flex-1">
+              <div class="pw-form-group">
+                <label class="pw-input-label" for="lastname">Last Name</label>
+                <input
+                  class="pw-input fluid"
+                  id="lastname"
+                  name="lastname"
+                  type="text"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="pw-form-group">
+            <label class="pw-input-label" for="address">Address</label>
+            <input
+              class="pw-input fluid"
+              id="address"
+              name="address"
+              type="text"
+            />
+          </div>
+          <div class="pw-form-group">
+            <label class="pw-input-label" for="address2">Address 2</label>
+            <input
+              class="pw-input fluid"
+              id="address2"
+              name="address2"
+              type="text"
+            />
+          </div>
+          <div class="pw-form-row">
+            <div class="flex-3">
+              <div class="pw-form-group">
+                <label class="pw-input-label" for="city">City</label>
+                <input
+                  class="pw-input fluid"
+                  id="city"
+                  name="city"
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="flex-2">
+              <div class="pw-form-group">
+                <label class="pw-input-label" for="state">State</label>
+                <select class="pw-input fluid" id="state" name="state">
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </select>
+              </div>
+            </div>
+            <div class="flex-1">
+              <div class="pw-form-group">
+                <label class="pw-input-label" for="zip">Zip</label>
+                <input class="pw-input fluid" id="zip" name="zip" type="text" />
+              </div>
+            </div>
+          </div>
+          <div class="pw-form-actions end">
+            <button class="pw-button" type="reset">Cancel</button>
+            <button class="pw-button raised primary" type="submit">Send</button>
+          </div>
+        </form>
+      </details>
+      <details class="pw-details">
         <summary>Icon Button</summary>
         <h4>Variants</h4>
         <div class="flex align-center gap-2 mb-2">
@@ -362,7 +498,7 @@
           <button class="pw-icon-button raised sm">
             <span class="material-symbols-outlined">favorite</span>
           </button>
-          <button class="pw-icon-button raised mg">
+          <button class="pw-icon-button raised md">
             <span class="material-symbols-outlined">favorite</span>
           </button>
           <button class="pw-icon-button raised lg">
@@ -404,7 +540,7 @@
         <div class="flex align-start gap-2">
           <input class="pw-input xs" placeholder="Extra Small" />
           <input class="pw-input sm" placeholder="Small" />
-          <input class="pw-input mg" placeholder="Medium" />
+          <input class="pw-input md" placeholder="Medium" />
           <input class="pw-input lg" placeholder="Large" />
           <input class="pw-input xl" placeholder="Extra Large" />
         </div>
@@ -448,7 +584,7 @@
         <div class="flex align-center gap-4">
           <div class="pw-spinner xs"></div>
           <div class="pw-spinner sm"></div>
-          <div class="pw-spinner mg"></div>
+          <div class="pw-spinner md"></div>
           <div class="pw-spinner lg"></div>
           <div class="pw-spinner xl"></div>
         </div>
