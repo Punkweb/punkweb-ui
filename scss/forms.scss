@@ -3,11 +3,21 @@
   flex-direction: column;
   gap: 1rem;
 
+  &-row {
+    display: flex;
+    gap: 1rem;
+  }
+
   &-group {
     align-items: start;
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+
+    &.check {
+      align-items: center;
+      flex-direction: row;
+    }
   }
 
   &-actions {
@@ -23,6 +33,5 @@
   &.inline {
     align-items: end;
     flex-direction: row;
-    justify-content: end;
   }
 }
