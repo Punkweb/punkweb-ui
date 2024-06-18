@@ -33,5 +33,6 @@
   &.inline {
     align-items: end;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 }
