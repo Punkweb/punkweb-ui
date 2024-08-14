@@ -7,9 +7,10 @@
   @include font-medium;
   @include radius-sm;
   @include transition-fast;
-  @include button-size(1rem, 0.5rem 1rem);
   color: $oc-gray-9;
   display: inline-block;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
   text-align: center;
 
   &:disabled {

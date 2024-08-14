@@ -18,14 +18,20 @@
   @include font-bold;
   @include radius-sm;
   @include transition-fast;
-  @include icon-button-size(2rem, 1.25rem);
   align-items: center;
   color: $oc-gray-9;
   cursor: pointer;
   display: inline-flex;
+  height: 2rem;
   justify-content: center;
+  line-height: 2rem;
+  max-height: 2rem;
+  max-width: 2rem;
+  min-height: 2rem;
+  min-width: 2rem;
   padding: 0;
   text-align: center;
+  width: 2rem;
 
   &:disabled {
     background-color: $oc-gray-0 !important;
@@ -47,6 +53,7 @@
   .material-symbols,
   .material-symbols-outlined {
     display: block;
+    font-size: 1.25rem;
   }
 
   &.rounded {
