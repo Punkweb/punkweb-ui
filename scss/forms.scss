@@ -36,3 +36,11 @@
     flex-wrap: wrap;
   }
 }
+
+@include breakpoint("sm") {
+  .pw-form {
+    &-row {
+      flex-direction: column;
+    }
+  }
+}

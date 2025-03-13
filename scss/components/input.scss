@@ -9,6 +9,7 @@
   @include radius-sm;
   @include transition-fast;
   border: 1px solid $oc-gray-4;
+  line-height: 1.5;
   outline: none;
   padding: 0.5rem 1rem;
 
@@ -64,4 +65,13 @@
     font-size: 1.25rem;
     padding: 0.75rem 1.25rem;
   }
+}
+
+select.pw-input {
+  appearance: none;
+  padding-right: 2.25rem;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem 0.75rem;
 }
