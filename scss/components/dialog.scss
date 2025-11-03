@@ -49,11 +49,3 @@
     margin-top: 1rem;
   }
 }
-
-@include breakpoint('md') {
-  .dialog {
-    &-content {
-      max-width: 50vw;
-    }
-  }
-}

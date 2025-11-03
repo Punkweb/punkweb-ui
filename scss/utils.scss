@@ -366,8 +366,27 @@
     &-cols-#{$i} {
       grid-template-columns: repeat($i, minmax(0, 1fr));
     }
+
+    @each $key, $value in $breakpoints {
+      &-cols-#{$key}-#{$i} {
+        @include breakpoint($key) {
+          grid-template-columns: repeat($i, minmax(0, 1fr));
+        }
+      }
+    }
+  }
+
+  @for $i from 1 through 12 {
     &-rows-#{$i} {
       grid-template-rows: repeat($i, minmax(0, 1fr));
+    }
+
+    @each $key, $value in $breakpoints {
+      &-rows-#{$key}-#{$i} {
+        @include breakpoint($key) {
+          grid-template-rows: repeat($i, minmax(0, 1fr));
+        }
+      }
     }
   }
 }
@@ -377,6 +396,14 @@
 @for $i from 0 through 12 {
   .gap-#{$i} {
     gap: $i * 0.25rem;
+  }
+
+  @each $key, $value in $breakpoints {
+    .gap-#{$key}-#{$i} {
+      @include breakpoint($key) {
+        gap: $i * 0.25rem;
+      }
+    }
   }
 }
 
@@ -395,16 +422,48 @@
     flex-direction: row;
   }
 
+  @each $key, $value in $breakpoints {
+    &-row-#{$key} {
+      @include breakpoint($key) {
+        flex-direction: row;
+      }
+    }
+  }
+
   &-row-reverse {
     flex-direction: row-reverse;
+  }
+
+  @each $key, $value in $breakpoints {
+    &-row-reverse-#{$key} {
+      @include breakpoint($key) {
+        flex-direction: row-reverse;
+      }
+    }
   }
 
   &-col {
     flex-direction: column;
   }
 
+  @each $key, $value in $breakpoints {
+    &-col-#{$key} {
+      @include breakpoint($key) {
+        flex-direction: column;
+      }
+    }
+  }
+
   &-col-reverse {
     flex-direction: column-reverse;
+  }
+
+  @each $key, $value in $breakpoints {
+    &-col-reverse-#{$key} {
+      @include breakpoint($key) {
+        flex-direction: column-reverse;
+      }
+    }
   }
 
   &-wrap {

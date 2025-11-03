@@ -5,6 +5,7 @@
 
   &-row {
     display: flex;
+    flex-direction: column;
     gap: 1rem;
   }
 
@@ -37,10 +38,10 @@
   }
 }
 
-@include breakpoint('sm') {
+@include breakpoint('xs') {
   .pw-form {
     &-row {
-      flex-direction: column;
+      flex-direction: row;
     }
   }
 }

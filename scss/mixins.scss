@@ -72,20 +72,18 @@
 // Breakpoints
 
 $breakpoints: (
-  'xxs': 320px,
   'xs': 480px,
   'sm': 768px,
   'md': 1024px,
   'lg': 1280px,
   'xl': 1440px,
-  'xxl': 1920px,
 );
 
 @mixin breakpoint($size) {
   @if map_has_key($breakpoints, $size) {
     $width: map_get($breakpoints, $size);
 
-    @media only screen and (max-width: $width) {
+    @media only screen and (min-width: $width) {
       @content;
     }
   }
