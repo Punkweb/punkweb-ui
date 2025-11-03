@@ -1,6 +1,6 @@
 .pw-breadcrumb {
-  background-color: $oc-gray-1;
-  border-radius: 0.25rem;
+  @include radius-sm;
+  background-color: var(--muted);
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -9,25 +9,25 @@
 
   &-item {
     display: block;
+    max-width: 24rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    max-width: 24rem;
 
     a {
-      color: var(--primary-9);
+      color: var(--primary);
     }
 
     &:not(:first-of-type)::before {
-      color: $oc-gray-6;
-      content: "›";
+      color: var(--muted-foreground);
+      content: '›';
       display: inline-block;
       padding: 0 0.5rem;
       pointer-events: none;
     }
 
     &.active {
-      color: $oc-gray-9;
+      color: var(--foreground);
     }
   }
 }

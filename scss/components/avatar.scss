@@ -43,8 +43,8 @@
   &-fallback {
     @include font-medium;
     align-items: center;
-    background-color: $oc-gray-6;
-    color: white;
+    background-color: var(--avatar-fallback-background);
+    color: var(--avatar-fallback-foreground);
     display: flex;
     justify-content: center;
     line-height: 1;

@@ -1,22 +1,8 @@
 .pw-callout {
   @include radius-sm;
-  background-color: $oc-gray-0;
-  border: 1px solid $oc-gray-4;
-  color: $oc-gray-9;
+  background-color: var(--callout-background);
+  border: var(--border-width) solid var(--callout-border);
+  color: var(--callout-foreground);
   padding: 0.5rem 1rem;
   width: 100%;
-
-  @each $map, $color in $oc-color-list {
-    &.#{$color} {
-      background-color: map-get($map, "0");
-      border-color: map-get($map, "4");
-      color: map-get($map, "9");
-    }
-  }
-
-  &.primary {
-    background-color: var(--primary-0);
-    border-color: var(--primary-4);
-    color: var(--primary-9);
-  }
 }

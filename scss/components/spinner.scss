@@ -4,14 +4,23 @@
   width: $size;
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .pw-spinner {
   &:before {
     animation: spin 1.5s linear infinite;
-    border: 0.25rem solid $oc-gray-3;
-    border-bottom-color: var(--primary-9);
+    border: 0.25rem solid var(--border);
+    border-bottom-color: var(--primary);
     border-radius: 50%;
-    border-top-color: var(--primary-9);
-    content: "";
+    border-top-color: var(--primary);
+    content: '';
     display: inline-block;
     height: 2rem;
     width: 2rem;

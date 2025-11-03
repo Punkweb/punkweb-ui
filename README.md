@@ -1,11 +1,8 @@
 # punkweb-ui
 
-CSS Framework for Punkweb.
+A lightweight CSS framework used by [Punkweb](https://punkweb.net) projects.
 
-The primary goal of this project is to create a CSS framework that can be used for the following use cases:
-
-- As a standalone minified CSS file, for projects using only browser CSS
-- As a modular system for projects using SCSS.
+punkweb-ui can be used as a standalone CSS file or as a modular SCSS system.
 
 ## Usage
 
@@ -27,12 +24,8 @@ npm install punkweb-ui
 #### Full import
 
 ```scss
-@import "punkweb-ui/scss/punkweb-ui";
+@import 'punkweb-ui/scss/punkweb-ui';
 ```
-
-#### Individual components
-
-TODO
 
 ## Development
 

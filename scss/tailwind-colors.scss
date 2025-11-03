@@ -1,0 +1,631 @@
+@use 'sass:map';
+
+$tw-slate-list: (
+  '50': #f8fafc,
+  '100': #f1f5f9,
+  '200': #e2e8f0,
+  '300': #cbd5e1,
+  '400': #94a3b8,
+  '500': #64748b,
+  '600': #475569,
+  '700': #334155,
+  '800': #1e293b,
+  '900': #0f172a,
+  '950': #020617,
+);
+
+$tw-gray-list: (
+  '50': #f9fafb,
+  '100': #f3f4f6,
+  '200': #e5e7eb,
+  '300': #d1d5db,
+  '400': #9ca3af,
+  '500': #6b7280,
+  '600': #4b5563,
+  '700': #374151,
+  '800': #1f2937,
+  '900': #111827,
+  '950': #030712,
+);
+
+$tw-zinc-list: (
+  '50': #fafafa,
+  '100': #f4f4f5,
+  '200': #e4e4e7,
+  '300': #d4d4d8,
+  '400': #a1a1aa,
+  '500': #71717a,
+  '600': #52525b,
+  '700': #3f3f46,
+  '800': #27272a,
+  '900': #18181b,
+  '950': #09090b,
+);
+
+$tw-neutral-list: (
+  '50': #fafafa,
+  '100': #f5f5f5,
+  '200': #e5e5e5,
+  '300': #d4d4d4,
+  '400': #a3a3a3,
+  '500': #737373,
+  '600': #525252,
+  '700': #404040,
+  '800': #262626,
+  '900': #171717,
+  '950': #0a0a0a,
+);
+
+$tw-stone-list: (
+  '50': #fafaf9,
+  '100': #f5f5f4,
+  '200': #e7e5e4,
+  '300': #d6d3d1,
+  '400': #a8a29e,
+  '500': #78716c,
+  '600': #57534e,
+  '700': #44403c,
+  '800': #292524,
+  '900': #1c1917,
+  '950': #0c0a09,
+);
+
+$tw-red-list: (
+  '50': #fef2f2,
+  '100': #fee2e2,
+  '200': #fecaca,
+  '300': #fca5a5,
+  '400': #f87171,
+  '500': #ef4444,
+  '600': #dc2626,
+  '700': #b91c1c,
+  '800': #991b1b,
+  '900': #7f1d1d,
+  '950': #450a0a,
+);
+
+$tw-orange-list: (
+  '50': #fff7ed,
+  '100': #ffedd5,
+  '200': #fed7aa,
+  '300': #fdba74,
+  '400': #fb923c,
+  '500': #f97316,
+  '600': #ea580c,
+  '700': #c2410c,
+  '800': #9a3412,
+  '900': #7c2d12,
+  '950': #431407,
+);
+
+$tw-amber-list: (
+  '50': #fffbeb,
+  '100': #fef3c7,
+  '200': #fde68a,
+  '300': #fcd34d,
+  '400': #fbbf24,
+  '500': #f59e0b,
+  '600': #d97706,
+  '700': #b45309,
+  '800': #92400e,
+  '900': #78350f,
+  '950': #451a03,
+);
+
+$tw-yellow-list: (
+  '50': #fefce8,
+  '100': #fef9c3,
+  '200': #fef08a,
+  '300': #fde047,
+  '400': #facc15,
+  '500': #eab308,
+  '600': #ca8a04,
+  '700': #a16207,
+  '800': #854d0e,
+  '900': #713f12,
+  '950': #422006,
+);
+
+$tw-lime-list: (
+  '50': #f7fee7,
+  '100': #ecfccb,
+  '200': #d9f99d,
+  '300': #bef264,
+  '400': #a3e635,
+  '500': #84cc16,
+  '600': #65a30d,
+  '700': #4d7c0f,
+  '800': #3f6212,
+  '900': #365314,
+  '950': #1a2e05,
+);
+
+$tw-green-list: (
+  '50': #f0fdf4,
+  '100': #dcfce7,
+  '200': #bbf7d0,
+  '300': #86efac,
+  '400': #4ade80,
+  '500': #22c55e,
+  '600': #16a34a,
+  '700': #15803d,
+  '800': #166534,
+  '900': #14532d,
+  '950': #052e16,
+);
+
+$tw-emerald-list: (
+  '50': #ecfdf5,
+  '100': #d1fae5,
+  '200': #a7f3d0,
+  '300': #6ee7b7,
+  '400': #34d399,
+  '500': #10b981,
+  '600': #059669,
+  '700': #047857,
+  '800': #065f46,
+  '900': #064e3b,
+  '950': #022c22,
+);
+
+$tw-teal-list: (
+  '50': #f0fdfa,
+  '100': #ccfbf1,
+  '200': #99f6e4,
+  '300': #5eead4,
+  '400': #2dd4bf,
+  '500': #14b8a6,
+  '600': #0d9488,
+  '700': #0f766e,
+  '800': #115e59,
+  '900': #134e4a,
+  '950': #042f2e,
+);
+
+$tw-cyan-list: (
+  '50': #ecfeff,
+  '100': #cffafe,
+  '200': #a5f3fc,
+  '300': #67e8f9,
+  '400': #22d3ee,
+  '500': #06b6d4,
+  '600': #0891b2,
+  '700': #0e7490,
+  '800': #155e75,
+  '900': #164e63,
+  '950': #083344,
+);
+
+$tw-sky-list: (
+  '50': #f0f9ff,
+  '100': #e0f2fe,
+  '200': #bae6fd,
+  '300': #7dd3fc,
+  '400': #38bdf8,
+  '500': #0ea5e9,
+  '600': #0284c7,
+  '700': #0369a1,
+  '800': #075985,
+  '900': #0c4a6e,
+  '950': #083344,
+);
+
+$tw-blue-list: (
+  '50': #eff6ff,
+  '100': #dbeafe,
+  '200': #bfdbfe,
+  '300': #93c5fd,
+  '400': #60a5fa,
+  '500': #3b82f6,
+  '600': #2563eb,
+  '700': #1d4ed8,
+  '800': #1e40af,
+  '900': #1e3a8a,
+  '950': #172554,
+);
+
+$tw-indigo-list: (
+  '50': #eef2ff,
+  '100': #e0e7ff,
+  '200': #c7d2fe,
+  '300': #a5b4fc,
+  '400': #818cf8,
+  '500': #6366f1,
+  '600': #4f46e5,
+  '700': #4338ca,
+  '800': #3730a3,
+  '900': #312e81,
+  '950': #1e1b4b,
+);
+
+$tw-violet-list: (
+  '50': #f5f3ff,
+  '100': #ede9fe,
+  '200': #ddd6fe,
+  '300': #c4b5fd,
+  '400': #a78bfa,
+  '500': #8b5cf6,
+  '600': #7c3aed,
+  '700': #6d28d9,
+  '800': #5b21b6,
+  '900': #4c1d95,
+  '950': #2e1065,
+);
+
+$tw-purple-list: (
+  '50': #faf5ff,
+  '100': #f3e8ff,
+  '200': #e9d5ff,
+  '300': #d8b4fe,
+  '400': #c084fc,
+  '500': #a855f7,
+  '600': #9333ea,
+  '700': #7e22ce,
+  '800': #6b21a8,
+  '900': #581c87,
+  '950': #3b0764,
+);
+
+$tw-fuchsia-list: (
+  '50': #fdf4ff,
+  '100': #fae8ff,
+  '200': #f5d0fe,
+  '300': #f0abfc,
+  '400': #e879f9,
+  '500': #d946ef,
+  '600': #c026d3,
+  '700': #a21caf,
+  '800': #86198f,
+  '900': #701a75,
+  '950': #4a044e,
+);
+
+$tw-pink-list: (
+  '50': #fdf2f8,
+  '100': #fce7f3,
+  '200': #fbcfe8,
+  '300': #f9a8d4,
+  '400': #f472b6,
+  '500': #ec4899,
+  '600': #db2777,
+  '700': #be185d,
+  '800': #9d174d,
+  '900': #831843,
+  '950': #500724,
+);
+
+$tw-rose-list: (
+  '50': #fff1f2,
+  '100': #ffe4e6,
+  '200': #fecdd3,
+  '300': #fda4af,
+  '400': #fb7185,
+  '500': #f43f5e,
+  '600': #e11d48,
+  '700': #be123c,
+  '800': #9f1239,
+  '900': #881337,
+  '950': #4c0519,
+);
+
+// Slate
+$tw-slate-50: map.get($tw-slate-list, '50');
+$tw-slate-100: map.get($tw-slate-list, '100');
+$tw-slate-200: map.get($tw-slate-list, '200');
+$tw-slate-300: map.get($tw-slate-list, '300');
+$tw-slate-400: map.get($tw-slate-list, '400');
+$tw-slate-500: map.get($tw-slate-list, '500');
+$tw-slate-600: map.get($tw-slate-list, '600');
+$tw-slate-700: map.get($tw-slate-list, '700');
+$tw-slate-800: map.get($tw-slate-list, '800');
+$tw-slate-900: map.get($tw-slate-list, '900');
+$tw-slate-950: map.get($tw-slate-list, '950');
+
+// Gray
+$tw-gray-50: map.get($tw-gray-list, '50');
+$tw-gray-100: map.get($tw-gray-list, '100');
+$tw-gray-200: map.get($tw-gray-list, '200');
+$tw-gray-300: map.get($tw-gray-list, '300');
+$tw-gray-400: map.get($tw-gray-list, '400');
+$tw-gray-500: map.get($tw-gray-list, '500');
+$tw-gray-600: map.get($tw-gray-list, '600');
+$tw-gray-700: map.get($tw-gray-list, '700');
+$tw-gray-800: map.get($tw-gray-list, '800');
+$tw-gray-900: map.get($tw-gray-list, '900');
+$tw-gray-950: map.get($tw-gray-list, '950');
+
+// Zinc
+$tw-zinc-50: map.get($tw-zinc-list, '50');
+$tw-zinc-100: map.get($tw-zinc-list, '100');
+$tw-zinc-200: map.get($tw-zinc-list, '200');
+$tw-zinc-300: map.get($tw-zinc-list, '300');
+$tw-zinc-400: map.get($tw-zinc-list, '400');
+$tw-zinc-500: map.get($tw-zinc-list, '500');
+$tw-zinc-600: map.get($tw-zinc-list, '600');
+$tw-zinc-700: map.get($tw-zinc-list, '700');
+$tw-zinc-800: map.get($tw-zinc-list, '800');
+$tw-zinc-900: map.get($tw-zinc-list, '900');
+$tw-zinc-950: map.get($tw-zinc-list, '950');
+
+// Neutral
+$tw-neutral-50: map.get($tw-neutral-list, '50');
+$tw-neutral-100: map.get($tw-neutral-list, '100');
+$tw-neutral-200: map.get($tw-neutral-list, '200');
+$tw-neutral-300: map.get($tw-neutral-list, '300');
+$tw-neutral-400: map.get($tw-neutral-list, '400');
+$tw-neutral-500: map.get($tw-neutral-list, '500');
+$tw-neutral-600: map.get($tw-neutral-list, '600');
+$tw-neutral-700: map.get($tw-neutral-list, '700');
+$tw-neutral-800: map.get($tw-neutral-list, '800');
+$tw-neutral-900: map.get($tw-neutral-list, '900');
+$tw-neutral-950: map.get($tw-neutral-list, '950');
+
+// Stone
+$tw-stone-50: map.get($tw-stone-list, '50');
+$tw-stone-100: map.get($tw-stone-list, '100');
+$tw-stone-200: map.get($tw-stone-list, '200');
+$tw-stone-300: map.get($tw-stone-list, '300');
+$tw-stone-400: map.get($tw-stone-list, '400');
+$tw-stone-500: map.get($tw-stone-list, '500');
+$tw-stone-600: map.get($tw-stone-list, '600');
+$tw-stone-700: map.get($tw-stone-list, '700');
+$tw-stone-800: map.get($tw-stone-list, '800');
+$tw-stone-900: map.get($tw-stone-list, '900');
+$tw-stone-950: map.get($tw-stone-list, '950');
+
+// Red
+$tw-red-50: map.get($tw-red-list, '50');
+$tw-red-100: map.get($tw-red-list, '100');
+$tw-red-200: map.get($tw-red-list, '200');
+$tw-red-300: map.get($tw-red-list, '300');
+$tw-red-400: map.get($tw-red-list, '400');
+$tw-red-500: map.get($tw-red-list, '500');
+$tw-red-600: map.get($tw-red-list, '600');
+$tw-red-700: map.get($tw-red-list, '700');
+$tw-red-800: map.get($tw-red-list, '800');
+$tw-red-900: map.get($tw-red-list, '900');
+$tw-red-950: map.get($tw-red-list, '950');
+
+// Orange
+$tw-orange-50: map.get($tw-orange-list, '50');
+$tw-orange-100: map.get($tw-orange-list, '100');
+$tw-orange-200: map.get($tw-orange-list, '200');
+$tw-orange-300: map.get($tw-orange-list, '300');
+$tw-orange-400: map.get($tw-orange-list, '400');
+$tw-orange-500: map.get($tw-orange-list, '500');
+$tw-orange-600: map.get($tw-orange-list, '600');
+$tw-orange-700: map.get($tw-orange-list, '700');
+$tw-orange-800: map.get($tw-orange-list, '800');
+$tw-orange-900: map.get($tw-orange-list, '900');
+$tw-orange-950: map.get($tw-orange-list, '950');
+
+// Amber
+$tw-amber-50: map.get($tw-amber-list, '50');
+$tw-amber-100: map.get($tw-amber-list, '100');
+$tw-amber-200: map.get($tw-amber-list, '200');
+$tw-amber-300: map.get($tw-amber-list, '300');
+$tw-amber-400: map.get($tw-amber-list, '400');
+$tw-amber-500: map.get($tw-amber-list, '500');
+$tw-amber-600: map.get($tw-amber-list, '600');
+$tw-amber-700: map.get($tw-amber-list, '700');
+$tw-amber-800: map.get($tw-amber-list, '800');
+$tw-amber-900: map.get($tw-amber-list, '900');
+$tw-amber-950: map.get($tw-amber-list, '950');
+
+// Yellow
+$tw-yellow-50: map.get($tw-yellow-list, '50');
+$tw-yellow-100: map.get($tw-yellow-list, '100');
+$tw-yellow-200: map.get($tw-yellow-list, '200');
+$tw-yellow-300: map.get($tw-yellow-list, '300');
+$tw-yellow-400: map.get($tw-yellow-list, '400');
+$tw-yellow-500: map.get($tw-yellow-list, '500');
+$tw-yellow-600: map.get($tw-yellow-list, '600');
+$tw-yellow-700: map.get($tw-yellow-list, '700');
+$tw-yellow-800: map.get($tw-yellow-list, '800');
+$tw-yellow-900: map.get($tw-yellow-list, '900');
+$tw-yellow-950: map.get($tw-yellow-list, '950');
+
+// Lime
+$tw-lime-50: map.get($tw-lime-list, '50');
+$tw-lime-100: map.get($tw-lime-list, '100');
+$tw-lime-200: map.get($tw-lime-list, '200');
+$tw-lime-300: map.get($tw-lime-list, '300');
+$tw-lime-400: map.get($tw-lime-list, '400');
+$tw-lime-500: map.get($tw-lime-list, '500');
+$tw-lime-600: map.get($tw-lime-list, '600');
+$tw-lime-700: map.get($tw-lime-list, '700');
+$tw-lime-800: map.get($tw-lime-list, '800');
+$tw-lime-900: map.get($tw-lime-list, '900');
+$tw-lime-950: map.get($tw-lime-list, '950');
+
+// Green
+$tw-green-50: map.get($tw-green-list, '50');
+$tw-green-100: map.get($tw-green-list, '100');
+$tw-green-200: map.get($tw-green-list, '200');
+$tw-green-300: map.get($tw-green-list, '300');
+$tw-green-400: map.get($tw-green-list, '400');
+$tw-green-500: map.get($tw-green-list, '500');
+$tw-green-600: map.get($tw-green-list, '600');
+$tw-green-700: map.get($tw-green-list, '700');
+$tw-green-800: map.get($tw-green-list, '800');
+$tw-green-900: map.get($tw-green-list, '900');
+$tw-green-950: map.get($tw-green-list, '950');
+
+// Emerald
+$tw-emerald-50: map.get($tw-emerald-list, '50');
+$tw-emerald-100: map.get($tw-emerald-list, '100');
+$tw-emerald-200: map.get($tw-emerald-list, '200');
+$tw-emerald-300: map.get($tw-emerald-list, '300');
+$tw-emerald-400: map.get($tw-emerald-list, '400');
+$tw-emerald-500: map.get($tw-emerald-list, '500');
+$tw-emerald-600: map.get($tw-emerald-list, '600');
+$tw-emerald-700: map.get($tw-emerald-list, '700');
+$tw-emerald-800: map.get($tw-emerald-list, '800');
+$tw-emerald-900: map.get($tw-emerald-list, '900');
+$tw-emerald-950: map.get($tw-emerald-list, '950');
+
+// Teal
+$tw-teal-50: map.get($tw-teal-list, '50');
+$tw-teal-100: map.get($tw-teal-list, '100');
+$tw-teal-200: map.get($tw-teal-list, '200');
+$tw-teal-300: map.get($tw-teal-list, '300');
+$tw-teal-400: map.get($tw-teal-list, '400');
+$tw-teal-500: map.get($tw-teal-list, '500');
+$tw-teal-600: map.get($tw-teal-list, '600');
+$tw-teal-700: map.get($tw-teal-list, '700');
+$tw-teal-800: map.get($tw-teal-list, '800');
+$tw-teal-900: map.get($tw-teal-list, '900');
+$tw-teal-950: map.get($tw-teal-list, '950');
+
+// Cyan
+$tw-cyan-50: map.get($tw-cyan-list, '50');
+$tw-cyan-100: map.get($tw-cyan-list, '100');
+$tw-cyan-200: map.get($tw-cyan-list, '200');
+$tw-cyan-300: map.get($tw-cyan-list, '300');
+$tw-cyan-400: map.get($tw-cyan-list, '400');
+$tw-cyan-500: map.get($tw-cyan-list, '500');
+$tw-cyan-600: map.get($tw-cyan-list, '600');
+$tw-cyan-700: map.get($tw-cyan-list, '700');
+$tw-cyan-800: map.get($tw-cyan-list, '800');
+$tw-cyan-900: map.get($tw-cyan-list, '900');
+$tw-cyan-950: map.get($tw-cyan-list, '950');
+
+// Sky
+$tw-sky-50: map.get($tw-sky-list, '50');
+$tw-sky-100: map.get($tw-sky-list, '100');
+$tw-sky-200: map.get($tw-sky-list, '200');
+$tw-sky-300: map.get($tw-sky-list, '300');
+$tw-sky-400: map.get($tw-sky-list, '400');
+$tw-sky-500: map.get($tw-sky-list, '500');
+$tw-sky-600: map.get($tw-sky-list, '600');
+$tw-sky-700: map.get($tw-sky-list, '700');
+$tw-sky-800: map.get($tw-sky-list, '800');
+$tw-sky-900: map.get($tw-sky-list, '900');
+$tw-sky-950: map.get($tw-sky-list, '950');
+
+// Blue
+$tw-blue-50: map.get($tw-blue-list, '50');
+$tw-blue-100: map.get($tw-blue-list, '100');
+$tw-blue-200: map.get($tw-blue-list, '200');
+$tw-blue-300: map.get($tw-blue-list, '300');
+$tw-blue-400: map.get($tw-blue-list, '400');
+$tw-blue-500: map.get($tw-blue-list, '500');
+$tw-blue-600: map.get($tw-blue-list, '600');
+$tw-blue-700: map.get($tw-blue-list, '700');
+$tw-blue-800: map.get($tw-blue-list, '800');
+$tw-blue-900: map.get($tw-blue-list, '900');
+$tw-blue-950: map.get($tw-blue-list, '950');
+
+// Indigo
+$tw-indigo-50: map.get($tw-indigo-list, '50');
+$tw-indigo-100: map.get($tw-indigo-list, '100');
+$tw-indigo-200: map.get($tw-indigo-list, '200');
+$tw-indigo-300: map.get($tw-indigo-list, '300');
+$tw-indigo-400: map.get($tw-indigo-list, '400');
+$tw-indigo-500: map.get($tw-indigo-list, '500');
+$tw-indigo-600: map.get($tw-indigo-list, '600');
+$tw-indigo-700: map.get($tw-indigo-list, '700');
+$tw-indigo-800: map.get($tw-indigo-list, '800');
+$tw-indigo-900: map.get($tw-indigo-list, '900');
+$tw-indigo-950: map.get($tw-indigo-list, '950');
+
+// Violet
+$tw-violet-50: map.get($tw-violet-list, '50');
+$tw-violet-100: map.get($tw-violet-list, '100');
+$tw-violet-200: map.get($tw-violet-list, '200');
+$tw-violet-300: map.get($tw-violet-list, '300');
+$tw-violet-400: map.get($tw-violet-list, '400');
+$tw-violet-500: map.get($tw-violet-list, '500');
+$tw-violet-600: map.get($tw-violet-list, '600');
+$tw-violet-700: map.get($tw-violet-list, '700');
+$tw-violet-800: map.get($tw-violet-list, '800');
+$tw-violet-900: map.get($tw-violet-list, '900');
+$tw-violet-950: map.get($tw-violet-list, '950');
+
+// Purple
+$tw-purple-50: map.get($tw-purple-list, '50');
+$tw-purple-100: map.get($tw-purple-list, '100');
+$tw-purple-200: map.get($tw-purple-list, '200');
+$tw-purple-300: map.get($tw-purple-list, '300');
+$tw-purple-400: map.get($tw-purple-list, '400');
+$tw-purple-500: map.get($tw-purple-list, '500');
+$tw-purple-600: map.get($tw-purple-list, '600');
+$tw-purple-700: map.get($tw-purple-list, '700');
+$tw-purple-800: map.get($tw-purple-list, '800');
+$tw-purple-900: map.get($tw-purple-list, '900');
+$tw-purple-950: map.get($tw-purple-list, '950');
+
+// Fuchsia
+$tw-fuchsia-50: map.get($tw-fuchsia-list, '50');
+$tw-fuchsia-100: map.get($tw-fuchsia-list, '100');
+$tw-fuchsia-200: map.get($tw-fuchsia-list, '200');
+$tw-fuchsia-300: map.get($tw-fuchsia-list, '300');
+$tw-fuchsia-400: map.get($tw-fuchsia-list, '400');
+$tw-fuchsia-500: map.get($tw-fuchsia-list, '500');
+$tw-fuchsia-600: map.get($tw-fuchsia-list, '600');
+$tw-fuchsia-700: map.get($tw-fuchsia-list, '700');
+$tw-fuchsia-800: map.get($tw-fuchsia-list, '800');
+$tw-fuchsia-900: map.get($tw-fuchsia-list, '900');
+$tw-fuchsia-950: map.get($tw-fuchsia-list, '950');
+
+// Pink
+$tw-pink-50: map.get($tw-pink-list, '50');
+$tw-pink-100: map.get($tw-pink-list, '100');
+$tw-pink-200: map.get($tw-pink-list, '200');
+$tw-pink-300: map.get($tw-pink-list, '300');
+$tw-pink-400: map.get($tw-pink-list, '400');
+$tw-pink-500: map.get($tw-pink-list, '500');
+$tw-pink-600: map.get($tw-pink-list, '600');
+$tw-pink-700: map.get($tw-pink-list, '700');
+$tw-pink-800: map.get($tw-pink-list, '800');
+$tw-pink-900: map.get($tw-pink-list, '900');
+$tw-pink-950: map.get($tw-pink-list, '950');
+
+// Rose
+$tw-rose-50: map.get($tw-rose-list, '50');
+$tw-rose-100: map.get($tw-rose-list, '100');
+$tw-rose-200: map.get($tw-rose-list, '200');
+$tw-rose-300: map.get($tw-rose-list, '300');
+$tw-rose-400: map.get($tw-rose-list, '400');
+$tw-rose-500: map.get($tw-rose-list, '500');
+$tw-rose-600: map.get($tw-rose-list, '600');
+$tw-rose-700: map.get($tw-rose-list, '700');
+$tw-rose-800: map.get($tw-rose-list, '800');
+$tw-rose-900: map.get($tw-rose-list, '900');
+$tw-rose-950: map.get($tw-rose-list, '950');
+
+// Color list
+$tw-color-list: (
+  $tw-slate-list: 'slate',
+  $tw-gray-list: 'gray',
+  $tw-zinc-list: 'zinc',
+  $tw-neutral-list: 'neutral',
+  $tw-stone-list: 'stone',
+  $tw-red-list: 'red',
+  $tw-orange-list: 'orange',
+  $tw-amber-list: 'amber',
+  $tw-yellow-list: 'yellow',
+  $tw-lime-list: 'lime',
+  $tw-green-list: 'green',
+  $tw-emerald-list: 'emerald',
+  $tw-teal-list: 'teal',
+  $tw-cyan-list: 'cyan',
+  $tw-sky-list: 'sky',
+  $tw-blue-list: 'blue',
+  $tw-indigo-list: 'indigo',
+  $tw-violet-list: 'violet',
+  $tw-purple-list: 'purple',
+  $tw-fuchsia-list: 'fuchsia',
+  $tw-pink-list: 'pink',
+  $tw-rose-list: 'rose',
+);
+
+// Assign all colors to root variables
+
+:root {
+  @each $map, $color in $tw-color-list {
+    @each $key, $value in $map {
+      --tw-#{$color}-#{$key}: #{$value};
+    }
+  }
+}

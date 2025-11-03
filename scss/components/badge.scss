@@ -2,8 +2,9 @@
   @include font-bold;
   @include radius-sm;
   align-items: center;
-  background-color: $oc-gray-1;
-  color: $oc-gray-9;
+  background-color: var(--badge-background);
+  border: var(--border-width) solid var(--badge-border);
+  color: var(--badge-foreground);
   cursor: pointer;
   display: inline-flex;
   font-size: 0.875rem;
@@ -11,6 +12,10 @@
   margin: 0;
   padding: 0.25rem 0.75rem;
   width: fit-content;
+
+  &.rounded {
+    border-radius: 2rem;
+  }
 
   &.xs {
     font-size: 0.625rem;
@@ -30,21 +35,5 @@
 
   &.xl {
     font-size: 1.125rem;
-  }
-
-  &.rounded {
-    border-radius: 2rem;
-  }
-
-  @each $map, $color in $oc-color-list {
-    &.#{$color} {
-      background-color: map-get($map, "1");
-      color: map-get($map, "9");
-    }
-  }
-
-  &.primary {
-    background-color: var(--primary-1);
-    color: var(--primary-9);
   }
 }

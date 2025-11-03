@@ -1,54 +1,299 @@
-.display {
+// display
+
+.hidden {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+// object fit & position
+
+.object {
+  &-contain {
+    object-fit: contain;
+  }
+  &-cover {
+    object-fit: cover;
+  }
+  &-fill {
+    object-fit: fill;
+  }
   &-none {
-    display: none;
+    object-fit: none;
   }
-  &-inline {
-    display: inline;
+  &-scale-down {
+    object-fit: scale-down;
   }
-  &-inline-block {
-    display: inline-block;
+  &-bottom {
+    object-position: bottom;
   }
-  &-block {
-    display: block;
+  &-center {
+    object-position: center;
   }
-  &-flex {
-    display: flex;
+  &-left {
+    object-position: left;
   }
-  &-inline-flex {
-    display: inline-flex;
+  &-left-bottom {
+    object-position: left bottom;
+  }
+  &-left-top {
+    object-position: left top;
+  }
+  &-right {
+    object-position: right;
+  }
+  &-right-bottom {
+    object-position: right bottom;
+  }
+  &-right-top {
+    object-position: right top;
+  }
+  &-top {
+    object-position: top;
   }
 }
 
+// overflow
+
+.overflow {
+  &-auto {
+    overflow: auto;
+  }
+  &-hidden {
+    overflow: hidden;
+  }
+  &-visible {
+    overflow: visible;
+  }
+  &-scroll {
+    overflow: scroll;
+  }
+  &-x-auto {
+    overflow-x: auto;
+  }
+  &-y-auto {
+    overflow-y: auto;
+  }
+  &-x-hidden {
+    overflow-x: hidden;
+  }
+  &-y-hidden {
+    overflow-y: hidden;
+  }
+  &-x-visible {
+    overflow-x: visible;
+  }
+  &-y-visible {
+    overflow-y: visible;
+  }
+  &-x-scroll {
+    overflow-x: scroll;
+  }
+  &-y-scroll {
+    overflow-y: scroll;
+  }
+}
+
+// position
+
+.static {
+  position: static;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.sticky {
+  position: sticky;
+}
+
+// visibility
+
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+// z-index
+
+.z-0 {
+  z-index: 0;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
+.z-30 {
+  z-index: 30;
+}
+
+.z-40 {
+  z-index: 40;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+.z-auto {
+  z-index: auto;
+}
+
+// padding
+
+@for $i from 0 through 12 {
+  .pt-#{$i} {
+    padding-top: $i * 0.25rem;
+  }
+  .pb-#{$i} {
+    padding-bottom: $i * 0.25rem;
+  }
+  .pl-#{$i} {
+    padding-left: $i * 0.25rem;
+  }
+  .pr-#{$i} {
+    padding-right: $i * 0.25rem;
+  }
+  .px-#{$i} {
+    padding-left: $i * 0.25rem;
+    padding-right: $i * 0.25rem;
+  }
+  .py-#{$i} {
+    padding-top: $i * 0.25rem;
+    padding-bottom: $i * 0.25rem;
+  }
+  .p-#{$i} {
+    padding: $i * 0.25rem;
+  }
+}
+
+// margin
+
+@for $i from 0 through 12 {
+  .mt-#{$i} {
+    margin-top: $i * 0.25rem;
+  }
+  .mb-#{$i} {
+    margin-bottom: $i * 0.25rem;
+  }
+  .ml-#{$i} {
+    margin-left: $i * 0.25rem;
+  }
+  .mr-#{$i} {
+    margin-right: $i * 0.25rem;
+  }
+  .mx-#{$i} {
+    margin-left: $i * 0.25rem;
+    margin-right: $i * 0.25rem;
+  }
+  .my-#{$i} {
+    margin-top: $i * 0.25rem;
+    margin-bottom: $i * 0.25rem;
+  }
+  .m-#{$i} {
+    margin: $i * 0.25rem;
+  }
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// cursor
+
 .cursor {
+  &-auto {
+    cursor: auto;
+  }
+  &-default {
+    cursor: default;
+  }
   &-pointer {
     cursor: pointer;
+  }
+  &-wait {
+    cursor: wait;
+  }
+  &-text {
+    cursor: text;
+  }
+  &-move {
+    cursor: move;
+  }
+  &-help {
+    cursor: help;
   }
   &-not-allowed {
     cursor: not-allowed;
   }
-  &-zoom-in {
-    cursor: zoom-in;
+}
+
+// resize
+
+.resize {
+  resize: both;
+
+  &-none {
+    resize: none;
   }
-  &-zoom-out {
-    cursor: zoom-out;
+  &-y {
+    resize: vertical;
+  }
+  &-x {
+    resize: horizontal;
   }
 }
 
-.position {
-  &-absolute {
-    position: absolute;
+// select
+
+.select {
+  &-none {
+    user-select: none;
   }
-  &-fixed {
-    position: fixed;
+  &-text {
+    user-select: text;
   }
-  &-relative {
-    position: relative;
+  &-all {
+    user-select: all;
   }
-  &-static {
-    position: static;
-  }
-  &-sticky {
-    position: sticky;
+  &-auto {
+    user-select: auto;
   }
 }
 
@@ -76,6 +321,7 @@
 }
 
 // radius
+
 .radius {
   &-none {
     @include radius-none;
@@ -111,28 +357,225 @@
   }
 }
 
+// grid
+
+.grid {
+  display: grid;
+
+  @for $i from 1 through 12 {
+    &-cols-#{$i} {
+      grid-template-columns: repeat($i, minmax(0, 1fr));
+    }
+    &-rows-#{$i} {
+      grid-template-rows: repeat($i, minmax(0, 1fr));
+    }
+  }
+}
+
+// gap
+
+@for $i from 0 through 12 {
+  .gap-#{$i} {
+    gap: $i * 0.25rem;
+  }
+}
+
+// flex
+
+.flex {
+  display: flex;
+
+  @for $i from 1 through 12 {
+    &-#{$i} {
+      flex: $i $i 0%;
+    }
+  }
+
+  &-row {
+    flex-direction: row;
+  }
+
+  &-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  &-col {
+    flex-direction: column;
+  }
+
+  &-col-reverse {
+    flex-direction: column-reverse;
+  }
+
+  &-wrap {
+    flex-wrap: wrap;
+  }
+
+  &-wrap-reverse {
+    flex-wrap: wrap-reverse;
+  }
+
+  &-nowrap {
+    flex-wrap: nowrap;
+  }
+
+  &-auto {
+    flex: 1 1 auto;
+  }
+
+  &-initial {
+    flex: 0 1 auto;
+  }
+
+  &-none {
+    flex: none;
+  }
+
+  &-grow {
+    flex-grow: 1;
+  }
+
+  &-grow-0 {
+    flex-grow: 0;
+  }
+
+  &-shrink {
+    flex-shrink: 1;
+  }
+
+  &-shrink-0 {
+    flex-shrink: 0;
+  }
+}
+
+// justify content
+
+.justify {
+  &-start {
+    justify-content: flex-start;
+  }
+  &-end {
+    justify-content: flex-end;
+  }
+  &-center {
+    justify-content: center;
+  }
+  &-between {
+    justify-content: space-between;
+  }
+  &-around {
+    justify-content: space-around;
+  }
+  &-evenly {
+    justify-content: space-evenly;
+  }
+}
+
+// justify items
+
+.justify-items {
+  &-start {
+    justify-items: flex-start;
+  }
+  &-end {
+    justify-items: flex-end;
+  }
+  &-center {
+    justify-items: center;
+  }
+  &-stretch {
+    justify-items: stretch;
+  }
+}
+
+// align items
+
+.items {
+  &-start {
+    align-items: flex-start;
+  }
+  &-end {
+    align-items: flex-end;
+  }
+  &-center {
+    align-items: center;
+  }
+  &-stretch {
+    align-items: stretch;
+  }
+  &-baseline {
+    align-items: baseline;
+  }
+}
+
+// align content
+
+.content {
+  &-start {
+    align-content: flex-start;
+  }
+  &-end {
+    align-content: flex-end;
+  }
+  &-center {
+    align-content: center;
+  }
+  &-between {
+    align-content: space-between;
+  }
+  &-around {
+    align-content: space-around;
+  }
+  &-stretch {
+    align-content: stretch;
+  }
+}
+
+// align self
+
+.self {
+  &-auto {
+    align-self: auto;
+  }
+  &-start {
+    align-self: flex-start;
+  }
+  &-end {
+    align-self: flex-end;
+  }
+  &-center {
+    align-self: center;
+  }
+  &-stretch {
+    align-self: stretch;
+  }
+  &-baseline {
+    align-self: baseline;
+  }
+}
+
 // text
 
 $text-sizes: (
-  "xxs": 0.625rem,
-  "xs": 0.75rem,
-  "sm": 0.875rem,
-  "md": 1rem,
-  "lg": 1.25rem,
-  "xl": 1.5rem,
-  "xxl": 2rem,
-);
-
-$text-weights: (
-  "light": 300,
-  "normal": 400,
-  "medium": 500,
-  "semi-bold": 600,
-  "bold": 700,
-  "black": 900,
+  'xxs': 0.625rem,
+  'xs': 0.75rem,
+  'sm': 0.875rem,
+  'md': 1rem,
+  'lg': 1.25rem,
+  'xl': 1.5rem,
+  'xxl': 2rem,
 );
 
 .text {
+  &-muted {
+    color: var(--muted-foreground);
+  }
+  &-error {
+    color: var(--error);
+  }
+  &-primary {
+    color: var(--primary);
+  }
   &-left {
     text-align: left;
   }
@@ -172,166 +615,27 @@ $text-weights: (
     white-space: nowrap;
   }
   @each $name, $value in $text-sizes {
-    &-size-#{$name} {
+    &-#{$name} {
       font-size: $value;
     }
   }
-  @each $name, $value in $text-weights {
+}
+
+// font
+
+$font-weights: (
+  'light': 300,
+  'normal': 400,
+  'medium': 500,
+  'semibold': 600,
+  'bold': 700,
+  'black': 900,
+);
+
+.font {
+  @each $name, $value in $font-weights {
     &-weight-#{$name} {
       font-weight: $value;
     }
-  }
-}
-
-// Grid
-
-.grid {
-  display: grid;
-
-  @for $i from 1 through 12 {
-    &-columns-#{$i} {
-      grid-template-columns: repeat(#{$i}, 1fr);
-    }
-    &-rows-#{$i} {
-      grid-template-rows: repeat(#{$i}, 1fr);
-    }
-  }
-}
-
-// Flexbox
-
-.flex {
-  display: flex;
-
-  &-row {
-    flex-direction: row;
-  }
-
-  &-column {
-    flex-direction: column;
-  }
-}
-
-// Align
-
-.align {
-  &-center {
-    align-items: center;
-  }
-  &-start {
-    align-items: flex-start;
-  }
-  &-end {
-    align-items: flex-end;
-  }
-}
-
-// Justify
-
-.justify {
-  &-center {
-    justify-content: center;
-  }
-  &-start {
-    justify-content: flex-start;
-  }
-  &-end {
-    justify-content: flex-end;
-  }
-  &-between {
-    justify-content: space-between;
-  }
-  &-around {
-    justify-content: space-around;
-  }
-  &-evenly {
-    justify-content: space-evenly;
-  }
-}
-
-.justify-items {
-  &-center {
-    justify-items: center;
-  }
-  &-start {
-    justify-items: flex-start;
-  }
-  &-end {
-    justify-items: flex-end;
-  }
-  &-stretch {
-    justify-items: stretch;
-  }
-}
-
-// flex 1-12
-
-@for $i from 1 through 12 {
-  .flex-#{$i} {
-    flex: $i;
-  }
-}
-
-// gap 1-12
-
-@for $i from 1 through 12 {
-  .gap-#{$i} {
-    gap: $i * 0.25rem;
-  }
-}
-
-// padding 0-12
-
-@for $i from 0 through 12 {
-  .pt-#{$i} {
-    padding-top: $i * 0.25rem;
-  }
-  .pb-#{$i} {
-    padding-bottom: $i * 0.25rem;
-  }
-  .pl-#{$i} {
-    padding-left: $i * 0.25rem;
-  }
-  .pr-#{$i} {
-    padding-right: $i * 0.25rem;
-  }
-  .px-#{$i} {
-    padding-left: $i * 0.25rem;
-    padding-right: $i * 0.25rem;
-  }
-  .py-#{$i} {
-    padding-top: $i * 0.25rem;
-    padding-bottom: $i * 0.25rem;
-  }
-  .p-#{$i} {
-    padding: $i * 0.25rem;
-  }
-}
-
-// margin 0-12
-
-@for $i from 0 through 12 {
-  .mt-#{$i} {
-    margin-top: $i * 0.25rem;
-  }
-  .mb-#{$i} {
-    margin-bottom: $i * 0.25rem;
-  }
-  .ml-#{$i} {
-    margin-left: $i * 0.25rem;
-  }
-  .mr-#{$i} {
-    margin-right: $i * 0.25rem;
-  }
-  .mx-#{$i} {
-    margin-left: $i * 0.25rem;
-    margin-right: $i * 0.25rem;
-  }
-  .my-#{$i} {
-    margin-top: $i * 0.25rem;
-    margin-bottom: $i * 0.25rem;
-  }
-  .m-#{$i} {
-    margin: $i * 0.25rem;
   }
 }

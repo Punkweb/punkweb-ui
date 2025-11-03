@@ -1,48 +1,57 @@
-html,
-body {
-  @include font-normal;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 h1 {
   font-size: 2rem;
 }
+
 h2 {
   font-size: 1.5rem;
 }
+
 h3 {
   font-size: 1.25rem;
 }
+
 h4 {
   font-size: 1rem;
 }
+
 h5 {
   font-size: 0.875rem;
 }
+
 h6 {
   font-size: 0.75rem;
 }
 
-.material-icons,
-.material-symbols,
-.material-symbols-outlined {
-  user-select: none;
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
-.material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
-.error {
-  @include font-bold;
-  color: $oc-red-9;
-  font-size: 0.875rem;
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
 }
 
-.hint {
-  @include font-normal;
-  color: $oc-gray-7;
-  font-size: 0.75rem;
+blockquote {
+  margin: 0 0 1rem;
 }

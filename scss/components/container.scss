@@ -1,6 +1,6 @@
 .pw-container {
   margin: 0 auto;
-  max-width: 90rem;
-  padding: 0 1rem;
+  max-width: var(--container-width);
+  padding: 0 var(--container-padding);
   width: 100%;
 }

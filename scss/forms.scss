@@ -30,14 +30,14 @@
     }
   }
 
-  &.inline {
+  &.horizontal {
     align-items: end;
     flex-direction: row;
     flex-wrap: wrap;
   }
 }
 
-@include breakpoint("sm") {
+@include breakpoint('sm') {
   .pw-form {
     &-row {
       flex-direction: column;

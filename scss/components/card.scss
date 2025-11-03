@@ -2,24 +2,13 @@
   @include radius-sm;
   @include shadow-md;
 
-  background-color: white;
-  border: 1px solid $oc-gray-4;
-  overflow: hidden;
+  background-color: var(--background);
+  border: var(--border-width) solid var(--border);
   min-width: 16rem;
+  overflow: hidden;
+  padding: 1rem;
 
   &.fluid {
     width: 100%;
-  }
-
-  &-header {
-    background-color: $oc-gray-1;
-    border-bottom: 1px solid $oc-gray-4;
-    font-size: 1rem;
-    font-weight: 700;
-    padding: 1rem;
-  }
-
-  &-content {
-    padding: 1rem;
   }
 }

@@ -1,86 +1,315 @@
-// This file contains css resets for default browser styles.
-// Changes here can have unintended consequences.
-
-// set box-sizing to border-box
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-// set body min width to 20rem and reset line height
+*:focus-visible {
+  outline: var(--border-width) solid var(--primary);
+  outline-offset: 1px;
+}
+
+html {
+  font-family: var(--font-sans);
+}
+
 body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-size: 100%;
+  line-height: 1.5;
   min-width: 20rem;
   margin: 0;
   padding: 0;
 }
 
-// set cursor to pointer on buttons
-button,
-input[type="submit"],
-input[type="button"] {
-  cursor: pointer;
-}
-
-// set cursor to not-allowed on disabled buttons
-button:disabled,
-input[type="submit"]:disabled,
-input[type="button"]:disabled {
-  cursor: not-allowed;
-}
-
-// make images, videos and iframes not able to be wider than their parent element
 img,
 video,
 iframe {
+  @include radius-sm;
   max-width: 100%;
 }
 
-// set font-size to inherit for tables
+img,
+video {
+  @include radius-sm;
+  height: auto;
+  max-width: 100%;
+}
+
+hr {
+  background: var(--border);
+  border: none;
+  height: var(--border-width);
+  margin: 1rem 0;
+}
+
+a,
+a:visited {
+  color: var(--primary);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+mark {
+  @include radius-sm;
+  background-color: var(--mark);
+  color: black;
+  padding: 0.125rem 0.25rem;
+}
+
+code,
+pre,
+kbd,
+samp {
+  font-family: var(--font-mono);
+}
+
+code {
+  color: var(--code);
+  font-size: 0.875rem;
+}
+
+kbd {
+  @include radius-sm;
+  color: var(--foreground);
+  border: var(--border-width) solid var(--border);
+  border-bottom: 3px solid var(--border);
+  padding: 0.125rem 0.25rem;
+}
+
+pre {
+  max-width: 100%;
+  overflow: auto;
+}
+
+pre code {
+  color: var(--foreground);
+}
+
+details {
+  @include radius-sm;
+  border: var(--border-width) solid var(--border);
+  padding: 0.75rem 1rem;
+}
+
+summary {
+  @include font-bold;
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  margin: -0.75rem -1rem;
+  word-break: break-all;
+}
+
+details[open] > summary + * {
+  margin-top: 0;
+}
+
+details[open] > summary {
+  margin-bottom: 0.5rem;
+}
+
+details[open] > :last-child {
+  margin-bottom: 0;
+}
+
+blockquote {
+  background: var(--blockquote-background);
+  border-left: var(--blockquote-border-width) solid var(--blockquote-border);
+  color: var(--blockquote-foreground);
+  padding: 0.5rem 1rem;
+}
+
+blockquote > cite {
+  color: var(--muted-foreground);
+  display: block;
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+.pw-table-container {
+  overflow-x: auto;
+}
+
 table {
+  border: var(--border-width) solid var(--border);
+  border-collapse: collapse;
+  border-spacing: 0;
   font-size: inherit;
 }
 
-// remove border from a and img tags
-a,
-img {
-  border: 0;
+td,
+th {
+  border: var(--border-width) solid var(--border);
+  padding: 0.5rem;
+  text-align: start;
 }
 
-// remove underline from a tags
-a {
+th {
+  @include font-bold;
+  background-color: var(--muted);
+}
+
+tr:nth-child(even) {
+  background-color: var(--muted);
+}
+
+table caption {
+  font-style: italic;
+  font-size: 0.875rem;
+}
+
+input:not([type='range']),
+textarea,
+select {
+  appearance: none;
+}
+
+input,
+textarea,
+select,
+button,
+a.pw-button {
+  @include radius-sm;
+  box-shadow: none;
+  display: inline-block;
+  font-family: inherit;
+  font-size: inherit;
+  max-width: 100%;
+  padding: 0.5rem;
+}
+
+input.fluid,
+select.fluid,
+textarea.fluid,
+button.fluid,
+a.pw-button.fluid {
+  width: 100%;
+}
+
+button,
+input[type='submit'],
+input[type='reset'],
+input[type='button'],
+a.pw-button {
+  appearance: none;
+  background-color: var(--button-background);
+  border: var(--border-width) solid var(--button-border);
+  color: var(--button-foreground);
+  line-height: normal;
+  padding: 0.5rem;
   text-decoration: none;
 }
 
-// set a consistent vertical alignment for inline and table cell elements
-img,
-table,
-td,
-th {
-  vertical-align: middle;
+button.rounded,
+input.rounded,
+textarea.rounded,
+select.rounded,
+a.pw-button.rounded {
+  border-radius: 2rem;
 }
 
-// remove the default spacing that browsers apply to tables
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+input:disabled,
+textarea:disabled,
+select:disabled,
+button[disabled] {
+  background-color: var(--disabled);
+  border-color: var(--disabled);
+  color: var(--disabled-foreground);
+  cursor: not-allowed;
 }
 
-// remove default styles that browsers apply to form elements
-button,
+button:enabled:hover,
+a.pw-button:hover,
+input[type='submit']:enabled:hover,
+input[type='reset']:enabled:hover,
+input[type='button']:enabled:hover {
+  background-color: var(--button-hover-background);
+  cursor: pointer;
+}
+
 input,
 select,
 textarea {
-  background: none;
-  border: none;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  margin: 0;
-  padding: 0;
+  background-color: var(--background);
+  border: var(--border-width) solid var(--border);
+  color: var(--foreground);
 }
 
-// remove iframe border
-iframe {
-  border: 0;
+label {
+  @include font-bold;
+  color: var(--foreground);
+  display: block;
+  font-size: 0.875rem;
+}
+
+textarea:not([cols]) {
+  width: 100%;
+}
+
+select:not([multiple]) {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  background-position: right 0.75rem center;
+  background-size: 1rem 0.75rem;
+  background-repeat: no-repeat;
+  padding-inline-end: 2.25rem;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  position: relative;
+  vertical-align: middle;
+  width: min-content;
+}
+
+input[type='checkbox'] + label,
+input[type='radio'] + label {
+  display: inline-block;
+}
+
+input[type='radio'] {
+  border-radius: 100%;
+}
+
+input[type='checkbox']:checked,
+input[type='radio']:checked {
+  background-color: var(--foreground);
+}
+
+input[type='checkbox']:checked::after {
+  background-color: transparent;
+  border-bottom: 2px solid var(--background);
+  border-radius: 0;
+  border-left: 2px solid var(--background);
+  content: ' ';
+  font-size: 2rem;
+  height: 6px;
+  left: 2px;
+  position: absolute;
+  top: 4px;
+  transform: rotate(-45deg);
+  width: 12px;
+}
+
+input[type='radio']:checked::after {
+  background-color: var(--background);
+  border-radius: 100%;
+  content: ' ';
+  font-size: 2rem;
+  height: 8px;
+  left: 4px;
+  position: absolute;
+  top: 4px;
+  width: 8px;
+}
+
+input[type='color'] {
+  background: none;
+  block-size: 2.5rem;
+  border: none;
+  inline-size: 2.5rem;
+  padding: 0;
 }

@@ -1,6 +1,6 @@
 .pw-pagination {
-  border: 1px solid $oc-gray-4;
-  border-radius: 0.25rem;
+  @include radius-sm;
+  border: var(--border-width) solid var(--border);
   display: flex;
   list-style: none;
   margin: 0;
@@ -9,7 +9,7 @@
 
   &-item {
     &:not(:last-of-type) {
-      border-right: 1px solid $oc-gray-4;
+      border-right: var(--border-width) solid var(--border);
     }
 
     &:first-child .pw-pagination-link {
@@ -23,33 +23,27 @@
     }
 
     &.disabled .pw-pagination-link {
-      color: $oc-gray-6;
+      background-color: var(--disabled);
+      color: var(--disabled-foreground);
       cursor: auto;
       pointer-events: none;
     }
 
     &.active .pw-pagination-link {
-      background-color: var(--primary-9);
-      border-color: var(--primary-9);
-      color: white;
+      background-color: var(--primary);
+      border-color: var(--primary);
+      color: var(--primary-foreground);
       z-index: 1;
-    }
-
-    &:not(:disabled):not(.disabled):not(.active):hover {
-      background-color: $oc-gray-0;
-    }
-
-    &:not(:disabled):not(.disabled):not(.active):active {
-      background-color: $oc-gray-1;
     }
   }
 
   &-link {
-    color: var(--primary-9);
+    color: var(--primary);
     display: block;
     padding: 0.25rem 0.5rem;
 
-    &:not(:disabled):not(.disabled) {
+    &:enabled,
+    &:not(.disabled) {
       cursor: pointer;
     }
   }

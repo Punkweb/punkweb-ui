@@ -1,12 +1,10 @@
 .pw-dialog {
   @include radius-sm;
   @include shadow-md;
-  background-color: white;
+  background-color: var(--background);
   overflow: hidden;
   position: relative;
   width: fit-content;
-
-  animation: zoomIn 150ms ease;
 
   &-container {
     align-items: center;
@@ -16,30 +14,22 @@
     padding: 2rem;
 
     position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    inset: 0;
     z-index: 1000;
-
-    animation: fadeIn 150ms ease;
   }
 
   &-underlay {
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    inset: 0;
     z-index: -1;
   }
 
   &-header {
     @include font-bold;
     align-items: center;
-    background-color: $oc-gray-1;
-    border-bottom: 1px solid $oc-gray-4;
+    background-color: var(--muted);
+    border-bottom: var(--border-width) solid var(--border);
     display: flex;
     font-size: 1rem;
     justify-content: space-between;
@@ -60,7 +50,7 @@
   }
 }
 
-@include breakpoint("md") {
+@include breakpoint('md') {
   .dialog {
     &-content {
       max-width: 50vw;

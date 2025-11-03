@@ -1,25 +1,21 @@
-@import "../node_modules/open-color/open-color";
+@import './tailwind-colors';
 
-@import "mixins";
-@import "root";
-@import "defaults";
-@import "typography";
-@import "keyframes";
-@import "forms";
+@import 'mixins';
+@import 'root';
+@import 'defaults';
+@import 'typography';
+@import 'forms';
 
-@import "components/avatar";
-@import "components/badge";
-@import "components/blockquote";
-@import "components/breadcrumb";
-@import "components/button";
-@import "components/callout";
-@import "components/card";
-@import "components/container";
-@import "components/details";
-@import "components/dialog";
-@import "components/icon-button.scss";
-@import "components/input";
-@import "components/pagination";
-@import "components/spinner";
+@import 'components/avatar';
+@import 'components/badge';
+@import 'components/breadcrumb';
+@import 'components/button';
+@import 'components/callout';
+@import 'components/card';
+@import 'components/container';
+@import 'components/dialog';
+@import 'components/input';
+@import 'components/pagination';
+@import 'components/spinner';
 
-@import "utils";
+@import 'utils';
