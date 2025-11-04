@@ -135,30 +135,19 @@ blockquote > cite {
 }
 
 table {
-  border: var(--border-width) solid var(--border);
   border-collapse: collapse;
   border-spacing: 0;
-  font-size: inherit;
+  width: 100%;
 }
 
 td,
 th {
-  border: var(--border-width) solid var(--border);
-  padding: 0.5rem;
+  padding: 0.75rem 1rem;
   text-align: start;
 }
 
 th {
-  @include font-bold;
   background-color: var(--muted);
-}
-
-tr:nth-child(even) {
-  background-color: var(--muted);
-}
-
-table caption {
-  font-style: italic;
   font-size: 0.875rem;
 }
 
