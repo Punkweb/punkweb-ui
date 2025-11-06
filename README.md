@@ -8,8 +8,7 @@ punkweb-ui can be used as a standalone CSS file or as a modular SCSS system.
 
 ### Standalone CSS
 
-- Download the latest release from the [releases page](https://github.com/Punkweb/punkweb-ui/releases) and include the minified CSS file in your project.
-- Include the CSS file in your HTML file:
+- Download the latest release from the [releases page](https://github.com/Punkweb/punkweb-ui/releases) and include the minified CSS file in your HTML:
 
 ```html
 <link rel="stylesheet" href="/path/to/punkweb-ui.min.css" />
@@ -21,7 +20,7 @@ punkweb-ui can be used as a standalone CSS file or as a modular SCSS system.
 npm install punkweb-ui
 ```
 
-#### Full import
+Then import the SCSS file in your project:
 
 ```scss
 @import 'punkweb-ui/scss/punkweb-ui';
