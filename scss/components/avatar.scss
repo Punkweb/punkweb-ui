@@ -1,3 +1,5 @@
+@use '../mixins';
+
 @mixin avatar-size($size, $font-size) {
   font-size: $font-size;
   height: $size;
@@ -41,7 +43,7 @@
   }
 
   &-fallback {
-    @include font-medium;
+    @include mixins.font-medium;
     align-items: center;
     background-color: var(--avatar-fallback-background);
     color: var(--avatar-fallback-foreground);

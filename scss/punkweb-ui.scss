@@ -1,21 +1,22 @@
-@import './tailwind-colors';
+@use '../node_modules/normalize.css/normalize.css';
+@use './tailwind-colors';
 
-@import 'mixins';
-@import 'root';
-@import 'defaults';
-@import 'typography';
-@import 'forms';
+@use 'root';
+@use 'mixins';
+@use 'defaults';
+@use 'typography';
+@use 'forms';
 
-@import 'components/avatar';
-@import 'components/badge';
-@import 'components/breadcrumb';
-@import 'components/button';
-@import 'components/callout';
-@import 'components/card';
-@import 'components/container';
-@import 'components/dialog';
-@import 'components/input';
-@import 'components/pagination';
-@import 'components/spinner';
+@use 'components/avatar';
+@use 'components/badge';
+@use 'components/breadcrumb';
+@use 'components/button';
+@use 'components/callout';
+@use 'components/card';
+@use 'components/container';
+@use 'components/dialog';
+@use 'components/input';
+@use 'components/pagination';
+@use 'components/spinner';
 
-@import 'utils';
+@use 'utils';

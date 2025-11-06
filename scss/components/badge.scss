@@ -1,6 +1,8 @@
+@use '../mixins';
+
 .pw-badge {
-  @include font-bold;
-  @include radius-sm;
+  @include mixins.font-bold;
+  @include mixins.radius-sm;
   align-items: center;
   background-color: var(--badge-background);
   border: var(--border-width) solid var(--badge-border);

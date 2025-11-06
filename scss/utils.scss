@@ -1,3 +1,5 @@
+@use 'mixins';
+
 // display
 
 .hidden {
@@ -301,22 +303,22 @@
 
 .shadow {
   &-none {
-    @include shadow-none;
+    @include mixins.shadow-none;
   }
   &-xs {
-    @include shadow-xs;
+    @include mixins.shadow-xs;
   }
   &-sm {
-    @include shadow-sm;
+    @include mixins.shadow-sm;
   }
   &-md {
-    @include shadow-md;
+    @include mixins.shadow-md;
   }
   &-lg {
-    @include shadow-lg;
+    @include mixins.shadow-lg;
   }
   &-xl {
-    @include shadow-xl;
+    @include mixins.shadow-xl;
   }
 }
 
@@ -324,22 +326,22 @@
 
 .radius {
   &-none {
-    @include radius-none;
+    @include mixins.radius-none;
   }
   &-xs {
-    @include radius-xs;
+    @include mixins.radius-xs;
   }
   &-sm {
-    @include radius-sm;
+    @include mixins.radius-sm;
   }
   &-md {
-    @include radius-md;
+    @include mixins.radius-md;
   }
   &-lg {
-    @include radius-lg;
+    @include mixins.radius-lg;
   }
   &-xl {
-    @include radius-xl;
+    @include mixins.radius-xl;
   }
 }
 
@@ -367,9 +369,9 @@
       grid-template-columns: repeat($i, minmax(0, 1fr));
     }
 
-    @each $key, $value in $breakpoints {
+    @each $key, $value in mixins.$breakpoints {
       &-cols-#{$key}-#{$i} {
-        @include breakpoint($key) {
+        @include mixins.breakpoint($key) {
           grid-template-columns: repeat($i, minmax(0, 1fr));
         }
       }
@@ -381,9 +383,9 @@
       grid-template-rows: repeat($i, minmax(0, 1fr));
     }
 
-    @each $key, $value in $breakpoints {
+    @each $key, $value in mixins.$breakpoints {
       &-rows-#{$key}-#{$i} {
-        @include breakpoint($key) {
+        @include mixins.breakpoint($key) {
           grid-template-rows: repeat($i, minmax(0, 1fr));
         }
       }
@@ -398,9 +400,9 @@
     gap: $i * 0.25rem;
   }
 
-  @each $key, $value in $breakpoints {
+  @each $key, $value in mixins.$breakpoints {
     .gap-#{$key}-#{$i} {
-      @include breakpoint($key) {
+      @include mixins.breakpoint($key) {
         gap: $i * 0.25rem;
       }
     }
@@ -422,9 +424,9 @@
     flex-direction: row;
   }
 
-  @each $key, $value in $breakpoints {
+  @each $key, $value in mixins.$breakpoints {
     &-row-#{$key} {
-      @include breakpoint($key) {
+      @include mixins.breakpoint($key) {
         flex-direction: row;
       }
     }
@@ -434,9 +436,9 @@
     flex-direction: row-reverse;
   }
 
-  @each $key, $value in $breakpoints {
+  @each $key, $value in mixins.$breakpoints {
     &-row-reverse-#{$key} {
-      @include breakpoint($key) {
+      @include mixins.breakpoint($key) {
         flex-direction: row-reverse;
       }
     }
@@ -446,9 +448,9 @@
     flex-direction: column;
   }
 
-  @each $key, $value in $breakpoints {
+  @each $key, $value in mixins.$breakpoints {
     &-col-#{$key} {
-      @include breakpoint($key) {
+      @include mixins.breakpoint($key) {
         flex-direction: column;
       }
     }
@@ -458,9 +460,9 @@
     flex-direction: column-reverse;
   }
 
-  @each $key, $value in $breakpoints {
+  @each $key, $value in mixins.$breakpoints {
     &-col-reverse-#{$key} {
-      @include breakpoint($key) {
+      @include mixins.breakpoint($key) {
         flex-direction: column-reverse;
       }
     }

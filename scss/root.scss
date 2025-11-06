@@ -1,3 +1,14 @@
+@use './tailwind-colors';
+
+// Assign all colors to root variables
+:root {
+  @each $map, $color in tailwind-colors.$tw-color-list {
+    @each $key, $value in $map {
+      --tw-#{$color}-#{$key}: #{$value};
+    }
+  }
+}
+
 :root {
   --font-sans: 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', 'Nimbus Sans', sans-serif;
   --font-mono: 'Consolas', 'Liberation Mono', 'Menlo', 'Monaco', 'Courier New', monospace;

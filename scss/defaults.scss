@@ -1,3 +1,5 @@
+@use './mixins';
+
 *,
 *::before,
 *::after {
@@ -26,13 +28,13 @@ body {
 img,
 video,
 iframe {
-  @include radius-sm;
+  @include mixins.radius-sm;
   max-width: 100%;
 }
 
 img,
 video {
-  @include radius-sm;
+  @include mixins.radius-sm;
   height: auto;
   max-width: 100%;
 }
@@ -55,7 +57,7 @@ a:visited {
 }
 
 mark {
-  @include radius-sm;
+  @include mixins.radius-sm;
   background-color: var(--mark);
   color: black;
   padding: 0.125rem 0.25rem;
@@ -74,7 +76,7 @@ code {
 }
 
 kbd {
-  @include radius-sm;
+  @include mixins.radius-sm;
   color: var(--foreground);
   border: var(--border-width) solid var(--border);
   border-bottom: 3px solid var(--border);
@@ -91,13 +93,13 @@ pre code {
 }
 
 details {
-  @include radius-sm;
+  @include mixins.radius-sm;
   border: var(--border-width) solid var(--border);
   padding: 0.75rem 1rem;
 }
 
 summary {
-  @include font-bold;
+  @include mixins.font-bold;
   cursor: pointer;
   padding: 0.75rem 1rem;
   margin: -0.75rem -1rem;
@@ -163,11 +165,12 @@ textarea,
 select,
 button,
 a.pw-button {
-  @include radius-sm;
+  @include mixins.radius-sm;
   box-shadow: none;
   display: inline-block;
   font-family: inherit;
   font-size: inherit;
+  line-height: 1.25;
   max-width: 100%;
   padding: 0.5rem;
 }
@@ -189,7 +192,7 @@ a.pw-button {
   background-color: var(--button-background);
   border: var(--border-width) solid var(--button-border);
   color: var(--button-foreground);
-  line-height: normal;
+  line-height: 1.25;
   padding: 0.5rem;
   text-decoration: none;
 }
@@ -230,7 +233,7 @@ textarea {
 }
 
 label {
-  @include font-bold;
+  @include mixins.font-bold;
   color: var(--foreground);
   display: block;
   font-size: 0.875rem;

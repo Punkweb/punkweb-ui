@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 // Font weight
 @mixin font-light {
   font-weight: 300;
@@ -80,8 +82,8 @@ $breakpoints: (
 );
 
 @mixin breakpoint($size) {
-  @if map_has_key($breakpoints, $size) {
-    $width: map_get($breakpoints, $size);
+  @if map.has-key($breakpoints, $size) {
+    $width: map.get($breakpoints, $size);
 
     @media only screen and (min-width: $width) {
       @content;

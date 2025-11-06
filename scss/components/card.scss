@@ -1,6 +1,8 @@
+@use '../mixins';
+
 .pw-card {
-  @include radius-sm;
-  @include shadow-md;
+  @include mixins.radius-sm;
+  @include mixins.shadow-md;
 
   background-color: var(--background);
   border: var(--border-width) solid var(--border);

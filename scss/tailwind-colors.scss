@@ -619,13 +619,3 @@ $tw-color-list: (
   $tw-pink-list: 'pink',
   $tw-rose-list: 'rose',
 );
-
-// Assign all colors to root variables
-
-:root {
-  @each $map, $color in $tw-color-list {
-    @each $key, $value in $map {
-      --tw-#{$color}-#{$key}: #{$value};
-    }
-  }
-}
