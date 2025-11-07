@@ -1,11 +1,10 @@
 @use '../node_modules/normalize.css/normalize.css';
-@use './tailwind-colors';
+
+/*! punkweb-ui | BSD-3-Clause license | https://github.com/Punkweb/punkweb-ui */
 
 @use 'root';
-@use 'mixins';
 @use 'defaults';
 @use 'typography';
-@use 'forms';
 
 @use 'components/avatar';
 @use 'components/badge';
@@ -15,6 +14,7 @@
 @use 'components/card';
 @use 'components/container';
 @use 'components/dialog';
+@use 'components/form';
 @use 'components/input';
 @use 'components/pagination';
 @use 'components/spinner';

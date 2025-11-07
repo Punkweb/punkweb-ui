@@ -5,21 +5,117 @@
 .hidden {
   display: none;
 }
-
 .block {
   display: block;
 }
-
 .inline-block {
   display: inline-block;
 }
-
 .inline {
   display: inline;
 }
-
+.flex {
+  display: flex;
+}
 .inline-flex {
   display: inline-flex;
+}
+
+// position
+
+.static {
+  position: static;
+}
+.fixed {
+  position: fixed;
+}
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.sticky {
+  position: sticky;
+}
+
+// cursor
+
+.cursor {
+  &-auto {
+    cursor: auto;
+  }
+  &-default {
+    cursor: default;
+  }
+  &-pointer {
+    cursor: pointer;
+  }
+  &-wait {
+    cursor: wait;
+  }
+  &-text {
+    cursor: text;
+  }
+  &-move {
+    cursor: move;
+  }
+  &-help {
+    cursor: help;
+  }
+  &-not-allowed {
+    cursor: not-allowed;
+  }
+}
+
+// visibility
+
+.visible {
+  visibility: visible;
+}
+.invisible {
+  visibility: hidden;
+}
+
+// overflow
+
+.overflow {
+  &-auto {
+    overflow: auto;
+  }
+  &-hidden {
+    overflow: hidden;
+  }
+  &-visible {
+    overflow: visible;
+  }
+  &-scroll {
+    overflow: scroll;
+  }
+  &-x-auto {
+    overflow-x: auto;
+  }
+  &-y-auto {
+    overflow-y: auto;
+  }
+  &-x-hidden {
+    overflow-x: hidden;
+  }
+  &-y-hidden {
+    overflow-y: hidden;
+  }
+  &-x-visible {
+    overflow-x: visible;
+  }
+  &-y-visible {
+    overflow-y: visible;
+  }
+  &-x-scroll {
+    overflow-x: scroll;
+  }
+  &-y-scroll {
+    overflow-y: scroll;
+  }
 }
 
 // object fit & position
@@ -69,201 +165,28 @@
   }
 }
 
-// overflow
-
-.overflow {
-  &-auto {
-    overflow: auto;
-  }
-  &-hidden {
-    overflow: hidden;
-  }
-  &-visible {
-    overflow: visible;
-  }
-  &-scroll {
-    overflow: scroll;
-  }
-  &-x-auto {
-    overflow-x: auto;
-  }
-  &-y-auto {
-    overflow-y: auto;
-  }
-  &-x-hidden {
-    overflow-x: hidden;
-  }
-  &-y-hidden {
-    overflow-y: hidden;
-  }
-  &-x-visible {
-    overflow-x: visible;
-  }
-  &-y-visible {
-    overflow-y: visible;
-  }
-  &-x-scroll {
-    overflow-x: scroll;
-  }
-  &-y-scroll {
-    overflow-y: scroll;
-  }
-}
-
-// position
-
-.static {
-  position: static;
-}
-
-.fixed {
-  position: fixed;
-}
-
-.absolute {
-  position: absolute;
-}
-
-.relative {
-  position: relative;
-}
-
-.sticky {
-  position: sticky;
-}
-
-// visibility
-
-.visible {
-  visibility: visible;
-}
-
-.invisible {
-  visibility: hidden;
-}
-
 // z-index
 
 .z-0 {
   z-index: 0;
 }
-
 .z-10 {
   z-index: 10;
 }
-
 .z-20 {
   z-index: 20;
 }
-
 .z-30 {
   z-index: 30;
 }
-
 .z-40 {
   z-index: 40;
 }
-
 .z-50 {
   z-index: 50;
 }
-
 .z-auto {
   z-index: auto;
-}
-
-// padding
-
-@for $i from 0 through 12 {
-  .pt-#{$i} {
-    padding-top: $i * 0.25rem;
-  }
-  .pb-#{$i} {
-    padding-bottom: $i * 0.25rem;
-  }
-  .pl-#{$i} {
-    padding-left: $i * 0.25rem;
-  }
-  .pr-#{$i} {
-    padding-right: $i * 0.25rem;
-  }
-  .px-#{$i} {
-    padding-left: $i * 0.25rem;
-    padding-right: $i * 0.25rem;
-  }
-  .py-#{$i} {
-    padding-top: $i * 0.25rem;
-    padding-bottom: $i * 0.25rem;
-  }
-  .p-#{$i} {
-    padding: $i * 0.25rem;
-  }
-}
-
-// margin
-
-@for $i from 0 through 12 {
-  .mt-#{$i} {
-    margin-top: $i * 0.25rem;
-  }
-  .mb-#{$i} {
-    margin-bottom: $i * 0.25rem;
-  }
-  .ml-#{$i} {
-    margin-left: $i * 0.25rem;
-  }
-  .mr-#{$i} {
-    margin-right: $i * 0.25rem;
-  }
-  .mx-#{$i} {
-    margin-left: $i * 0.25rem;
-    margin-right: $i * 0.25rem;
-  }
-  .my-#{$i} {
-    margin-top: $i * 0.25rem;
-    margin-bottom: $i * 0.25rem;
-  }
-  .m-#{$i} {
-    margin: $i * 0.25rem;
-  }
-}
-
-.m-auto {
-  margin: auto;
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-// cursor
-
-.cursor {
-  &-auto {
-    cursor: auto;
-  }
-  &-default {
-    cursor: default;
-  }
-  &-pointer {
-    cursor: pointer;
-  }
-  &-wait {
-    cursor: wait;
-  }
-  &-text {
-    cursor: text;
-  }
-  &-move {
-    cursor: move;
-  }
-  &-help {
-    cursor: help;
-  }
-  &-not-allowed {
-    cursor: not-allowed;
-  }
 }
 
 // resize
@@ -345,20 +268,6 @@
   }
 }
 
-// image
-
-.image {
-  &-cover {
-    object-fit: cover;
-  }
-  &-contain {
-    object-fit: contain;
-  }
-  &-invert {
-    filter: invert(1);
-  }
-}
-
 // grid
 
 .grid {
@@ -368,52 +277,26 @@
     &-cols-#{$i} {
       grid-template-columns: repeat($i, minmax(0, 1fr));
     }
-
-    @each $key, $value in mixins.$breakpoints {
-      &-cols-#{$key}-#{$i} {
-        @include mixins.breakpoint($key) {
-          grid-template-columns: repeat($i, minmax(0, 1fr));
-        }
-      }
-    }
   }
 
   @for $i from 1 through 12 {
     &-rows-#{$i} {
       grid-template-rows: repeat($i, minmax(0, 1fr));
     }
-
-    @each $key, $value in mixins.$breakpoints {
-      &-rows-#{$key}-#{$i} {
-        @include mixins.breakpoint($key) {
-          grid-template-rows: repeat($i, minmax(0, 1fr));
-        }
-      }
-    }
   }
 }
 
 // gap
 
-@for $i from 0 through 12 {
+@for $i from 0 through 16 {
   .gap-#{$i} {
     gap: $i * 0.25rem;
-  }
-
-  @each $key, $value in mixins.$breakpoints {
-    .gap-#{$key}-#{$i} {
-      @include mixins.breakpoint($key) {
-        gap: $i * 0.25rem;
-      }
-    }
   }
 }
 
 // flex
 
 .flex {
-  display: flex;
-
   @for $i from 1 through 12 {
     &-#{$i} {
       flex: $i $i 0%;
@@ -423,89 +306,23 @@
   &-row {
     flex-direction: row;
   }
-
-  @each $key, $value in mixins.$breakpoints {
-    &-row-#{$key} {
-      @include mixins.breakpoint($key) {
-        flex-direction: row;
-      }
-    }
-  }
-
   &-row-reverse {
     flex-direction: row-reverse;
   }
-
-  @each $key, $value in mixins.$breakpoints {
-    &-row-reverse-#{$key} {
-      @include mixins.breakpoint($key) {
-        flex-direction: row-reverse;
-      }
-    }
-  }
-
   &-col {
     flex-direction: column;
   }
-
-  @each $key, $value in mixins.$breakpoints {
-    &-col-#{$key} {
-      @include mixins.breakpoint($key) {
-        flex-direction: column;
-      }
-    }
-  }
-
   &-col-reverse {
     flex-direction: column-reverse;
   }
-
-  @each $key, $value in mixins.$breakpoints {
-    &-col-reverse-#{$key} {
-      @include mixins.breakpoint($key) {
-        flex-direction: column-reverse;
-      }
-    }
-  }
-
   &-wrap {
     flex-wrap: wrap;
   }
-
   &-wrap-reverse {
     flex-wrap: wrap-reverse;
   }
-
   &-nowrap {
     flex-wrap: nowrap;
-  }
-
-  &-auto {
-    flex: 1 1 auto;
-  }
-
-  &-initial {
-    flex: 0 1 auto;
-  }
-
-  &-none {
-    flex: none;
-  }
-
-  &-grow {
-    flex-grow: 1;
-  }
-
-  &-grow-0 {
-    flex-grow: 0;
-  }
-
-  &-shrink {
-    flex-shrink: 1;
-  }
-
-  &-shrink-0 {
-    flex-shrink: 0;
   }
 }
 
@@ -695,8 +512,259 @@ $font-weights: (
 
 .font {
   @each $name, $value in $font-weights {
-    &-weight-#{$name} {
+    &-#{$name} {
       font-weight: $value;
+    }
+  }
+}
+
+// responsive utilities
+
+@each $key, $value in mixins.$breakpoints {
+  // display
+
+  .#{$key}\:hidden {
+    @include mixins.breakpoint($key) {
+      display: none;
+    }
+  }
+  .#{$key}\:block {
+    @include mixins.breakpoint($key) {
+      display: block;
+    }
+  }
+  .#{$key}\:inline-block {
+    @include mixins.breakpoint($key) {
+      display: inline-block;
+    }
+  }
+  .#{$key}\:inline {
+    @include mixins.breakpoint($key) {
+      display: inline;
+    }
+  }
+  .#{$key}\:inline-flex {
+    @include mixins.breakpoint($key) {
+      display: inline-flex;
+    }
+  }
+
+  // position
+
+  .#{$key}\:static {
+    @include mixins.breakpoint($key) {
+      position: static;
+    }
+  }
+  .#{$key}\:fixed {
+    @include mixins.breakpoint($key) {
+      position: fixed;
+    }
+  }
+  .#{$key}\:absolute {
+    @include mixins.breakpoint($key) {
+      position: absolute;
+    }
+  }
+  .#{$key}\:relative {
+    @include mixins.breakpoint($key) {
+      position: relative;
+    }
+  }
+  .#{$key}\:sticky {
+    @include mixins.breakpoint($key) {
+      position: sticky;
+    }
+  }
+
+  // visibility
+
+  .#{$key}\:visible {
+    @include mixins.breakpoint($key) {
+      visibility: visible;
+    }
+  }
+  .#{$key}\:invisible {
+    @include mixins.breakpoint($key) {
+      visibility: hidden;
+    }
+  }
+
+  // grid
+
+  @for $i from 1 through 12 {
+    .#{$key}\:grid-cols-#{$i} {
+      grid-template-columns: repeat($i, minmax(0, 1fr));
+    }
+  }
+
+  @for $i from 1 through 12 {
+    .#{$key}\:grid-rows-#{$i} {
+      grid-template-rows: repeat($i, minmax(0, 1fr));
+    }
+  }
+
+  // gap
+
+  @for $i from 0 through 16 {
+    .#{$key}\:gap-#{$i} {
+      gap: $i * 0.25rem;
+    }
+  }
+
+  // flex
+
+  @for $i from 1 through 12 {
+    .#{$key}\:flex-#{$i} {
+      flex: $i $i 0%;
+    }
+  }
+
+  .#{$key}\:flex-row-#{$key} {
+    @include mixins.breakpoint($key) {
+      flex-direction: row;
+    }
+  }
+  .#{$key}\:flex-row-reverse-#{$key} {
+    @include mixins.breakpoint($key) {
+      flex-direction: row-reverse;
+    }
+  }
+  .#{$key}\:flex-col-#{$key} {
+    @include mixins.breakpoint($key) {
+      flex-direction: column;
+    }
+  }
+  .#{$key}\:flex-col-reverse-#{$key} {
+    @include mixins.breakpoint($key) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  // justify content
+
+  .#{$key}\:justify-start {
+    @include mixins.breakpoint($key) {
+      justify-content: flex-start;
+    }
+  }
+  .#{$key}\:justify-end {
+    @include mixins.breakpoint($key) {
+      justify-content: flex-end;
+    }
+  }
+  .#{$key}\:justify-center {
+    @include mixins.breakpoint($key) {
+      justify-content: center;
+    }
+  }
+  .#{$key}\:justify-between {
+    @include mixins.breakpoint($key) {
+      justify-content: space-between;
+    }
+  }
+  .#{$key}\:justify-around {
+    @include mixins.breakpoint($key) {
+      justify-content: space-around;
+    }
+  }
+  .#{$key}\:justify-evenly {
+    @include mixins.breakpoint($key) {
+      justify-content: space-evenly;
+    }
+  }
+
+  // justify items
+
+  .#{$key}\:justify-items-start {
+    @include mixins.breakpoint($key) {
+      justify-items: flex-start;
+    }
+  }
+  .#{$key}\:justify-items-end {
+    @include mixins.breakpoint($key) {
+      justify-items: flex-end;
+    }
+  }
+  .#{$key}\:justify-items-center {
+    @include mixins.breakpoint($key) {
+      justify-items: center;
+    }
+  }
+  .#{$key}\:justify-items-stretch {
+    @include mixins.breakpoint($key) {
+      justify-items: stretch;
+    }
+  }
+
+  // align items
+
+  .#{$key}\:items-start {
+    @include mixins.breakpoint($key) {
+      align-items: flex-start;
+    }
+  }
+  .#{$key}\:items-end {
+    @include mixins.breakpoint($key) {
+      align-items: flex-end;
+    }
+  }
+  .#{$key}\:items-center {
+    @include mixins.breakpoint($key) {
+      align-items: center;
+    }
+  }
+  .#{$key}\:items-stretch {
+    @include mixins.breakpoint($key) {
+      align-items: stretch;
+    }
+  }
+  .#{$key}\:items-baseline {
+    @include mixins.breakpoint($key) {
+      align-items: baseline;
+    }
+  }
+
+  // align content
+
+  .#{$key}\:content-start {
+    @include mixins.breakpoint($key) {
+      align-content: flex-start;
+    }
+  }
+  .#{$key}\:content-end {
+    @include mixins.breakpoint($key) {
+      align-content: flex-end;
+    }
+  }
+  .#{$key}\:content-center {
+    @include mixins.breakpoint($key) {
+      align-content: center;
+    }
+  }
+  .#{$key}\:content-between {
+    @include mixins.breakpoint($key) {
+      align-content: space-between;
+    }
+  }
+  .#{$key}\:content-around {
+    @include mixins.breakpoint($key) {
+      align-content: space-around;
+    }
+  }
+  .#{$key}\:content-stretch {
+    @include mixins.breakpoint($key) {
+      align-content: stretch;
+    }
+  }
+
+  // text size
+
+  @each $name, $value in $text-sizes {
+    @include mixins.breakpoint($key) {
+      .#{$key}\:text-#{$name} {
+        font-size: $value;
+      }
     }
   }
 }

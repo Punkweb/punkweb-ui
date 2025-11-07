@@ -1,6 +1,22 @@
 .pw-container {
   margin: 0 auto;
-  max-width: var(--container-width);
-  padding: 0 var(--container-padding);
+  max-width: 80rem;
+  padding: 0 1rem;
   width: 100%;
+
+  &.xs {
+    max-width: 30rem;
+  }
+  &.sm {
+    max-width: 48rem;
+  }
+  &.md {
+    max-width: 64rem;
+  }
+  &.lg {
+    max-width: 80rem;
+  }
+  &.xl {
+    max-width: 90rem;
+  }
 }

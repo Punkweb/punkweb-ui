@@ -39,25 +39,21 @@
       @include spinner-size(0.125rem, 1rem);
     }
   }
-
   &.sm {
     &:before {
       @include spinner-size(0.1875rem, 1.5rem);
     }
   }
-
   &.md {
     &:before {
       @include spinner-size(0.25rem, 2rem);
     }
   }
-
   &.lg {
     &:before {
       @include spinner-size(0.3125rem, 2.5rem);
     }
   }
-
   &.xl {
     &:before {
       @include spinner-size(0.375rem, 3rem);

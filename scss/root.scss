@@ -1,6 +1,5 @@
 @use './tailwind-colors';
 
-// Assign all colors to root variables
 :root {
   @each $map, $color in tailwind-colors.$tw-color-list {
     @each $key, $value in $map {
@@ -14,8 +13,6 @@
   --font-mono: 'Consolas', 'Liberation Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
 
   --border-width: 1px;
-  --container-width: 80rem;
-  --container-padding: 1rem;
 
   --background: var(--tw-gray-50);
   --foreground: var(--tw-gray-950);
