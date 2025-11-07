@@ -518,250 +518,255 @@ $font-weights: (
   }
 }
 
+// margin
+
+.mt-auto {
+  margin-top: auto;
+}
+.mb-auto {
+  margin-bottom: auto;
+}
+.ml-auto {
+  margin-left: auto;
+}
+.mr-auto {
+  margin-right: auto;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.m-auto {
+  margin: auto;
+}
+
+@for $i from 0 through 16 {
+  .mt-#{$i} {
+    margin-top: $i * 0.25rem;
+  }
+  .mb-#{$i} {
+    margin-bottom: $i * 0.25rem;
+  }
+  .ml-#{$i} {
+    margin-left: $i * 0.25rem;
+  }
+  .mr-#{$i} {
+    margin-right: $i * 0.25rem;
+  }
+  .mx-#{$i} {
+    margin-left: $i * 0.25rem;
+    margin-right: $i * 0.25rem;
+  }
+  .my-#{$i} {
+    margin-top: $i * 0.25rem;
+    margin-bottom: $i * 0.25rem;
+  }
+  .m-#{$i} {
+    margin: $i * 0.25rem;
+  }
+}
+
+// padding
+
+@for $i from 0 through 16 {
+  .pt-#{$i} {
+    padding-top: $i * 0.25rem;
+  }
+  .pb-#{$i} {
+    padding-bottom: $i * 0.25rem;
+  }
+  .pl-#{$i} {
+    padding-left: $i * 0.25rem;
+  }
+  .pr-#{$i} {
+    padding-right: $i * 0.25rem;
+  }
+  .px-#{$i} {
+    padding-left: $i * 0.25rem;
+    padding-right: $i * 0.25rem;
+  }
+  .py-#{$i} {
+    padding-top: $i * 0.25rem;
+    padding-bottom: $i * 0.25rem;
+  }
+  .p-#{$i} {
+    padding: $i * 0.25rem;
+  }
+}
+
 // responsive utilities
 
 @each $key, $value in mixins.$breakpoints {
   // display
-
-  .#{$key}\:hidden {
-    @include mixins.breakpoint($key) {
+  @include mixins.breakpoint($key) {
+    .#{$key}\:hidden {
       display: none;
     }
-  }
-  .#{$key}\:block {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:block {
       display: block;
     }
-  }
-  .#{$key}\:inline-block {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:inline-block {
       display: inline-block;
     }
-  }
-  .#{$key}\:inline {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:inline {
       display: inline;
     }
-  }
-  .#{$key}\:inline-flex {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:inline-flex {
       display: inline-flex;
     }
-  }
 
-  // position
+    // position
 
-  .#{$key}\:static {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:static {
       position: static;
     }
-  }
-  .#{$key}\:fixed {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:fixed {
       position: fixed;
     }
-  }
-  .#{$key}\:absolute {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:absolute {
       position: absolute;
     }
-  }
-  .#{$key}\:relative {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:relative {
       position: relative;
     }
-  }
-  .#{$key}\:sticky {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:sticky {
       position: sticky;
     }
-  }
 
-  // visibility
+    // visibility
 
-  .#{$key}\:visible {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:visible {
       visibility: visible;
     }
-  }
-  .#{$key}\:invisible {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:invisible {
       visibility: hidden;
     }
-  }
 
-  // grid
+    // grid
 
-  @for $i from 1 through 12 {
-    .#{$key}\:grid-cols-#{$i} {
-      grid-template-columns: repeat($i, minmax(0, 1fr));
+    @for $i from 1 through 12 {
+      .#{$key}\:grid-cols-#{$i} {
+        grid-template-columns: repeat($i, minmax(0, 1fr));
+      }
     }
-  }
 
-  @for $i from 1 through 12 {
-    .#{$key}\:grid-rows-#{$i} {
-      grid-template-rows: repeat($i, minmax(0, 1fr));
+    @for $i from 1 through 12 {
+      .#{$key}\:grid-rows-#{$i} {
+        grid-template-rows: repeat($i, minmax(0, 1fr));
+      }
     }
-  }
 
-  // gap
+    // gap
 
-  @for $i from 0 through 16 {
-    .#{$key}\:gap-#{$i} {
-      gap: $i * 0.25rem;
+    @for $i from 0 through 16 {
+      .#{$key}\:gap-#{$i} {
+        gap: $i * 0.25rem;
+      }
     }
-  }
 
-  // flex
+    // flex
 
-  @for $i from 1 through 12 {
-    .#{$key}\:flex-#{$i} {
-      flex: $i $i 0%;
+    @for $i from 1 through 12 {
+      .#{$key}\:flex-#{$i} {
+        flex: $i $i 0%;
+      }
     }
-  }
 
-  .#{$key}\:flex-row-#{$key} {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:flex-row-#{$key} {
       flex-direction: row;
     }
-  }
-  .#{$key}\:flex-row-reverse-#{$key} {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:flex-row-reverse-#{$key} {
       flex-direction: row-reverse;
     }
-  }
-  .#{$key}\:flex-col-#{$key} {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:flex-col-#{$key} {
       flex-direction: column;
     }
-  }
-  .#{$key}\:flex-col-reverse-#{$key} {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:flex-col-reverse-#{$key} {
       flex-direction: column-reverse;
     }
-  }
 
-  // justify content
+    // justify content
 
-  .#{$key}\:justify-start {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:justify-start {
       justify-content: flex-start;
     }
-  }
-  .#{$key}\:justify-end {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:justify-end {
       justify-content: flex-end;
     }
-  }
-  .#{$key}\:justify-center {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:justify-center {
       justify-content: center;
     }
-  }
-  .#{$key}\:justify-between {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:justify-between {
       justify-content: space-between;
     }
-  }
-  .#{$key}\:justify-around {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:justify-around {
       justify-content: space-around;
     }
-  }
-  .#{$key}\:justify-evenly {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:justify-evenly {
       justify-content: space-evenly;
     }
-  }
 
-  // justify items
+    // justify items
 
-  .#{$key}\:justify-items-start {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:justify-items-start {
       justify-items: flex-start;
     }
-  }
-  .#{$key}\:justify-items-end {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:justify-items-end {
       justify-items: flex-end;
     }
-  }
-  .#{$key}\:justify-items-center {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:justify-items-center {
       justify-items: center;
     }
-  }
-  .#{$key}\:justify-items-stretch {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:justify-items-stretch {
       justify-items: stretch;
     }
-  }
 
-  // align items
+    // align items
 
-  .#{$key}\:items-start {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:items-start {
       align-items: flex-start;
     }
-  }
-  .#{$key}\:items-end {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:items-end {
       align-items: flex-end;
     }
-  }
-  .#{$key}\:items-center {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:items-center {
       align-items: center;
     }
-  }
-  .#{$key}\:items-stretch {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:items-stretch {
       align-items: stretch;
     }
-  }
-  .#{$key}\:items-baseline {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:items-baseline {
       align-items: baseline;
     }
-  }
 
-  // align content
+    // align content
 
-  .#{$key}\:content-start {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:content-start {
       align-content: flex-start;
     }
-  }
-  .#{$key}\:content-end {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:content-end {
       align-content: flex-end;
     }
-  }
-  .#{$key}\:content-center {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:content-center {
       align-content: center;
     }
-  }
-  .#{$key}\:content-between {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:content-between {
       align-content: space-between;
     }
-  }
-  .#{$key}\:content-around {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:content-around {
       align-content: space-around;
     }
-  }
-  .#{$key}\:content-stretch {
-    @include mixins.breakpoint($key) {
+    .#{$key}\:content-stretch {
       align-content: stretch;
     }
-  }
 
-  // text size
+    // text size
 
-  @each $name, $value in $text-sizes {
-    @include mixins.breakpoint($key) {
+    @each $name, $value in $text-sizes {
       .#{$key}\:text-#{$name} {
         font-size: $value;
       }
