@@ -41,23 +41,32 @@
 }
 
 // Border radius
-@mixin radius-none {
+@mixin rounded-none {
   border-radius: 0;
 }
-@mixin radius-xs {
+@mixin rounded-xs {
   border-radius: 0.125rem;
 }
-@mixin radius-sm {
+@mixin rounded-sm {
   border-radius: 0.25rem;
 }
-@mixin radius-md {
+@mixin rounded-md {
+  border-radius: 0.375rem;
+}
+@mixin rounded-lg {
   border-radius: 0.5rem;
 }
-@mixin radius-lg {
+@mixin rounded-xl {
   border-radius: 0.75rem;
 }
-@mixin radius-xl {
+@mixin rounded-2xl {
   border-radius: 1rem;
+}
+@mixin rounded-3xl {
+  border-radius: 1.5rem;
+}
+@mixin rounded-full {
+  border-radius: 100%;
 }
 
 // Transition

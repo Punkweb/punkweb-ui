@@ -1,7 +1,7 @@
 @use '../mixins';
 
 .pw-pagination {
-  @include mixins.radius-sm;
+  @include mixins.rounded-sm;
   border: var(--border-width) solid var(--border);
   display: flex;
   list-style: none;

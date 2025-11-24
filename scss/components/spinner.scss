@@ -1,3 +1,5 @@
+@use '../mixins';
+
 @mixin spinner-size($border-width, $size) {
   border-width: $border-width;
   height: $size;
@@ -15,10 +17,10 @@
 
 .pw-spinner {
   &:before {
+    @include mixins.rounded-full;
     animation: spin 1.5s linear infinite;
     border: 0.25rem solid var(--border);
     border-bottom-color: var(--primary);
-    border-radius: 50%;
     border-top-color: var(--primary);
     content: '';
     display: inline-block;

@@ -1,7 +1,7 @@
 @use '../mixins';
 
 .pw-dialog {
-  @include mixins.radius-sm;
+  @include mixins.rounded-sm;
   @include mixins.shadow-md;
   background-color: var(--background);
   overflow: hidden;

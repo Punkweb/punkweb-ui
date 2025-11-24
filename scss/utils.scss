@@ -1,4 +1,5 @@
 @use 'mixins';
+@use 'tailwind-colors';
 
 // display
 
@@ -165,28 +166,24 @@
   }
 }
 
+// opacity
+
+@for $i from 0 through 100 {
+  @if $i % 10 == 0 {
+    .opacity-#{$i} {
+      opacity: $i;
+    }
+  }
+}
+
 // z-index
 
-.z-0 {
-  z-index: 0;
-}
-.z-10 {
-  z-index: 10;
-}
-.z-20 {
-  z-index: 20;
-}
-.z-30 {
-  z-index: 30;
-}
-.z-40 {
-  z-index: 40;
-}
-.z-50 {
-  z-index: 50;
-}
-.z-auto {
-  z-index: auto;
+@for $i from 0 through 100 {
+  @if $i % 10 == 0 {
+    .z-#{$i} {
+      z-index: $i;
+    }
+  }
 }
 
 // resize
@@ -245,26 +242,37 @@
   }
 }
 
-// radius
+// rounded
 
-.radius {
+.rounded {
+  @include mixins.rounded-sm;
+
   &-none {
-    @include mixins.radius-none;
+    @include mixins.rounded-none;
   }
   &-xs {
-    @include mixins.radius-xs;
+    @include mixins.rounded-xs;
   }
   &-sm {
-    @include mixins.radius-sm;
+    @include mixins.rounded-sm;
   }
   &-md {
-    @include mixins.radius-md;
+    @include mixins.rounded-md;
   }
   &-lg {
-    @include mixins.radius-lg;
+    @include mixins.rounded-lg;
   }
   &-xl {
-    @include mixins.radius-xl;
+    @include mixins.rounded-xl;
+  }
+  &-2xl {
+    @include mixins.rounded-2xl;
+  }
+  &-3xl {
+    @include mixins.rounded-3xl;
+  }
+  &-full {
+    @include mixins.rounded-full;
   }
 }
 
@@ -283,14 +291,6 @@
     &-rows-#{$i} {
       grid-template-rows: repeat($i, minmax(0, 1fr));
     }
-  }
-}
-
-// gap
-
-@for $i from 0 through 16 {
-  .gap-#{$i} {
-    gap: $i * 0.25rem;
   }
 }
 
@@ -346,6 +346,14 @@
   }
   &-evenly {
     justify-content: space-evenly;
+  }
+}
+
+// gap
+
+@for $i from 0 through 16 {
+  .gap-#{$i} {
+    gap: $i * 0.25rem;
   }
 }
 
@@ -432,6 +440,30 @@
   }
 }
 
+// bg
+
+.bg {
+  @each $map, $color in tailwind-colors.$tw-color-list {
+    @each $key, $value in $map {
+      &-#{$color}-#{$key} {
+        background-color: #{$value};
+      }
+    }
+  }
+}
+
+// border
+
+.border {
+  @each $map, $color in tailwind-colors.$tw-color-list {
+    @each $key, $value in $map {
+      &-#{$color}-#{$key} {
+        border-color: #{$value};
+      }
+    }
+  }
+}
+
 // text
 
 $text-sizes: (
@@ -495,6 +527,13 @@ $text-sizes: (
   @each $name, $value in $text-sizes {
     &-#{$name} {
       font-size: $value;
+    }
+  }
+  @each $map, $color in tailwind-colors.$tw-color-list {
+    @each $key, $value in $map {
+      &-#{$color}-#{$key} {
+        color: #{$value};
+      }
     }
   }
 }
@@ -615,6 +654,9 @@ $font-weights: (
     .#{$key}\:inline {
       display: inline;
     }
+    .#{$key}\:flex {
+      display: flex;
+    }
     .#{$key}\:inline-flex {
       display: inline-flex;
     }
@@ -676,16 +718,16 @@ $font-weights: (
       }
     }
 
-    .#{$key}\:flex-row-#{$key} {
+    .#{$key}\:flex-row {
       flex-direction: row;
     }
-    .#{$key}\:flex-row-reverse-#{$key} {
+    .#{$key}\:flex-row-reverse {
       flex-direction: row-reverse;
     }
-    .#{$key}\:flex-col-#{$key} {
+    .#{$key}\:flex-col {
       flex-direction: column;
     }
-    .#{$key}\:flex-col-reverse-#{$key} {
+    .#{$key}\:flex-col-reverse {
       flex-direction: column-reverse;
     }
 

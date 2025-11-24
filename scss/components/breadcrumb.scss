@@ -1,7 +1,7 @@
 @use '../mixins';
 
 .pw-breadcrumb {
-  @include mixins.radius-sm;
+  @include mixins.rounded-sm;
   background-color: var(--muted);
   display: flex;
   flex-wrap: wrap;

@@ -28,13 +28,13 @@ body {
 img,
 video,
 iframe {
-  @include mixins.radius-sm;
+  @include mixins.rounded-sm;
   max-width: 100%;
 }
 
 img,
 video {
-  @include mixins.radius-sm;
+  @include mixins.rounded-sm;
   height: auto;
   max-width: 100%;
 }
@@ -57,7 +57,7 @@ a:visited {
 }
 
 mark {
-  @include mixins.radius-sm;
+  @include mixins.rounded-sm;
   background-color: var(--mark);
   color: black;
   padding: 0.125rem 0.25rem;
@@ -76,7 +76,7 @@ code {
 }
 
 kbd {
-  @include mixins.radius-sm;
+  @include mixins.rounded-sm;
   color: var(--foreground);
   border: var(--border-width) solid var(--border);
   border-bottom: 3px solid var(--border);
@@ -93,7 +93,7 @@ pre code {
 }
 
 details {
-  @include mixins.radius-sm;
+  @include mixins.rounded-sm;
   border: var(--border-width) solid var(--border);
   padding: 0.75rem 1rem;
 }
@@ -165,7 +165,7 @@ textarea,
 select,
 button,
 a.pw-button {
-  @include mixins.radius-sm;
+  @include mixins.rounded-sm;
   box-shadow: none;
   display: inline-block;
   font-family: inherit;
@@ -195,14 +195,6 @@ a.pw-button {
   line-height: 1.25;
   padding: 0.5rem;
   text-decoration: none;
-}
-
-button.rounded,
-input.rounded,
-textarea.rounded,
-select.rounded,
-a.pw-button.rounded {
-  border-radius: 2rem;
 }
 
 input:disabled,
@@ -264,7 +256,7 @@ input[type='radio'] + label {
 }
 
 input[type='radio'] {
-  border-radius: 100%;
+  @include mixins.rounded-full;
 }
 
 input[type='checkbox']:checked,
@@ -273,9 +265,9 @@ input[type='radio']:checked {
 }
 
 input[type='checkbox']:checked::after {
+  @include mixins.rounded-none;
   background-color: transparent;
   border-bottom: 2px solid var(--background);
-  border-radius: 0;
   border-left: 2px solid var(--background);
   content: ' ';
   font-size: 2rem;
@@ -288,8 +280,8 @@ input[type='checkbox']:checked::after {
 }
 
 input[type='radio']:checked::after {
+  @include mixins.rounded-full;
   background-color: var(--background);
-  border-radius: 100%;
   content: ' ';
   font-size: 2rem;
   height: 8px;

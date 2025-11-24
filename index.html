@@ -5,12 +5,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PunkwebUI</title>
+  <script type="text/javascript" src="/static/theme.js"></script>
   <link rel="stylesheet" href="dist/css/punkweb-ui.min.css" />
 </head>
 
 <body>
   <div class="pw-container">
-    <h1 class="mt-8">PunkwebUI</h1>
+    <div class="flex items-center gap-4 my-8">
+      <h1 class="my-0">PunkwebUI</h1>
+      <button class="pw-button icon" id="theme-toggle">&#9728;</button>
+    </div>
     <div class="flex flex-col gap-2 my-8">
       <details>
         <summary>Avatar</summary>
@@ -46,7 +50,7 @@
         <h4>Default</h4>
         <div class="pw-badge">Badge</div>
         <h4>Rounded</h4>
-        <div class="pw-badge rounded">Badge</div>
+        <div class="pw-badge rounded-3xl">Badge</div>
         <h4>Sizes</h4>
         <div class="flex items-center gap-2">
           <div class="pw-badge xs">Badge</div>
@@ -98,7 +102,7 @@
           <button class="pw-button primary">Primary</button>
         </div>
         <h4>Rounded</h4>
-        <button class="rounded">Button</button>
+        <button class="rounded-3xl">Button</button>
         <h4>Sizes</h4>
         <div class="flex items-center gap-2">
           <button class="pw-button xs">Button</button>
@@ -131,9 +135,9 @@
             ligula vitae tortor porttitor laoreet iaculis finibus est.
           </p>
         </div>
-        <h4>Radius</h4>
+        <h4>Rounded</h4>
         <div class="grid grid-cols-2 gap-8 my-4">
-          <div class="pw-card radius-none">
+          <div class="pw-card rounded-none">
             <h4>Title</h4>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
@@ -141,7 +145,7 @@
               ligula vitae tortor porttitor laoreet iaculis finibus est.
             </p>
           </div>
-          <div class="pw-card radius-xl">
+          <div class="pw-card rounded-xl">
             <h4>Title</h4>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
@@ -295,7 +299,7 @@
         <h4>Placeholder</h4>
         <input placeholder="Placeholder" />
         <h4>Rounded</h4>
-        <input class="rounded" />
+        <input class="rounded-3xl" />
         <h4>Label</h4>
         <label for="label-example">Username</label>
         <input id="label-example" />

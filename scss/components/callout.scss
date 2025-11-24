@@ -1,7 +1,7 @@
 @use '../mixins';
 
 .pw-callout {
-  @include mixins.radius-sm;
+  @include mixins.rounded-sm;
   background-color: var(--callout-background);
   border: var(--border-width) solid var(--callout-border);
   color: var(--callout-foreground);

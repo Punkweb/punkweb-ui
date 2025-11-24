@@ -2,7 +2,7 @@
 
 .pw-badge {
   @include mixins.font-bold;
-  @include mixins.radius-sm;
+  @include mixins.rounded-sm;
   align-items: center;
   background-color: var(--badge-background);
   border: var(--border-width) solid var(--badge-border);
@@ -14,10 +14,6 @@
   margin: 0;
   padding: 0.25rem 0.75rem;
   width: fit-content;
-
-  &.rounded {
-    border-radius: 2rem;
-  }
 
   &.xs {
     font-size: 0.625rem;

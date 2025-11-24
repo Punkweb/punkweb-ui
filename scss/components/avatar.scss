@@ -7,8 +7,8 @@
 }
 
 .pw-avatar {
+  @include mixins.rounded-full;
   align-items: center;
-  border-radius: 100%;
   cursor: pointer;
   display: inline-flex;
   font-size: 2rem;
