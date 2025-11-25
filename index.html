@@ -11,7 +11,7 @@
 
 <body>
   <div class="pw-container">
-    <div class="flex items-center gap-4 my-8">
+    <div class="flex items-center justify-between gap-4 my-8">
       <h1 class="my-0">PunkwebUI</h1>
       <button class="pw-button icon" id="theme-toggle">&#9728;</button>
     </div>
@@ -20,7 +20,7 @@
         <summary>Avatar</summary>
         <h4>Image</h4>
         <div class="pw-avatar">
-          <img class="pw-avatar-image" src="/static/punkweb.png" />
+          <img class="pw-avatar-image" src="https://picsum.photos/200" />
         </div>
         <h4>Fallback</h4>
         <div class="pw-avatar">
@@ -29,19 +29,19 @@
         <h4>Sizes</h4>
         <div class="flex items-center gap-2">
           <div class="pw-avatar xs">
-            <img class="pw-avatar-image" src="/static/punkweb.png" />
+            <img class="pw-avatar-image" src="https://picsum.photos/200" />
           </div>
           <div class="pw-avatar sm">
-            <img class="pw-avatar-image" src="/static/punkweb.png" />
+            <img class="pw-avatar-image" src="https://picsum.photos/200" />
           </div>
           <div class="pw-avatar md">
-            <img class="pw-avatar-image" src="/static/punkweb.png" />
+            <img class="pw-avatar-image" src="https://picsum.photos/200" />
           </div>
           <div class="pw-avatar lg">
-            <img class="pw-avatar-image" src="/static/punkweb.png" />
+            <img class="pw-avatar-image" src="https://picsum.photos/200" />
           </div>
           <div class="pw-avatar xl">
-            <img class="pw-avatar-image" src="/static/punkweb.png" />
+            <img class="pw-avatar-image" src="https://picsum.photos/200" />
           </div>
         </div>
       </details>
@@ -64,12 +64,12 @@
         <summary>Blockquote</summary>
         <h4>Default</h4>
         <blockquote>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </blockquote>
         <h4>Cite</h4>
         <blockquote>
           <cite>Punkweb said:</cite>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </blockquote>
       </details>
       <details>
@@ -97,6 +97,10 @@
           <a href="#" class="pw-button">Link</a>
           <button disabled>Disabled</button>
         </div>
+        <h4>Icon</h4>
+        <div class="flex items-center gap-2">
+          <button class="pw-button icon">+</button>
+        </div>
         <h4>Colors</h4>
         <div class="flex items-center gap-2">
           <button class="pw-button primary">Primary</button>
@@ -116,8 +120,8 @@
         <summary>Callout</summary>
         <h4>Default</h4>
         <div class="pw-callout">
-          <h4>Header</h4>
-          <p>
+          <h4 class="mt-0">Header</h4>
+          <p class="mb-0">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
             rhoncus tempor neque, sed malesuada eros dapibus vel. Aliquam in
             ligula vitae tortor porttitor laoreet iaculis finibus est.
@@ -128,50 +132,12 @@
         <summary>Card</summary>
         <h4>Default</h4>
         <div class="pw-card">
-          <h4>Title</h4>
-          <p>
+          <h4 class="mt-0">Title</h4>
+          <p class="mb-0">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
             rhoncus tempor neque, sed malesuada eros dapibus vel. Aliquam in
             ligula vitae tortor porttitor laoreet iaculis finibus est.
           </p>
-        </div>
-        <h4>Rounded</h4>
-        <div class="grid grid-cols-2 gap-8 my-4">
-          <div class="pw-card rounded-none">
-            <h4>Title</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              rhoncus tempor neque, sed malesuada eros dapibus vel. Aliquam in
-              ligula vitae tortor porttitor laoreet iaculis finibus est.
-            </p>
-          </div>
-          <div class="pw-card rounded-xl">
-            <h4>Title</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              rhoncus tempor neque, sed malesuada eros dapibus vel. Aliquam in
-              ligula vitae tortor porttitor laoreet iaculis finibus est.
-            </p>
-          </div>
-        </div>
-        <h4>Shadow</h4>
-        <div class="grid grid-cols-2 gap-8 my-4">
-          <div class="pw-card shadow-none">
-            <h4>Title</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              rhoncus tempor neque, sed malesuada eros dapibus vel. Aliquam in
-              ligula vitae tortor porttitor laoreet iaculis finibus est.
-            </p>
-          </div>
-          <div class="pw-card shadow-xl">
-            <h4>Title</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              rhoncus tempor neque, sed malesuada eros dapibus vel. Aliquam in
-              ligula vitae tortor porttitor laoreet iaculis finibus est.
-            </p>
-          </div>
         </div>
       </details>
       <details>
@@ -203,8 +169,8 @@
             <input class="fluid" id="password" name="password" type="password" />
           </div>
           <div class="pw-form-group check">
-            <label>Remember me</label>
-            <input type="checkbox" name="remember" />
+            <label for="remember-me">Remember me</label>
+            <input id="remember-me" type="checkbox" name="remember" />
           </div>
           <div class="pw-form-actions">
             <button class="pw-button fluid primary" type="submit">
