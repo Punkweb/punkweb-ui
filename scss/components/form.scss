@@ -20,12 +20,14 @@
     &.check {
       align-items: center;
       flex-direction: row;
+      gap: 0.5rem;
     }
   }
 
   &-actions {
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
 
     &.end {
@@ -44,6 +46,7 @@
   .pw-form {
     &-row {
       flex-direction: row;
+      flex-wrap: wrap;
     }
   }
 }

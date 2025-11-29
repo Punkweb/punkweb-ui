@@ -13,31 +13,28 @@
   --font-mono: 'Consolas', 'Liberation Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
 
   --border-width: 1px;
+  --outline-width: 1px;
 
-  --background: var(--tw-gray-50);
+  --background: white;
   --foreground: var(--tw-gray-950);
-  --border: var(--tw-gray-300);
+  --border: var(--tw-gray-200);
 
   --muted: var(--tw-gray-100);
-  --muted-foreground: var(--tw-gray-600);
+  --muted-foreground: var(--tw-gray-500);
 
-  --primary: var(--tw-emerald-600);
-  --primary-foreground: var(--background);
-  --primary-hover: var(--tw-emerald-500);
-
-  --disabled: var(--tw-slate-300);
-  --disabled-foreground: var(--tw-slate-600);
+  --primary: var(--tw-emerald-500);
+  --primary-foreground: white;
 
   --code: var(--tw-rose-600);
   --mark: var(--tw-amber-100);
-  --error: var(--tw-red-500);
+  --error: var(--tw-red-600);
 
-  --avatar-fallback-background: var(--tw-gray-400);
-  --avatar-fallback-foreground: white;
+  --avatar-fallback-background: var(--muted);
+  --avatar-fallback-foreground: var(--muted-foreground);
 
-  --badge-background: transparent;
-  --badge-foreground: var(--muted-foreground);
+  --badge-background: var(--muted);
   --badge-border: var(--border);
+  --badge-foreground: var(--foreground);
 
   --blockquote-background: var(--muted);
   --blockquote-border: var(--primary);
@@ -48,7 +45,6 @@
   --button-background: var(--tw-gray-100);
   --button-border: var(--border);
   --button-foreground: var(--foreground);
-  --button-hover-background: var(--tw-gray-200);
 
   --callout-background: var(--muted);
   --callout-border: var(--border);
@@ -57,42 +53,20 @@
 
 [data-theme='dark'] {
   --background: var(--tw-gray-900);
-  --foreground: var(--tw-gray-100);
+  --foreground: var(--tw-gray-50);
   --border: var(--tw-gray-700);
 
   --muted: var(--tw-gray-800);
-  --muted-foreground: var(--tw-gray-300);
+  --muted-foreground: var(--tw-gray-400);
 
   --primary: var(--tw-emerald-300);
   --primary-foreground: var(--background);
-  --primary-hover: var(--tw-emerald-400);
-
-  --disabled: var(--tw-slate-700);
-  --disabled-foreground: var(--tw-slate-400);
 
   --code: var(--tw-rose-400);
   --mark: var(--tw-amber-100);
-  --error: var(--tw-red-500);
-
-  --avatar-fallback-background: var(--muted);
-  --avatar-fallback-foreground: var(--muted-foreground);
-
-  --badge-background: transparent;
-  --badge-foreground: var(--muted-foreground);
-  --badge-border: var(--border);
-
-  --blockquote-background: var(--muted);
-  --blockquote-border: var(--primary);
-  --blockquote-border-width: 0.25rem;
-  --blockquote-cite-foreground: var(--muted-foreground);
-  --blockquote-foreground: var(--foreground);
+  --error: var(--tw-red-400);
 
   --button-background: var(--tw-gray-800);
   --button-border: var(--border);
   --button-foreground: var(--foreground);
-  --button-hover-background: var(--tw-gray-700);
-
-  --callout-background: var(--muted);
-  --callout-border: var(--border);
-  --callout-foreground: var(--foreground);
 }

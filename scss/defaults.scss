@@ -1,3 +1,4 @@
+@use './functions';
 @use './mixins';
 
 *,
@@ -7,7 +8,7 @@
 }
 
 *:focus-visible {
-  outline: var(--border-width) solid var(--primary);
+  outline: var(--outline-width) solid var(--primary);
   outline-offset: 1px;
 }
 
@@ -28,14 +29,6 @@ body {
 img,
 video,
 iframe {
-  @include mixins.rounded-sm;
-  max-width: 100%;
-}
-
-img,
-video {
-  @include mixins.rounded-sm;
-  height: auto;
   max-width: 100%;
 }
 
@@ -46,8 +39,7 @@ hr {
   margin: 1rem 0;
 }
 
-a,
-a:visited {
+a {
   color: var(--primary);
   text-decoration: none;
 
@@ -144,14 +136,10 @@ table {
 
 td,
 th {
-  padding: 0.75rem 1rem;
-  text-align: start;
-}
-
-th {
-  background-color: var(--muted);
-  color: var(--muted-foreground);
+  border: var(--border-width) solid var(--border);
   font-size: 0.875rem;
+  padding: 0.5rem;
+  text-align: start;
 }
 
 input:not([type='range']),
@@ -164,9 +152,10 @@ input,
 textarea,
 select,
 button,
+.pw-button,
 a.pw-button {
   @include mixins.rounded-sm;
-  box-shadow: none;
+  @include mixins.shadow-none;
   display: inline-block;
   font-family: inherit;
   font-size: inherit;
@@ -179,7 +168,7 @@ input.fluid,
 select.fluid,
 textarea.fluid,
 button.fluid,
-a.pw-button.fluid {
+.pw-button.fluid {
   width: 100%;
 }
 
@@ -187,13 +176,12 @@ button,
 input[type='submit'],
 input[type='reset'],
 input[type='button'],
+.pw-button,
 a.pw-button {
-  appearance: none;
   background-color: var(--button-background);
   border: var(--border-width) solid var(--button-border);
   color: var(--button-foreground);
-  line-height: 1.25;
-  padding: 0.5rem;
+  cursor: pointer;
   text-decoration: none;
 }
 
@@ -201,19 +189,17 @@ input:disabled,
 textarea:disabled,
 select:disabled,
 button[disabled] {
-  background-color: var(--disabled);
-  border-color: var(--disabled);
-  color: var(--disabled-foreground);
   cursor: not-allowed;
+  opacity: 0.5;
 }
 
 button:enabled:hover,
+.pw-button:hover,
 a.pw-button:hover,
 input[type='submit']:enabled:hover,
 input[type='reset']:enabled:hover,
 input[type='button']:enabled:hover {
-  background-color: var(--button-hover-background);
-  cursor: pointer;
+  background-color: functions.mix-alpha(var(--button-background), 90%);
 }
 
 input,
@@ -262,7 +248,7 @@ input[type='radio'] {
 
 input[type='checkbox']:checked,
 input[type='radio']:checked {
-  background-color: var(--foreground);
+  background-color: var(--primary);
 }
 
 input[type='checkbox']:checked::after {

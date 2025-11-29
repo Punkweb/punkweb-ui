@@ -455,6 +455,28 @@
 // border
 
 .border {
+  border: var(--border-width) solid var(--border);
+
+  &-none {
+    border: none;
+  }
+
+  &-t {
+    border-top: var(--border-width) solid var(--border);
+  }
+
+  &-r {
+    border-right: var(--border-width) solid var(--border);
+  }
+
+  &-b {
+    border-bottom: var(--border-width) solid var(--border);
+  }
+
+  &-l {
+    border-left: var(--border-width) solid var(--border);
+  }
+
   @each $map, $color in tailwind-colors.$tw-color-list {
     @each $key, $value in $map {
       &-#{$color}-#{$key} {

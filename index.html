@@ -27,7 +27,7 @@
           <div class="pw-avatar-fallback">PW</div>
         </div>
         <h4>Sizes</h4>
-        <div class="flex items-center gap-2">
+        <div class="flex flex-wrap items-center gap-2">
           <div class="pw-avatar xs">
             <img class="pw-avatar-image" src="https://picsum.photos/200" />
           </div>
@@ -52,7 +52,7 @@
         <h4>Rounded</h4>
         <div class="pw-badge rounded-3xl">Badge</div>
         <h4>Sizes</h4>
-        <div class="flex items-center gap-2">
+        <div class="flex flex-wrap items-center gap-2">
           <div class="pw-badge xs">Badge</div>
           <div class="pw-badge sm">Badge</div>
           <div class="pw-badge md">Badge</div>
@@ -90,7 +90,7 @@
       <details>
         <summary>Button</summary>
         <h4>Default</h4>
-        <div class="flex items-center gap-2">
+        <div class="flex flex-wrap items-center gap-2">
           <button>Default</button>
           <input type="reset" value="Reset" />
           <input type="submit" value="Submit" />
@@ -108,7 +108,7 @@
         <h4>Rounded</h4>
         <button class="rounded-3xl">Button</button>
         <h4>Sizes</h4>
-        <div class="flex items-center gap-2">
+        <div class="flex flex-wrap items-center gap-2">
           <button class="pw-button xs">Button</button>
           <button class="pw-button sm">Button</button>
           <button class="pw-button md">Button</button>
@@ -276,7 +276,7 @@
         <input />
         <p class="font-size-sm text-error">Password must contain 8 characters</p>
         <h4>Sizes</h4>
-        <div class="flex items-start gap-2">
+        <div class="flex flex-wrap items-start gap-2">
           <input class="pw-input xs" placeholder="Extra Small" />
           <input class="pw-input sm" placeholder="Small" />
           <input class="pw-input md" placeholder="Medium" />
@@ -429,7 +429,7 @@
         <h4>Default</h4>
         <div class="pw-spinner"></div>
         <h4>Sizes</h4>
-        <div class="flex items-center gap-4">
+        <div class="flex flex-wrap items-center gap-4">
           <div class="pw-spinner xs"></div>
           <div class="pw-spinner sm"></div>
           <div class="pw-spinner md"></div>
@@ -487,6 +487,14 @@
             </tfoot>
           </table>
         </div>
+      </details>
+      <details>
+        <summary>Tabs</summary>
+        <ul class="pw-tabs">
+          <li>Accounts</li>
+          <li class="active">Projects</li>
+          <li class="disabled">Settings</li>
+        </ul>
       </details>
       <details>
         <summary>Typography</summary>

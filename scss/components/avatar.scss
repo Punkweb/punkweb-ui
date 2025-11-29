@@ -23,16 +23,16 @@
     @include avatar-size(2rem, 0.75rem);
   }
   &.sm {
-    @include avatar-size(4rem, 1.25rem);
+    @include avatar-size(3rem, 1.25rem);
   }
   &.md {
-    @include avatar-size(6rem, 2rem);
+    @include avatar-size(4rem, 2rem);
   }
   &.lg {
-    @include avatar-size(8rem, 2.75rem);
+    @include avatar-size(6rem, 2.75rem);
   }
   &.xl {
-    @include avatar-size(10rem, 3.25rem);
+    @include avatar-size(8rem, 3.25rem);
   }
 
   &-image {

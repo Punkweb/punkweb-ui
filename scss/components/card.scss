@@ -2,7 +2,7 @@
 
 .pw-card {
   @include mixins.rounded-sm;
-  @include mixins.shadow-md;
+  @include mixins.shadow-sm;
 
   background-color: var(--background);
   border: var(--border-width) solid var(--border);

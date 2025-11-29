@@ -2,12 +2,12 @@
 
 .pw-breadcrumb {
   @include mixins.rounded-sm;
-  background-color: var(--muted);
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
-  padding: 0.75rem 1rem;
+  padding: 0;
 
   li {
     display: block;
@@ -17,11 +17,16 @@
     white-space: nowrap;
 
     a {
-      color: var(--primary);
+      color: var(--muted-foreground);
+
+      &:hover {
+        color: var(--foreground);
+        text-decoration: none;
+      }
     }
 
     &:not(:first-of-type)::before {
-      color: var(--muted-foreground);
+      color: var(--foreground);
       content: '›';
       display: inline-block;
       padding: 0 0.5rem;
