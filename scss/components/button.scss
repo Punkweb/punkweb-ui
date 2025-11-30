@@ -12,7 +12,7 @@
     color: var(--primary-foreground);
 
     &:enabled:hover {
-      background-color: functions.mix-alpha(var(--primary), 90%);
+      background-color: functions.theme-lighten(var(--primary), 10%);
     }
   }
 
@@ -34,14 +34,5 @@
 
   &.xl {
     @include button-size(1.25rem, 0.75rem);
-  }
-
-  &.icon {
-    align-items: center;
-    display: inline-flex;
-    height: 2rem;
-    justify-content: center;
-    padding: 0;
-    width: 2rem;
   }
 }

@@ -15,17 +15,16 @@
   --border-width: 1px;
   --outline-width: 1px;
 
-  --background: white;
+  --background: var(--tw-gray-100);
   --foreground: var(--tw-gray-950);
   --border: var(--tw-gray-200);
 
-  --muted: var(--tw-gray-100);
-  --muted-foreground: var(--tw-gray-500);
+  --muted: var(--tw-gray-200);
+  --muted-foreground: var(--tw-gray-600);
 
   --primary: var(--tw-emerald-500);
   --primary-foreground: white;
 
-  --code: var(--tw-rose-600);
   --mark: var(--tw-amber-100);
   --error: var(--tw-red-600);
 
@@ -42,8 +41,7 @@
   --blockquote-cite-foreground: var(--muted-foreground);
   --blockquote-foreground: var(--foreground);
 
-  --button-background: var(--tw-gray-100);
-  --button-border: var(--border);
+  --button-background: var(--tw-gray-200);
   --button-foreground: var(--foreground);
 
   --callout-background: var(--muted);
@@ -60,13 +58,8 @@
   --muted-foreground: var(--tw-gray-400);
 
   --primary: var(--tw-emerald-300);
-  --primary-foreground: var(--background);
-
-  --code: var(--tw-rose-400);
-  --mark: var(--tw-amber-100);
-  --error: var(--tw-red-400);
+  --primary-foreground: var(--tw-gray-950);
 
   --button-background: var(--tw-gray-800);
-  --button-border: var(--border);
   --button-foreground: var(--foreground);
 }

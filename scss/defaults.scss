@@ -63,8 +63,10 @@ samp {
 }
 
 code {
-  color: var(--code);
+  @include mixins.rounded-sm;
+  background-color: var(--muted);
   font-size: 0.875rem;
+  padding: 0.125rem 0.25rem;
 }
 
 kbd {
@@ -81,7 +83,9 @@ pre {
 }
 
 pre code {
-  color: var(--foreground);
+  @include mixins.rounded-none;
+  background-color: transparent;
+  padding: 0;
 }
 
 details {
@@ -164,31 +168,29 @@ a.pw-button {
   padding: 0.5rem;
 }
 
-input.fluid,
-select.fluid,
-textarea.fluid,
-button.fluid,
-.pw-button.fluid {
-  width: 100%;
-}
-
 button,
 input[type='submit'],
 input[type='reset'],
 input[type='button'],
 .pw-button,
 a.pw-button {
+  align-items: center;
   background-color: var(--button-background);
-  border: var(--border-width) solid var(--button-border);
+  border: var(--border-width) solid var(--button-background);
   color: var(--button-foreground);
   cursor: pointer;
+  display: inline-flex;
+  gap: 0.5rem;
+  justify-content: center;
   text-decoration: none;
+  vertical-align: middle;
 }
 
 input:disabled,
 textarea:disabled,
 select:disabled,
 button[disabled] {
+  color: var(--muted-foreground);
   cursor: not-allowed;
   opacity: 0.5;
 }
@@ -199,7 +201,7 @@ a.pw-button:hover,
 input[type='submit']:enabled:hover,
 input[type='reset']:enabled:hover,
 input[type='button']:enabled:hover {
-  background-color: functions.mix-alpha(var(--button-background), 90%);
+  background-color: functions.theme-lighten(var(--button-background), 10%);
 }
 
 input,

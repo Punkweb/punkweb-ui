@@ -9,7 +9,7 @@ PunkwebUI is a lightweight open source (BSD-3 Clause) CSS framework that can be 
 - Essential UI components (buttons, dialogs, forms, etc.)
 - Theming and customization through CSS variables
 - Dark mode support out of the box
-- Small footprint (~53kB minified, ~11kB gzipped)
+- Small footprint (~25kB minified and gzipped)
 
 ## Quick Start
 

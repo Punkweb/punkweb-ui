@@ -1,3 +1,7 @@
-@function mix-alpha($color, $alpha) {
-  @return color-mix(in srgb, $color $alpha, transparent);
+@function theme-lighten($color, $amount) {
+  @return color-mix(in srgb, $color, white $amount);
+}
+
+@function theme-darken($color, $amount) {
+  @return color-mix(in srgb, $color, black $amount);
 }

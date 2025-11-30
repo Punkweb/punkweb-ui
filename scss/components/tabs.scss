@@ -22,6 +22,7 @@
     }
 
     &.disabled {
+      color: var(--muted-foreground);
       cursor: not-allowed;
       opacity: 0.5;
       pointer-events: none;
