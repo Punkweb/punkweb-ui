@@ -1,0 +1,1592 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PunkwebUI — Documentation</title>
+  <script>
+    (function () {
+      var saved = localStorage.getItem('pw-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+  </script>
+  <link rel="stylesheet" href="dist/css/punkweb-ui.min.css" />
+  <style>
+    /* Docs-specific layout */
+    .docs-layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .docs-sidebar {
+      width: 240px;
+      flex-shrink: 0;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      background: var(--muted);
+      border-right: 1px solid var(--border);
+      padding: 1.5rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .docs-sidebar-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted-foreground);
+      margin: 0.75rem 0 0.25rem;
+      padding: 0 0.5rem;
+    }
+
+    .docs-sidebar-title:first-child {
+      margin-top: 0;
+    }
+
+    .docs-sidebar a {
+      display: block;
+      padding: 0.3rem 0.5rem;
+      border-radius: 0.375rem;
+      color: var(--foreground);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .docs-sidebar a:hover {
+      background: var(--border);
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .docs-sidebar a.active {
+      background: var(--primary);
+      color: var(--primary-foreground);
+    }
+
+    .docs-main {
+      flex: 1;
+      min-width: 0;
+      padding: 2rem 3rem;
+      max-width: 900px;
+    }
+
+    .docs-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .docs-header h1 {
+      margin: 0;
+    }
+
+    .docs-section {
+      margin-bottom: 3rem;
+      scroll-margin-top: 1rem;
+    }
+
+    .docs-section h2 {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+
+    .docs-section h3 {
+      margin-top: 1.5rem;
+    }
+
+    .docs-preview {
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      margin: 0.75rem 0;
+      background: var(--background);
+    }
+
+    .docs-preview > * + * {
+      margin-top: 0.75rem;
+    }
+
+    .docs-code {
+      margin: 0.5rem 0 1.25rem;
+      background: var(--muted);
+      border: 1px solid var(--border);
+      border-radius: 0.375rem;
+      overflow: auto;
+    }
+
+    .docs-code pre {
+      margin: 0;
+      padding: 1rem;
+      font-size: 0.8rem;
+      line-height: 1.6;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+    }
+
+    .docs-code code {
+      background: transparent;
+      border: none;
+      padding: 0;
+    }
+
+    .docs-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted-foreground);
+      margin-top: 1.25rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .util-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+
+    .util-table th,
+    .util-table td {
+      text-align: left;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid var(--border);
+    }
+
+    .util-table th {
+      background: var(--muted);
+      font-weight: 600;
+    }
+
+    .util-table tr:nth-child(even) td {
+      background: color-mix(in srgb, var(--muted) 40%, transparent);
+    }
+
+    .util-table code {
+      font-size: 0.8rem;
+    }
+
+    .var-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+
+    .var-table th,
+    .var-table td {
+      text-align: left;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid var(--border);
+    }
+
+    .var-table th {
+      background: var(--muted);
+      font-weight: 600;
+    }
+
+    .var-table tr:nth-child(even) td {
+      background: color-mix(in srgb, var(--muted) 40%, transparent);
+    }
+
+    .var-table code {
+      font-size: 0.8rem;
+    }
+
+    .color-swatch {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border-radius: 2px;
+      border: 1px solid var(--border);
+      vertical-align: middle;
+      margin-right: 4px;
+    }
+
+    .badge-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .docs-sidebar {
+        display: none;
+      }
+      .docs-main {
+        padding: 1.25rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="docs-layout">
+    <!-- Sidebar -->
+    <nav class="docs-sidebar">
+      <div class="docs-sidebar-title">Overview</div>
+      <a href="#getting-started">Getting Started</a>
+      <a href="#theming">Theming</a>
+
+      <div class="docs-sidebar-title">Components</div>
+      <a href="#avatar">Avatar</a>
+      <a href="#badge">Badge</a>
+      <a href="#breadcrumb">Breadcrumb</a>
+      <a href="#button">Button</a>
+      <a href="#callout">Callout</a>
+      <a href="#card">Card</a>
+      <a href="#dialog">Dialog</a>
+      <a href="#form">Form</a>
+      <a href="#input">Input</a>
+      <a href="#pagination">Pagination</a>
+      <a href="#spinner">Spinner</a>
+      <a href="#table">Table</a>
+      <a href="#tabs">Tabs</a>
+
+      <div class="docs-sidebar-title">Base Styles</div>
+      <a href="#typography">Typography</a>
+      <a href="#blockquote">Blockquote</a>
+
+      <div class="docs-sidebar-title">Utilities</div>
+      <a href="#layout-utils">Layout</a>
+      <a href="#spacing-utils">Spacing</a>
+      <a href="#sizing-utils">Sizing</a>
+      <a href="#flex-utils">Flexbox &amp; Grid</a>
+      <a href="#text-utils">Typography</a>
+      <a href="#color-utils">Color</a>
+      <a href="#border-utils">Border</a>
+      <a href="#shadow-utils">Shadow</a>
+      <a href="#responsive-utils">Responsive</a>
+    </nav>
+
+    <!-- Main content -->
+    <main class="docs-main">
+      <div class="docs-header">
+        <div>
+          <h1 style="margin-bottom:0.25rem">PunkwebUI</h1>
+          <p style="margin:0;color:var(--muted-foreground);font-size:0.9rem">
+            v0.5.0 &mdash; Lightweight CSS framework with classless defaults, utility classes, and essential components.
+          </p>
+        </div>
+        <button class="pw-button icon" id="theme-toggle" title="Toggle theme">&#9728;</button>
+      </div>
+
+      <!-- ===================== GETTING STARTED ===================== -->
+      <section class="docs-section" id="getting-started">
+        <h2>Getting Started</h2>
+        <p>
+          PunkwebUI is a lightweight (~25kB gzipped) CSS framework available as a standalone CSS file or as an
+          npm package for SCSS-based build systems.
+        </p>
+
+        <h3>Standalone CSS</h3>
+        <p>Download the latest release and link the minified CSS file:</p>
+        <div class="docs-code">
+          <pre><code>&lt;link rel="stylesheet" href="/path/to/punkweb-ui.min.css" /&gt;</code></pre>
+        </div>
+
+        <h3>npm / SCSS</h3>
+        <div class="docs-code">
+          <pre><code>npm install punkweb-ui</code></pre>
+        </div>
+        <p>Then import the SCSS entry point in your project:</p>
+        <div class="docs-code">
+          <pre><code>@import 'punkweb-ui/scss/punkweb-ui';</code></pre>
+        </div>
+
+        <h3>Dark Mode</h3>
+        <p>
+          Add <code>data-theme="dark"</code> to your <code>&lt;html&gt;</code> or <code>&lt;body&gt;</code> tag.
+          PunkwebUI ships a small optional JS helper (<code>/static/theme.js</code>) that persists the user's
+          preference in <code>localStorage</code> under the key <code>pw-theme</code>.
+        </p>
+        <div class="docs-code">
+          <pre><code>&lt;html lang="en" data-theme="dark"&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- ===================== THEMING ===================== -->
+      <section class="docs-section" id="theming">
+        <h2>Theming</h2>
+        <p>
+          PunkwebUI is themed entirely via CSS custom properties. Override any of the variables below in your own
+          stylesheet to customise the look of the framework without touching source files.
+        </p>
+
+        <h3>Global Variables</h3>
+        <table class="var-table">
+          <thead>
+            <tr><th>Variable</th><th>Light default</th><th>Dark default</th><th>Purpose</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>--background</code></td><td>gray-100</td><td>gray-900</td><td>Page background</td></tr>
+            <tr><td><code>--foreground</code></td><td>gray-950</td><td>gray-50</td><td>Primary text color</td></tr>
+            <tr><td><code>--border</code></td><td>gray-300</td><td>gray-700</td><td>Border color</td></tr>
+            <tr><td><code>--muted</code></td><td>gray-200</td><td>gray-800</td><td>Subtle background</td></tr>
+            <tr><td><code>--muted-foreground</code></td><td>gray-600</td><td>gray-400</td><td>Secondary text</td></tr>
+            <tr><td><code>--primary</code></td><td>emerald-500</td><td>emerald-300</td><td>Brand / accent color</td></tr>
+            <tr><td><code>--primary-foreground</code></td><td>white</td><td>gray-950</td><td>Text on primary bg</td></tr>
+            <tr><td><code>--error</code></td><td>red-600</td><td>red-600</td><td>Error / danger color</td></tr>
+            <tr><td><code>--mark</code></td><td>amber-100</td><td>amber-100</td><td><code>&lt;mark&gt;</code> background</td></tr>
+            <tr><td><code>--font-sans</code></td><td colspan="2">Helvetica Neue, Arial, …</td><td>Body font stack</td></tr>
+            <tr><td><code>--font-mono</code></td><td colspan="2">Consolas, Menlo, …</td><td>Code font stack</td></tr>
+            <tr><td><code>--border-width</code></td><td colspan="2">1px</td><td>Default border width</td></tr>
+            <tr><td><code>--outline-width</code></td><td colspan="2">1px</td><td>Focus outline width</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Component Variables</h3>
+        <table class="var-table">
+          <thead>
+            <tr><th>Variable</th><th>Default</th><th>Component</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>--avatar-fallback-background</code></td><td><code>--muted</code></td><td>Avatar</td></tr>
+            <tr><td><code>--avatar-fallback-foreground</code></td><td><code>--muted-foreground</code></td><td>Avatar</td></tr>
+            <tr><td><code>--badge-background</code></td><td><code>--muted</code></td><td>Badge</td></tr>
+            <tr><td><code>--badge-border</code></td><td><code>--border</code></td><td>Badge</td></tr>
+            <tr><td><code>--badge-foreground</code></td><td><code>--foreground</code></td><td>Badge</td></tr>
+            <tr><td><code>--blockquote-background</code></td><td><code>--muted</code></td><td>Blockquote</td></tr>
+            <tr><td><code>--blockquote-border</code></td><td><code>--primary</code></td><td>Blockquote</td></tr>
+            <tr><td><code>--blockquote-border-width</code></td><td>0.25rem</td><td>Blockquote</td></tr>
+            <tr><td><code>--blockquote-cite-foreground</code></td><td><code>--muted-foreground</code></td><td>Blockquote</td></tr>
+            <tr><td><code>--button-background</code></td><td>gray-200 / gray-800</td><td>Button</td></tr>
+            <tr><td><code>--button-foreground</code></td><td><code>--foreground</code></td><td>Button</td></tr>
+            <tr><td><code>--callout-background</code></td><td><code>--muted</code></td><td>Callout</td></tr>
+            <tr><td><code>--callout-border</code></td><td><code>--border</code></td><td>Callout</td></tr>
+            <tr><td><code>--callout-foreground</code></td><td><code>--foreground</code></td><td>Callout</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Example — Custom Primary Color</h3>
+        <div class="docs-code">
+          <pre><code>:root {
+  --primary: #6366f1;         /* Indigo */
+  --primary-foreground: #fff;
+}</code></pre>
+        </div>
+      </section>
+
+      <!-- ===================== AVATAR ===================== -->
+      <section class="docs-section" id="avatar">
+        <h2>Avatar</h2>
+        <p>Circular avatar with image or fallback text support. All size modifiers apply to both variants.</p>
+
+        <div class="docs-label">Image</div>
+        <div class="docs-preview">
+          <div class="pw-avatar">
+            <img class="pw-avatar-image" src="https://picsum.photos/seed/doc/200" />
+          </div>
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;div class="pw-avatar"&gt;
+  &lt;img class="pw-avatar-image" src="avatar.jpg" /&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <div class="docs-label">Fallback text</div>
+        <div class="docs-preview">
+          <div class="pw-avatar">
+            <div class="pw-avatar-fallback">JP</div>
+          </div>
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;div class="pw-avatar"&gt;
+  &lt;div class="pw-avatar-fallback"&gt;JP&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <div class="docs-label">Sizes — xs / sm / md (default) / lg / xl</div>
+        <div class="docs-preview">
+          <div class="flex flex-wrap items-center gap-4">
+            <div class="pw-avatar xs"><div class="pw-avatar-fallback">XS</div></div>
+            <div class="pw-avatar sm"><div class="pw-avatar-fallback">SM</div></div>
+            <div class="pw-avatar md"><div class="pw-avatar-fallback">MD</div></div>
+            <div class="pw-avatar lg"><div class="pw-avatar-fallback">LG</div></div>
+            <div class="pw-avatar xl"><div class="pw-avatar-fallback">XL</div></div>
+          </div>
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;div class="pw-avatar xs"&gt;…&lt;/div&gt;
+&lt;div class="pw-avatar sm"&gt;…&lt;/div&gt;
+&lt;div class="pw-avatar md"&gt;…&lt;/div&gt;
+&lt;div class="pw-avatar lg"&gt;…&lt;/div&gt;
+&lt;div class="pw-avatar xl"&gt;…&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- ===================== BADGE ===================== -->
+      <section class="docs-section" id="badge">
+        <h2>Badge</h2>
+        <p>Inline label for status, counts, or categories.</p>
+
+        <div class="docs-label">Default</div>
+        <div class="docs-preview">
+          <span class="pw-badge">Badge</span>
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;span class="pw-badge"&gt;Badge&lt;/span&gt;</code></pre>
+        </div>
+
+        <div class="docs-label">Rounded pill</div>
+        <div class="docs-preview">
+          <span class="pw-badge rounded-3xl">Badge</span>
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;span class="pw-badge rounded-3xl"&gt;Badge&lt;/span&gt;</code></pre>
+        </div>
+
+        <div class="docs-label">Sizes — xs / sm / md (default) / lg / xl</div>
+        <div class="docs-preview">
+          <div class="badge-group">
+            <span class="pw-badge xs">xs</span>
+            <span class="pw-badge sm">sm</span>
+            <span class="pw-badge md">md</span>
+            <span class="pw-badge lg">lg</span>
+            <span class="pw-badge xl">xl</span>
+          </div>
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;span class="pw-badge xs"&gt;xs&lt;/span&gt;
+&lt;span class="pw-badge sm"&gt;sm&lt;/span&gt;
+&lt;span class="pw-badge"&gt;default&lt;/span&gt;
+&lt;span class="pw-badge lg"&gt;lg&lt;/span&gt;
+&lt;span class="pw-badge xl"&gt;xl&lt;/span&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- ===================== BREADCRUMB ===================== -->
+      <section class="docs-section" id="breadcrumb">
+        <h2>Breadcrumb</h2>
+        <p>Hierarchical navigation path. Mark the current page with <code>.active</code>.</p>
+
+        <div class="docs-preview">
+          <nav>
+            <ul class="pw-breadcrumb">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Members</a></li>
+              <li class="active">Punkweb</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;nav&gt;
+  &lt;ul class="pw-breadcrumb"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Members&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="active"&gt;Punkweb&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- ===================== BUTTON ===================== -->
+      <section class="docs-section" id="button">
+        <h2>Button</h2>
+        <p>
+          Works on <code>&lt;button&gt;</code>, <code>&lt;input type="submit"&gt;</code>,
+          <code>&lt;input type="reset"&gt;</code>, and <code>&lt;a class="pw-button"&gt;</code>.
+        </p>
+
+        <div class="docs-label">Default — no class needed on &lt;button&gt;</div>
+        <div class="docs-preview">
+          <div class="flex flex-wrap items-center gap-2">
+            <button>Default</button>
+            <input type="reset" value="Reset" />
+            <input type="submit" value="Submit" />
+            <a href="#" class="pw-button">Link button</a>
+            <button disabled>Disabled</button>
+          </div>
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;button&gt;Default&lt;/button&gt;
+&lt;input type="reset" value="Reset" /&gt;
+&lt;input type="submit" value="Submit" /&gt;
+&lt;a href="#" class="pw-button"&gt;Link button&lt;/a&gt;
+&lt;button disabled&gt;Disabled&lt;/button&gt;</code></pre>
+        </div>
+
+        <div class="docs-label">Primary color</div>
+        <div class="docs-preview">
+          <button class="pw-button primary">Primary</button>
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;button class="pw-button primary"&gt;Primary&lt;/button&gt;</code></pre>
+        </div>
+
+        <div class="docs-label">With icon</div>
+        <div class="docs-preview">
+          <div class="flex items-center gap-2">
+            <button>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+              </svg>
+              Settings
+            </button>
+            <button class="pw-button icon">&#9829;</button>
+          </div>
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;!-- Icon + label --&gt;
+&lt;button&gt;
+  &lt;svg …&gt;…&lt;/svg&gt;
+  Settings
+&lt;/button&gt;
+
+&lt;!-- Icon-only (square ratio) --&gt;
+&lt;button class="pw-button icon"&gt;♥&lt;/button&gt;</code></pre>
+        </div>
+
+        <div class="docs-label">Rounded pill</div>
+        <div class="docs-preview">
+          <button class="rounded-3xl">Rounded</button>
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;button class="rounded-3xl"&gt;Rounded&lt;/button&gt;</code></pre>
+        </div>
+
+        <div class="docs-label">Sizes — xs / sm / md (default) / lg / xl</div>
+        <div class="docs-preview">
+          <div class="flex flex-wrap items-center gap-2">
+            <button class="pw-button xs">xs</button>
+            <button class="pw-button sm">sm</button>
+            <button class="pw-button md">md</button>
+            <button class="pw-button lg">lg</button>
+            <button class="pw-button xl">xl</button>
+          </div>
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;button class="pw-button xs"&gt;xs&lt;/button&gt;
+&lt;button class="pw-button sm"&gt;sm&lt;/button&gt;
+&lt;button class="pw-button md"&gt;md&lt;/button&gt;
+&lt;button class="pw-button lg"&gt;lg&lt;/button&gt;
+&lt;button class="pw-button xl"&gt;xl&lt;/button&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- ===================== CALLOUT ===================== -->
+      <section class="docs-section" id="callout">
+        <h2>Callout</h2>
+        <p>Highlighted block for tips, warnings, or important information.</p>
+
+        <div class="docs-preview">
+          <div class="pw-callout">
+            <h4 class="mt-0">Note</h4>
+            <p class="mb-0">
+              This is a callout. Use it to highlight important information that should stand out from
+              the surrounding content.
+            </p>
+          </div>
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;div class="pw-callout"&gt;
+  &lt;h4 class="mt-0"&gt;Note&lt;/h4&gt;
+  &lt;p class="mb-0"&gt;Your message here.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- ===================== CARD ===================== -->
+      <section class="docs-section" id="card">
+        <h2>Card</h2>
+        <p>Bordered container for grouping related content.</p>
+
+        <div class="docs-preview">
+          <div class="pw-card">
+            <h4 class="mt-0">Card Title</h4>
+            <p class="mb-0">
+              Cards are simple containers with a border, subtle background, and padding.
+              Drop any content inside.
+            </p>
+          </div>
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;div class="pw-card"&gt;
+  &lt;h4 class="mt-0"&gt;Card Title&lt;/h4&gt;
+  &lt;p class="mb-0"&gt;Card content.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- ===================== DIALOG ===================== -->
+      <section class="docs-section" id="dialog">
+        <h2>Dialog</h2>
+        <p>
+          Modal/dialog layout component. Includes a header, scrollable body, and actions footer.
+          Positioning and backdrop are left to you (the CSS handles internal layout only).
+        </p>
+
+        <div class="docs-preview">
+          <div class="pw-dialog">
+            <div class="pw-dialog-header">Confirm Delete</div>
+            <div class="pw-dialog-body">
+              <p>Are you sure you want to delete this item? This action cannot be undone.</p>
+              <div class="pw-dialog-actions">
+                <button>Cancel</button>
+                <button class="pw-button primary">Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;div class="pw-dialog"&gt;
+  &lt;div class="pw-dialog-header"&gt;Confirm Delete&lt;/div&gt;
+  &lt;div class="pw-dialog-body"&gt;
+    &lt;p&gt;Are you sure?&lt;/p&gt;
+    &lt;div class="pw-dialog-actions"&gt;
+      &lt;button&gt;Cancel&lt;/button&gt;
+      &lt;button class="pw-button primary"&gt;Delete&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- ===================== FORM ===================== -->
+      <section class="docs-section" id="form">
+        <h2>Form</h2>
+        <p>Structured form layouts with vertical, horizontal, and multi-column variants.</p>
+
+        <div class="docs-label">Vertical (default)</div>
+        <div class="docs-preview">
+          <form class="pw-form" style="max-width:320px">
+            <div class="pw-form-group">
+              <label for="doc-email">Email address</label>
+              <input class="w-full" id="doc-email" type="email" />
+            </div>
+            <div class="pw-form-group">
+              <label for="doc-password">Password</label>
+              <input class="w-full" id="doc-password" type="password" />
+            </div>
+            <div class="pw-form-group check">
+              <label for="doc-remember">Remember me</label>
+              <input id="doc-remember" type="checkbox" />
+            </div>
+            <div class="pw-form-actions">
+              <button class="pw-button w-full primary" type="submit">Login</button>
+            </div>
+          </form>
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;form class="pw-form"&gt;
+  &lt;div class="pw-form-group"&gt;
+    &lt;label for="email"&gt;Email&lt;/label&gt;
+    &lt;input class="w-full" id="email" type="email" /&gt;
+  &lt;/div&gt;
+  &lt;!-- .check group aligns checkbox + label inline --&gt;
+  &lt;div class="pw-form-group check"&gt;
+    &lt;label for="remember"&gt;Remember me&lt;/label&gt;
+    &lt;input id="remember" type="checkbox" /&gt;
+  &lt;/div&gt;
+  &lt;div class="pw-form-actions"&gt;
+    &lt;button type="submit"&gt;Login&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+
+        <div class="docs-label">Horizontal</div>
+        <div class="docs-preview">
+          <form class="pw-form horizontal">
+            <div class="pw-form-group">
+              <label for="doc-search">Search</label>
+              <input id="doc-search" type="text" />
+            </div>
+            <div class="pw-form-group">
+              <label for="doc-sort">Sort</label>
+              <select id="doc-sort">
+                <option>Newest</option>
+                <option>Oldest</option>
+              </select>
+            </div>
+            <div class="pw-form-actions">
+              <button type="submit">Search</button>
+            </div>
+          </form>
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;form class="pw-form horizontal"&gt;…&lt;/form&gt;</code></pre>
+        </div>
+
+        <div class="docs-label">Multi-column with pw-form-row</div>
+        <div class="docs-preview">
+          <form class="pw-form" style="max-width:600px">
+            <div class="pw-form-row">
+              <div class="flex-1">
+                <div class="pw-form-group">
+                  <label>First Name</label>
+                  <input class="w-full" type="text" />
+                </div>
+              </div>
+              <div class="flex-1">
+                <div class="pw-form-group">
+                  <label>Last Name</label>
+                  <input class="w-full" type="text" />
+                </div>
+              </div>
+            </div>
+            <div class="pw-form-group">
+              <label>Address</label>
+              <input class="w-full" type="text" />
+            </div>
+            <div class="pw-form-actions end">
+              <button type="reset">Cancel</button>
+              <button class="pw-button primary" type="submit">Save</button>
+            </div>
+          </form>
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;form class="pw-form"&gt;
+  &lt;!-- pw-form-row creates a flex row --&gt;
+  &lt;div class="pw-form-row"&gt;
+    &lt;div class="flex-1"&gt;
+      &lt;div class="pw-form-group"&gt;
+        &lt;label&gt;First Name&lt;/label&gt;
+        &lt;input class="w-full" type="text" /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="flex-1"&gt;
+      &lt;div class="pw-form-group"&gt;
+        &lt;label&gt;Last Name&lt;/label&gt;
+        &lt;input class="w-full" type="text" /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- .end right-aligns action buttons --&gt;
+  &lt;div class="pw-form-actions end"&gt;
+    &lt;button type="reset"&gt;Cancel&lt;/button&gt;
+    &lt;button class="pw-button primary" type="submit"&gt;Save&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- ===================== INPUT ===================== -->
+      <section class="docs-section" id="input">
+        <h2>Input</h2>
+        <p>All standard HTML form controls are styled by default — no extra classes needed.</p>
+
+        <div class="docs-label">Text input states</div>
+        <div class="docs-preview" style="display:flex;flex-direction:column;gap:0.5rem">
+          <input type="text" placeholder="Default" />
+          <input type="text" disabled value="Disabled" />
+          <input type="text" readonly value="Readonly" />
+          <input type="text" class="rounded-3xl" placeholder="Rounded" />
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;input type="text" placeholder="Default" /&gt;
+&lt;input type="text" disabled value="Disabled" /&gt;
+&lt;input type="text" readonly value="Readonly" /&gt;
+&lt;input type="text" class="rounded-3xl" /&gt;</code></pre>
+        </div>
+
+        <div class="docs-label">Label, hint, and error</div>
+        <div class="docs-preview" style="display:flex;flex-direction:column;gap:0.5rem">
+          <div>
+            <label for="doc-hint-input">Username</label>
+            <input id="doc-hint-input" type="text" class="w-full" />
+            <p class="text-sm text-muted" style="margin:0.25rem 0 0">Must be at least 3 characters.</p>
+          </div>
+          <div>
+            <label for="doc-err-input">Email</label>
+            <input id="doc-err-input" type="email" class="w-full" value="not-an-email" />
+            <p class="text-sm text-error" style="margin:0.25rem 0 0">Please enter a valid email address.</p>
+          </div>
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;label for="username"&gt;Username&lt;/label&gt;
+&lt;input id="username" type="text" class="w-full" /&gt;
+&lt;p class="text-sm text-muted"&gt;Hint text here.&lt;/p&gt;
+
+&lt;p class="text-sm text-error"&gt;Error message here.&lt;/p&gt;</code></pre>
+        </div>
+
+        <div class="docs-label">Sizes — xs / sm / md (default) / lg / xl</div>
+        <div class="docs-preview" style="display:flex;flex-wrap:wrap;gap:0.5rem;align-items:flex-start">
+          <input class="pw-input xs" placeholder="xs" />
+          <input class="pw-input sm" placeholder="sm" />
+          <input class="pw-input md" placeholder="md" />
+          <input class="pw-input lg" placeholder="lg" />
+          <input class="pw-input xl" placeholder="xl" />
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;input class="pw-input xs" /&gt;
+&lt;input class="pw-input sm" /&gt;
+&lt;input class="pw-input md" /&gt;
+&lt;input class="pw-input lg" /&gt;
+&lt;input class="pw-input xl" /&gt;</code></pre>
+        </div>
+
+        <div class="docs-label">Textarea</div>
+        <div class="docs-preview">
+          <textarea placeholder="Write something…"></textarea>
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;textarea&gt;&lt;/textarea&gt;</code></pre>
+        </div>
+
+        <div class="docs-label">Select</div>
+        <div class="docs-preview">
+          <select>
+            <optgroup label="Group 1">
+              <option>Option 1</option>
+              <option>Option 2</option>
+            </optgroup>
+            <optgroup label="Group 2">
+              <option>Option 3</option>
+              <option disabled>Disabled Option</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;select&gt;
+  &lt;optgroup label="Group 1"&gt;
+    &lt;option&gt;Option 1&lt;/option&gt;
+  &lt;/optgroup&gt;
+&lt;/select&gt;</code></pre>
+        </div>
+
+        <div class="docs-label">Radio &amp; Checkbox</div>
+        <div class="docs-preview">
+          <div style="display:flex;flex-direction:column;gap:0.25rem">
+            <label><input type="radio" name="radio-doc" value="1" /> Radio 1</label>
+            <label><input type="radio" name="radio-doc" value="2" /> Radio 2</label>
+            <label><input type="radio" name="radio-doc" value="3" disabled /> Disabled</label>
+            <label><input type="checkbox" /> Checkbox 1</label>
+            <label><input type="checkbox" /> Checkbox 2</label>
+            <label><input type="checkbox" disabled /> Disabled</label>
+          </div>
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;label&gt;&lt;input type="radio" name="group" /&gt; Radio 1&lt;/label&gt;
+&lt;label&gt;&lt;input type="checkbox" /&gt; Checkbox 1&lt;/label&gt;</code></pre>
+        </div>
+
+        <div class="docs-label">Other native inputs</div>
+        <div class="docs-preview" style="display:flex;flex-direction:column;gap:0.5rem">
+          <input type="file" />
+          <input type="number" min="0" max="10" value="5" />
+          <input type="date" />
+          <input type="time" />
+          <input type="color" />
+          <input type="range" min="1" max="10" />
+          <progress value="65" max="100"></progress>
+          <meter min="0" max="100" value="72">72%</meter>
+          <output>42</output>
+        </div>
+      </section>
+
+      <!-- ===================== PAGINATION ===================== -->
+      <section class="docs-section" id="pagination">
+        <h2>Pagination</h2>
+        <p>
+          Page navigation list. Use <code>.active</code> for the current page and <code>.disabled</code>
+          for non-interactive items.
+        </p>
+
+        <div class="docs-preview">
+          <nav>
+            <ul class="pw-pagination">
+              <li class="disabled">Prev</li>
+              <li class="active">1</li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">Next</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;nav&gt;
+  &lt;ul class="pw-pagination"&gt;
+    &lt;li class="disabled"&gt;Prev&lt;/li&gt;
+    &lt;li class="active"&gt;1&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Next&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- ===================== SPINNER ===================== -->
+      <section class="docs-section" id="spinner">
+        <h2>Spinner</h2>
+        <p>CSS animated loading indicator styled with <code>--primary</code>.</p>
+
+        <div class="docs-label">Default</div>
+        <div class="docs-preview">
+          <div class="pw-spinner"></div>
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;div class="pw-spinner"&gt;&lt;/div&gt;</code></pre>
+        </div>
+
+        <div class="docs-label">Sizes — xs / sm / md (default) / lg / xl</div>
+        <div class="docs-preview">
+          <div class="flex flex-wrap items-center gap-4">
+            <div class="pw-spinner xs"></div>
+            <div class="pw-spinner sm"></div>
+            <div class="pw-spinner md"></div>
+            <div class="pw-spinner lg"></div>
+            <div class="pw-spinner xl"></div>
+          </div>
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;div class="pw-spinner xs"&gt;&lt;/div&gt;
+&lt;div class="pw-spinner sm"&gt;&lt;/div&gt;
+&lt;div class="pw-spinner md"&gt;&lt;/div&gt;
+&lt;div class="pw-spinner lg"&gt;&lt;/div&gt;
+&lt;div class="pw-spinner xl"&gt;&lt;/div&gt;</code></pre>
+        </div>
+
+        <div class="docs-label">Centered container with optional message</div>
+        <div class="docs-preview">
+          <div class="pw-spinner-container">
+            <div class="pw-spinner"></div>
+            <div class="text-sm text-muted">Loading…</div>
+          </div>
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;div class="pw-spinner-container"&gt;
+  &lt;div class="pw-spinner"&gt;&lt;/div&gt;
+  &lt;div class="text-sm text-muted"&gt;Loading…&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- ===================== TABLE ===================== -->
+      <section class="docs-section" id="table">
+        <h2>Table</h2>
+        <p>
+          Tables are styled classlessly. Wrap in <code>.pw-table-container</code> for responsive
+          horizontal scrolling on small screens.
+        </p>
+
+        <div class="docs-preview">
+          <div class="pw-table-container">
+            <table>
+              <caption>User accounts</caption>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Alice</td>
+                  <td>alice@example.com</td>
+                  <td>Admin</td>
+                </tr>
+                <tr>
+                  <td>Bob</td>
+                  <td>bob@example.com</td>
+                  <td>Editor</td>
+                </tr>
+                <tr>
+                  <td colspan="3">A row spanning all 3 columns</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>Footer 1</td>
+                  <td>Footer 2</td>
+                  <td>Footer 3</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;div class="pw-table-container"&gt;
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Email&lt;/th&gt;&lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;&lt;td&gt;Alice&lt;/td&gt;&lt;td&gt;alice@example.com&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- ===================== TABS ===================== -->
+      <section class="docs-section" id="tabs">
+        <h2>Tabs</h2>
+        <p>
+          Tab navigation bar. Mark the active tab with <code>.active</code> and disabled tabs with
+          <code>.disabled</code>.
+        </p>
+
+        <div class="docs-preview">
+          <ul class="pw-tabs">
+            <li>Accounts</li>
+            <li class="active">Projects</li>
+            <li class="disabled">Settings</li>
+          </ul>
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;ul class="pw-tabs"&gt;
+  &lt;li&gt;Accounts&lt;/li&gt;
+  &lt;li class="active"&gt;Projects&lt;/li&gt;
+  &lt;li class="disabled"&gt;Settings&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- ===================== TYPOGRAPHY ===================== -->
+      <section class="docs-section" id="typography">
+        <h2>Typography</h2>
+        <p>All heading and text elements are styled classlessly.</p>
+
+        <div class="docs-label">Headings</div>
+        <div class="docs-preview">
+          <h1>Heading 1</h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          <h4>Heading 4</h4>
+          <h5>Heading 5</h5>
+          <h6>Heading 6</h6>
+        </div>
+
+        <div class="docs-label">Inline elements</div>
+        <div class="docs-preview" style="display:flex;flex-direction:column;gap:0.4rem;line-height:1.8">
+          <p style="margin:0">The <a href="#">a element</a> example</p>
+          <p style="margin:0">The <b>b element</b> example</p>
+          <p style="margin:0">The <strong>strong element</strong> example</p>
+          <p style="margin:0">The <em>em element</em> example</p>
+          <p style="margin:0">The <i>i element</i> example</p>
+          <p style="margin:0">The <code>code element</code> example</p>
+          <p style="margin:0">The <kbd>kbd element</kbd> example</p>
+          <p style="margin:0">The <mark>mark element</mark> example</p>
+          <p style="margin:0">The <del>del element</del> example</p>
+          <p style="margin:0">The <ins>ins element</ins> example</p>
+          <p style="margin:0">The <s>s element</s> example</p>
+          <p style="margin:0">The <u>u element</u> example</p>
+          <p style="margin:0">The <sub>sub</sub> and <sup>sup</sup> elements</p>
+          <p style="margin:0">The <small>small element</small> example</p>
+          <p style="margin:0">The <abbr title="Abbreviation">abbr</abbr> element example</p>
+          <p style="margin:0">The <cite>cite element</cite> example</p>
+          <p style="margin:0">The <samp>samp element</samp> example</p>
+          <p style="margin:0">The <var>var element</var> example</p>
+        </div>
+
+        <div class="docs-label">Code block</div>
+        <div class="docs-preview">
+          <pre><code>// Example code block
+const greeting = 'hello world';
+console.log(greeting);</code></pre>
+        </div>
+
+        <div class="docs-label">Lists</div>
+        <div class="docs-preview">
+          <ul>
+            <li>Item 1</li>
+            <li>Item 2<ul><li>Nested item</li></ul></li>
+            <li>Item 3</li>
+          </ul>
+          <ol>
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+          </ol>
+          <dl>
+            <dt>Definition Term</dt>
+            <dd>Definition description goes here.</dd>
+          </dl>
+        </div>
+
+        <div class="docs-label">Details / Summary</div>
+        <div class="docs-preview">
+          <details>
+            <summary>Click to expand</summary>
+            <p>Hidden content revealed on expand.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- ===================== BLOCKQUOTE ===================== -->
+      <section class="docs-section" id="blockquote">
+        <h2>Blockquote</h2>
+
+        <div class="docs-label">Default</div>
+        <div class="docs-preview">
+          <blockquote>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.
+          </blockquote>
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;blockquote&gt;Your quote here.&lt;/blockquote&gt;</code></pre>
+        </div>
+
+        <div class="docs-label">With cite</div>
+        <div class="docs-preview">
+          <blockquote>
+            <cite>Punkweb said:</cite>
+            Keep it lightweight.
+          </blockquote>
+        </div>
+        <div class="docs-code">
+          <pre><code>&lt;blockquote&gt;
+  &lt;cite&gt;Author:&lt;/cite&gt;
+  Quote text here.
+&lt;/blockquote&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- ===================== LAYOUT UTILITIES ===================== -->
+      <section class="docs-section" id="layout-utils">
+        <h2>Layout Utilities</h2>
+
+        <h3>Display</h3>
+        <table class="util-table">
+          <thead><tr><th>Class</th><th>CSS</th></tr></thead>
+          <tbody>
+            <tr><td><code>.hidden</code></td><td><code>display: none</code></td></tr>
+            <tr><td><code>.block</code></td><td><code>display: block</code></td></tr>
+            <tr><td><code>.inline-block</code></td><td><code>display: inline-block</code></td></tr>
+            <tr><td><code>.inline</code></td><td><code>display: inline</code></td></tr>
+            <tr><td><code>.flex</code></td><td><code>display: flex</code></td></tr>
+            <tr><td><code>.inline-flex</code></td><td><code>display: inline-flex</code></td></tr>
+            <tr><td><code>.grid</code></td><td><code>display: grid</code></td></tr>
+          </tbody>
+        </table>
+
+        <h3>Position</h3>
+        <table class="util-table">
+          <thead><tr><th>Class</th><th>CSS</th></tr></thead>
+          <tbody>
+            <tr><td><code>.static</code></td><td><code>position: static</code></td></tr>
+            <tr><td><code>.fixed</code></td><td><code>position: fixed</code></td></tr>
+            <tr><td><code>.absolute</code></td><td><code>position: absolute</code></td></tr>
+            <tr><td><code>.relative</code></td><td><code>position: relative</code></td></tr>
+            <tr><td><code>.sticky</code></td><td><code>position: sticky</code></td></tr>
+          </tbody>
+        </table>
+
+        <h3>Visibility &amp; Overflow</h3>
+        <table class="util-table">
+          <thead><tr><th>Class</th><th>CSS</th></tr></thead>
+          <tbody>
+            <tr><td><code>.visible</code></td><td><code>visibility: visible</code></td></tr>
+            <tr><td><code>.invisible</code></td><td><code>visibility: hidden</code></td></tr>
+            <tr><td><code>.overflow-auto</code></td><td><code>overflow: auto</code></td></tr>
+            <tr><td><code>.overflow-hidden</code></td><td><code>overflow: hidden</code></td></tr>
+            <tr><td><code>.overflow-visible</code></td><td><code>overflow: visible</code></td></tr>
+            <tr><td><code>.overflow-scroll</code></td><td><code>overflow: scroll</code></td></tr>
+            <tr><td><code>.overflow-x-auto</code>, <code>.overflow-y-auto</code></td><td>axis variants</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Container</h3>
+        <p>
+          Use <code>.pw-container</code> with a size modifier to set a max-width wrapper
+          centered on the page.
+        </p>
+        <table class="util-table">
+          <thead><tr><th>Class</th><th>Max width</th></tr></thead>
+          <tbody>
+            <tr><td><code>.pw-container.xs</code></td><td>32rem (512px)</td></tr>
+            <tr><td><code>.pw-container.sm</code></td><td>40rem (640px)</td></tr>
+            <tr><td><code>.pw-container.md</code></td><td>48rem (768px)</td></tr>
+            <tr><td><code>.pw-container.lg</code></td><td>64rem (1024px)</td></tr>
+            <tr><td><code>.pw-container.xl</code></td><td>80rem (1280px)</td></tr>
+            <tr><td><code>.pw-container.2xl</code></td><td>96rem (1536px)</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ===================== SPACING UTILITIES ===================== -->
+      <section class="docs-section" id="spacing-utils">
+        <h2>Spacing Utilities</h2>
+        <p>
+          Margin and padding utilities use a numeric scale of <code>0</code>–<code>16</code>.
+          All axes and responsive variants are supported.
+        </p>
+
+        <h3>Margin</h3>
+        <table class="util-table">
+          <thead><tr><th>Class</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><code>.m-{0–16}</code></td><td>All sides</td></tr>
+            <tr><td><code>.mt-{0–16}</code></td><td>Top</td></tr>
+            <tr><td><code>.mb-{0–16}</code></td><td>Bottom</td></tr>
+            <tr><td><code>.ml-{0–16}</code></td><td>Left</td></tr>
+            <tr><td><code>.mr-{0–16}</code></td><td>Right</td></tr>
+            <tr><td><code>.mx-{0–16}</code></td><td>Horizontal (left + right)</td></tr>
+            <tr><td><code>.my-{0–16}</code></td><td>Vertical (top + bottom)</td></tr>
+            <tr><td><code>.m-auto</code>, <code>.mx-auto</code></td><td>Auto margin</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Padding</h3>
+        <table class="util-table">
+          <thead><tr><th>Class</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><code>.p-{0–16}</code></td><td>All sides</td></tr>
+            <tr><td><code>.pt-{0–16}</code></td><td>Top</td></tr>
+            <tr><td><code>.pb-{0–16}</code></td><td>Bottom</td></tr>
+            <tr><td><code>.pl-{0–16}</code></td><td>Left</td></tr>
+            <tr><td><code>.pr-{0–16}</code></td><td>Right</td></tr>
+            <tr><td><code>.px-{0–16}</code></td><td>Horizontal</td></tr>
+            <tr><td><code>.py-{0–16}</code></td><td>Vertical</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Gap</h3>
+        <table class="util-table">
+          <thead><tr><th>Class</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><code>.gap-{0–16}</code></td><td>Gap for flex/grid containers</td></tr>
+            <tr><td><code>.gap-x-{0–16}</code></td><td>Column gap</td></tr>
+            <tr><td><code>.gap-y-{0–16}</code></td><td>Row gap</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ===================== SIZING UTILITIES ===================== -->
+      <section class="docs-section" id="sizing-utils">
+        <h2>Sizing Utilities</h2>
+
+        <h3>Width</h3>
+        <table class="util-table">
+          <thead><tr><th>Class</th><th>Value</th></tr></thead>
+          <tbody>
+            <tr><td><code>.w-auto</code></td><td><code>width: auto</code></td></tr>
+            <tr><td><code>.w-full</code></td><td><code>width: 100%</code></td></tr>
+            <tr><td><code>.w-screen</code></td><td><code>width: 100vw</code></td></tr>
+            <tr><td><code>.w-{0–64}</code></td><td>Fixed rem-based width</td></tr>
+            <tr><td><code>.w-{1–12}/12</code></td><td>Fractional width (e.g. <code>.w-6/12</code> = 50%)</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Height</h3>
+        <table class="util-table">
+          <thead><tr><th>Class</th><th>Value</th></tr></thead>
+          <tbody>
+            <tr><td><code>.h-auto</code></td><td><code>height: auto</code></td></tr>
+            <tr><td><code>.h-full</code></td><td><code>height: 100%</code></td></tr>
+            <tr><td><code>.h-screen</code></td><td><code>height: 100vh</code></td></tr>
+            <tr><td><code>.h-{0–64}</code></td><td>Fixed rem-based height</td></tr>
+            <tr><td><code>.h-{1–12}/12</code></td><td>Fractional height</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ===================== FLEX / GRID UTILITIES ===================== -->
+      <section class="docs-section" id="flex-utils">
+        <h2>Flexbox &amp; Grid Utilities</h2>
+
+        <h3>Flex</h3>
+        <table class="util-table">
+          <thead><tr><th>Class</th><th>CSS</th></tr></thead>
+          <tbody>
+            <tr><td><code>.flex-row</code></td><td><code>flex-direction: row</code></td></tr>
+            <tr><td><code>.flex-col</code></td><td><code>flex-direction: column</code></td></tr>
+            <tr><td><code>.flex-wrap</code></td><td><code>flex-wrap: wrap</code></td></tr>
+            <tr><td><code>.flex-nowrap</code></td><td><code>flex-wrap: nowrap</code></td></tr>
+            <tr><td><code>.flex-1</code> … <code>.flex-12</code></td><td><code>flex: N</code></td></tr>
+            <tr><td><code>.flex-none</code></td><td><code>flex: none</code></td></tr>
+            <tr><td><code>.flex-auto</code></td><td><code>flex: auto</code></td></tr>
+            <tr><td><code>.flex-grow</code></td><td><code>flex-grow: 1</code></td></tr>
+            <tr><td><code>.flex-shrink</code></td><td><code>flex-shrink: 1</code></td></tr>
+          </tbody>
+        </table>
+
+        <h3>Alignment</h3>
+        <table class="util-table">
+          <thead><tr><th>Class</th><th>CSS</th></tr></thead>
+          <tbody>
+            <tr><td><code>.justify-start</code></td><td><code>justify-content: flex-start</code></td></tr>
+            <tr><td><code>.justify-end</code></td><td><code>justify-content: flex-end</code></td></tr>
+            <tr><td><code>.justify-center</code></td><td><code>justify-content: center</code></td></tr>
+            <tr><td><code>.justify-between</code></td><td><code>justify-content: space-between</code></td></tr>
+            <tr><td><code>.justify-around</code></td><td><code>justify-content: space-around</code></td></tr>
+            <tr><td><code>.justify-evenly</code></td><td><code>justify-content: space-evenly</code></td></tr>
+            <tr><td><code>.items-start</code></td><td><code>align-items: flex-start</code></td></tr>
+            <tr><td><code>.items-end</code></td><td><code>align-items: flex-end</code></td></tr>
+            <tr><td><code>.items-center</code></td><td><code>align-items: center</code></td></tr>
+            <tr><td><code>.items-stretch</code></td><td><code>align-items: stretch</code></td></tr>
+            <tr><td><code>.items-baseline</code></td><td><code>align-items: baseline</code></td></tr>
+            <tr><td><code>.self-auto</code> … <code>.self-baseline</code></td><td><code>align-self</code> variants</td></tr>
+            <tr><td><code>.content-start</code> … <code>.content-stretch</code></td><td><code>align-content</code> variants</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Grid</h3>
+        <table class="util-table">
+          <thead><tr><th>Class</th><th>CSS</th></tr></thead>
+          <tbody>
+            <tr><td><code>.grid-cols-{1–12}</code></td><td><code>grid-template-columns: repeat(N, minmax(0, 1fr))</code></td></tr>
+            <tr><td><code>.grid-rows-{1–12}</code></td><td><code>grid-template-rows: repeat(N, minmax(0, 1fr))</code></td></tr>
+            <tr><td><code>.col-span-{1–12}</code></td><td><code>grid-column: span N</code></td></tr>
+            <tr><td><code>.row-span-{1–12}</code></td><td><code>grid-row: span N</code></td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ===================== TEXT UTILITIES ===================== -->
+      <section class="docs-section" id="text-utils">
+        <h2>Typography Utilities</h2>
+
+        <h3>Font size</h3>
+        <table class="util-table">
+          <thead><tr><th>Class</th><th>Size</th></tr></thead>
+          <tbody>
+            <tr><td><code>.text-xxs</code></td><td>0.625rem</td></tr>
+            <tr><td><code>.text-xs</code></td><td>0.75rem</td></tr>
+            <tr><td><code>.text-sm</code></td><td>0.875rem</td></tr>
+            <tr><td><code>.text-md</code></td><td>1rem</td></tr>
+            <tr><td><code>.text-lg</code></td><td>1.125rem</td></tr>
+            <tr><td><code>.text-xl</code></td><td>1.25rem</td></tr>
+            <tr><td><code>.text-xxl</code></td><td>1.5rem</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Font weight</h3>
+        <table class="util-table">
+          <thead><tr><th>Class</th><th>Weight</th></tr></thead>
+          <tbody>
+            <tr><td><code>.font-light</code></td><td>300</td></tr>
+            <tr><td><code>.font-normal</code></td><td>400</td></tr>
+            <tr><td><code>.font-medium</code></td><td>500</td></tr>
+            <tr><td><code>.font-semibold</code></td><td>600</td></tr>
+            <tr><td><code>.font-bold</code></td><td>700</td></tr>
+            <tr><td><code>.font-black</code></td><td>900</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Text color</h3>
+        <table class="util-table">
+          <thead><tr><th>Class</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><code>.text-muted</code></td><td>Uses <code>--muted-foreground</code></td></tr>
+            <tr><td><code>.text-error</code></td><td>Uses <code>--error</code></td></tr>
+            <tr><td><code>.text-primary</code></td><td>Uses <code>--primary</code></td></tr>
+            <tr><td><code>.text-{color}-{shade}</code></td><td>Full Tailwind palette (e.g. <code>.text-indigo-500</code>)</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Text alignment &amp; decoration</h3>
+        <table class="util-table">
+          <thead><tr><th>Class</th><th>CSS</th></tr></thead>
+          <tbody>
+            <tr><td><code>.text-left</code></td><td><code>text-align: left</code></td></tr>
+            <tr><td><code>.text-right</code></td><td><code>text-align: right</code></td></tr>
+            <tr><td><code>.text-center</code></td><td><code>text-align: center</code></td></tr>
+            <tr><td><code>.text-justify</code></td><td><code>text-align: justify</code></td></tr>
+            <tr><td><code>.text-uppercase</code></td><td><code>text-transform: uppercase</code></td></tr>
+            <tr><td><code>.text-lowercase</code></td><td><code>text-transform: lowercase</code></td></tr>
+            <tr><td><code>.text-capitalize</code></td><td><code>text-transform: capitalize</code></td></tr>
+            <tr><td><code>.text-underline</code></td><td><code>text-decoration: underline</code></td></tr>
+            <tr><td><code>.text-line-through</code></td><td><code>text-decoration: line-through</code></td></tr>
+            <tr><td><code>.text-no-underline</code></td><td><code>text-decoration: none</code></td></tr>
+            <tr><td><code>.text-nowrap</code></td><td><code>white-space: nowrap</code></td></tr>
+            <tr><td><code>.text-ellipsis</code></td><td><code>text-overflow: ellipsis</code></td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ===================== COLOR UTILITIES ===================== -->
+      <section class="docs-section" id="color-utils">
+        <h2>Color Utilities</h2>
+        <p>
+          PunkwebUI ships the full Tailwind CSS color palette as CSS variables and utility classes.
+          Colors follow the pattern <code>.bg-{color}-{shade}</code>, <code>.text-{color}-{shade}</code>,
+          and <code>.border-{color}-{shade}</code>.
+        </p>
+
+        <h3>Available color palettes</h3>
+        <table class="util-table">
+          <thead><tr><th>Palette</th><th>Shade range</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td>slate</td><td>50 – 950</td><td><code>.bg-slate-500</code></td></tr>
+            <tr><td>gray</td><td>50 – 950</td><td><code>.bg-gray-500</code></td></tr>
+            <tr><td>red</td><td>50 – 950</td><td><code>.bg-red-500</code></td></tr>
+            <tr><td>orange</td><td>50 – 950</td><td><code>.bg-orange-500</code></td></tr>
+            <tr><td>amber</td><td>50 – 950</td><td><code>.bg-amber-500</code></td></tr>
+            <tr><td>yellow</td><td>50 – 950</td><td><code>.bg-yellow-500</code></td></tr>
+            <tr><td>lime</td><td>50 – 950</td><td><code>.bg-lime-500</code></td></tr>
+            <tr><td>green</td><td>50 – 950</td><td><code>.bg-green-500</code></td></tr>
+            <tr><td>emerald</td><td>50 – 950</td><td><code>.bg-emerald-500</code></td></tr>
+            <tr><td>teal</td><td>50 – 950</td><td><code>.bg-teal-500</code></td></tr>
+            <tr><td>cyan</td><td>50 – 950</td><td><code>.bg-cyan-500</code></td></tr>
+            <tr><td>sky</td><td>50 – 950</td><td><code>.bg-sky-500</code></td></tr>
+            <tr><td>blue</td><td>50 – 950</td><td><code>.bg-blue-500</code></td></tr>
+            <tr><td>indigo</td><td>50 – 950</td><td><code>.bg-indigo-500</code></td></tr>
+            <tr><td>violet</td><td>50 – 950</td><td><code>.bg-violet-500</code></td></tr>
+            <tr><td>purple</td><td>50 – 950</td><td><code>.bg-purple-500</code></td></tr>
+            <tr><td>fuchsia</td><td>50 – 950</td><td><code>.bg-fuchsia-500</code></td></tr>
+            <tr><td>pink</td><td>50 – 950</td><td><code>.bg-pink-500</code></td></tr>
+            <tr><td>rose</td><td>50 – 950</td><td><code>.bg-rose-500</code></td></tr>
+          </tbody>
+        </table>
+
+        <h3>Background color swatch preview</h3>
+        <div class="docs-preview">
+          <div class="flex flex-wrap gap-2">
+            <div class="p-2 rounded-md text-xs text-white bg-slate-500">.bg-slate-500</div>
+            <div class="p-2 rounded-md text-xs text-white bg-red-500">.bg-red-500</div>
+            <div class="p-2 rounded-md text-xs text-white bg-orange-500">.bg-orange-500</div>
+            <div class="p-2 rounded-md text-xs bg-yellow-400">.bg-yellow-400</div>
+            <div class="p-2 rounded-md text-xs text-white bg-green-500">.bg-green-500</div>
+            <div class="p-2 rounded-md text-xs text-white bg-emerald-500">.bg-emerald-500</div>
+            <div class="p-2 rounded-md text-xs text-white bg-teal-500">.bg-teal-500</div>
+            <div class="p-2 rounded-md text-xs text-white bg-blue-500">.bg-blue-500</div>
+            <div class="p-2 rounded-md text-xs text-white bg-indigo-500">.bg-indigo-500</div>
+            <div class="p-2 rounded-md text-xs text-white bg-violet-500">.bg-violet-500</div>
+            <div class="p-2 rounded-md text-xs text-white bg-purple-500">.bg-purple-500</div>
+            <div class="p-2 rounded-md text-xs text-white bg-pink-500">.bg-pink-500</div>
+            <div class="p-2 rounded-md text-xs text-white bg-rose-500">.bg-rose-500</div>
+          </div>
+        </div>
+
+        <h3>Opacity</h3>
+        <table class="util-table">
+          <thead><tr><th>Class</th><th>Value</th></tr></thead>
+          <tbody>
+            <tr><td><code>.opacity-0</code> … <code>.opacity-100</code></td><td>In steps of 10 (0, 10, 20, … 100)</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ===================== BORDER UTILITIES ===================== -->
+      <section class="docs-section" id="border-utils">
+        <h2>Border Utilities</h2>
+
+        <h3>Border</h3>
+        <table class="util-table">
+          <thead><tr><th>Class</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><code>.border</code></td><td>All sides, 1px, <code>--border</code> color</td></tr>
+            <tr><td><code>.border-t</code>, <code>.border-r</code>, <code>.border-b</code>, <code>.border-l</code></td><td>Single side</td></tr>
+            <tr><td><code>.border-none</code></td><td>Remove border</td></tr>
+            <tr><td><code>.border-{color}-{shade}</code></td><td>Tailwind color border</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Border Radius</h3>
+        <table class="util-table">
+          <thead><tr><th>Class</th><th>Value</th></tr></thead>
+          <tbody>
+            <tr><td><code>.rounded-none</code></td><td>0</td></tr>
+            <tr><td><code>.rounded-xs</code></td><td>0.125rem</td></tr>
+            <tr><td><code>.rounded-sm</code></td><td>0.25rem</td></tr>
+            <tr><td><code>.rounded-md</code></td><td>0.375rem</td></tr>
+            <tr><td><code>.rounded-lg</code></td><td>0.5rem</td></tr>
+            <tr><td><code>.rounded-xl</code></td><td>0.75rem</td></tr>
+            <tr><td><code>.rounded-2xl</code></td><td>1rem</td></tr>
+            <tr><td><code>.rounded-3xl</code></td><td>1.5rem</td></tr>
+            <tr><td><code>.rounded-full</code></td><td>9999px</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Z-Index</h3>
+        <table class="util-table">
+          <thead><tr><th>Class</th><th>Value</th></tr></thead>
+          <tbody>
+            <tr><td><code>.z-0</code> … <code>.z-100</code></td><td>In steps of 10</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ===================== SHADOW UTILITIES ===================== -->
+      <section class="docs-section" id="shadow-utils">
+        <h2>Shadow Utilities</h2>
+
+        <table class="util-table">
+          <thead><tr><th>Class</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><code>.shadow-none</code></td><td>No box shadow</td></tr>
+            <tr><td><code>.shadow-xs</code></td><td>Extra small shadow</td></tr>
+            <tr><td><code>.shadow-sm</code></td><td>Small shadow</td></tr>
+            <tr><td><code>.shadow-md</code></td><td>Medium shadow</td></tr>
+            <tr><td><code>.shadow-lg</code></td><td>Large shadow</td></tr>
+            <tr><td><code>.shadow-xl</code></td><td>Extra large shadow</td></tr>
+          </tbody>
+        </table>
+
+        <div class="docs-preview">
+          <div class="flex flex-wrap gap-4 p-4">
+            <div class="p-4 rounded-md shadow-xs bg-card" style="background:var(--background);border:1px solid var(--border)">shadow-xs</div>
+            <div class="p-4 rounded-md shadow-sm" style="background:var(--background);border:1px solid var(--border)">shadow-sm</div>
+            <div class="p-4 rounded-md shadow-md" style="background:var(--background);border:1px solid var(--border)">shadow-md</div>
+            <div class="p-4 rounded-md shadow-lg" style="background:var(--background);border:1px solid var(--border)">shadow-lg</div>
+            <div class="p-4 rounded-md shadow-xl" style="background:var(--background);border:1px solid var(--border)">shadow-xl</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== RESPONSIVE UTILITIES ===================== -->
+      <section class="docs-section" id="responsive-utils">
+        <h2>Responsive Utilities</h2>
+        <p>
+          All utility classes support responsive breakpoint prefixes. Prefix any utility with a breakpoint name
+          to apply it only at that screen size and above.
+        </p>
+
+        <table class="util-table">
+          <thead><tr><th>Prefix</th><th>Breakpoint</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td><code>xs:</code></td><td>≥ 512px (32rem)</td><td><code>.xs:flex</code></td></tr>
+            <tr><td><code>sm:</code></td><td>≥ 640px (40rem)</td><td><code>.sm:grid-cols-2</code></td></tr>
+            <tr><td><code>md:</code></td><td>≥ 768px (48rem)</td><td><code>.md:hidden</code></td></tr>
+            <tr><td><code>lg:</code></td><td>≥ 1024px (64rem)</td><td><code>.lg:text-xl</code></td></tr>
+            <tr><td><code>xl:</code></td><td>≥ 1280px (80rem)</td><td><code>.xl:p-8</code></td></tr>
+          </tbody>
+        </table>
+
+        <div class="docs-code">
+          <pre><code>&lt;!-- Stack on mobile, row on medium screens and up --&gt;
+&lt;div class="flex flex-col md:flex-row gap-4"&gt;
+  &lt;div class="w-full md:w-1/2"&gt;Left&lt;/div&gt;
+  &lt;div class="w-full md:w-1/2"&gt;Right&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    // Theme toggle
+    var btn = document.getElementById('theme-toggle');
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      btn.innerHTML = theme === 'dark' ? '&#9728;' : '&#9790;';
+      localStorage.setItem('pw-theme', theme);
+    }
+    // Init button label
+    applyTheme(document.documentElement.getAttribute('data-theme') || 'dark');
+    btn.addEventListener('click', function () {
+      var current = document.documentElement.getAttribute('data-theme');
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    });
+
+    // Highlight active sidebar link on scroll
+    var sections = document.querySelectorAll('.docs-section');
+    var sidebarLinks = document.querySelectorAll('.docs-sidebar a');
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          sidebarLinks.forEach(function (link) {
+            link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+          });
+        }
+      });
+    }, { rootMargin: '-20% 0px -75% 0px' });
+    sections.forEach(function (s) { observer.observe(s); });
+  </script>
+</body>
+
+</html>
