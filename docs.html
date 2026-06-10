@@ -12,6 +12,8 @@
     })();
   </script>
   <link rel="stylesheet" href="dist/css/punkweb-ui.min.css" />
+  <link rel="stylesheet" href="static/prism.css" />
+  <link rel="stylesheet" href="static/prism-punkweb.css" />
   <style>
     /* Docs-specific layout */
     .docs-layout {
@@ -136,6 +138,7 @@
       background: transparent;
       border: none;
       padding: 0;
+      text-shadow: none;
     }
 
     .docs-label {
@@ -295,11 +298,11 @@
 
         <h3>npm / SCSS</h3>
         <div class="docs-code">
-          <pre><code>npm install punkweb-ui</code></pre>
+          <pre><code class="language-bash">npm install punkweb-ui</code></pre>
         </div>
         <p>Then import the SCSS entry point in your project:</p>
         <div class="docs-code">
-          <pre><code>@import 'punkweb-ui/scss/punkweb-ui';</code></pre>
+          <pre><code class="language-scss">@import 'punkweb-ui/scss/punkweb-ui';</code></pre>
         </div>
 
         <h3>Dark Mode</h3>
@@ -368,7 +371,7 @@
 
         <h3>Example — Custom Primary Color</h3>
         <div class="docs-code">
-          <pre><code>:root {
+          <pre><code class="language-css">:root {
   --primary: #6366f1;         /* Indigo */
   --primary-foreground: #fff;
 }</code></pre>
@@ -1083,7 +1086,7 @@
 
         <div class="docs-label">Code block</div>
         <div class="docs-preview">
-          <pre><code>// Example code block
+          <pre><code class="language-javascript">// Example code block
 const greeting = 'hello world';
 console.log(greeting);</code></pre>
         </div>
@@ -1558,6 +1561,12 @@ console.log(greeting);</code></pre>
     </main>
   </div>
 
+  <script>
+    document.querySelectorAll('.docs-code code:not([class*="language-"])').forEach(function(el) {
+      el.classList.add('language-html');
+    });
+  </script>
+  <script src="static/prism.js"></script>
   <script>
     // Theme toggle
     var btn = document.getElementById('theme-toggle');
