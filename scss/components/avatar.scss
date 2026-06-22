@@ -16,8 +16,8 @@
   overflow: hidden;
   user-select: none;
   vertical-align: middle;
-  height: 6rem;
-  width: 6rem;
+  height: 4rem;
+  width: 4rem;
 
   &.xs {
     @include avatar-size(2rem, 0.75rem);
@@ -45,7 +45,7 @@
   &-fallback {
     @include mixins.font-medium;
     align-items: center;
-    background-color: var(--avatar-fallback-background);
+    background-color: var(--avatar-fallback);
     color: var(--avatar-fallback-foreground);
     display: flex;
     justify-content: center;
