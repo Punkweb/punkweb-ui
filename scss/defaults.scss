@@ -12,6 +12,11 @@
   outline-offset: 1px;
 }
 
+::selection {
+  background-color: var(--selection);
+  color: var(--selection-foreground);
+}
+
 html {
   font-family: var(--font-sans);
 }

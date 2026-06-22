@@ -19,10 +19,13 @@
   --foreground: var(--tw-gray-950);
   --border: var(--tw-gray-300);
 
+  --selection: var(--tw-emerald-300);
+  --selection-foreground: var(--foreground);
+
   --muted: var(--tw-gray-200);
   --muted-foreground: var(--tw-gray-600);
 
-  --primary: var(--tw-emerald-500);
+  --primary: var(--tw-emerald-700);
   --primary-foreground: white;
 
   --mark: var(--tw-amber-100);
@@ -47,12 +50,17 @@
   --callout-background: var(--muted);
   --callout-border: var(--border);
   --callout-foreground: var(--foreground);
+
+  --card-background: var(--background);
+  --card-foreground: var(--foreground);
 }
 
 [data-theme='dark'] {
   --background: var(--tw-gray-900);
   --foreground: var(--tw-gray-50);
   --border: var(--tw-gray-700);
+
+  --selection: var(--tw-emerald-700);
 
   --muted: var(--tw-gray-800);
   --muted-foreground: var(--tw-gray-400);

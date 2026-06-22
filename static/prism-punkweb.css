@@ -1,7 +1,6 @@
 :root {
   --code-accent: var(--tw-sky-700);
   --code-tertiary: var(--tw-violet-700);
-  --code-selection: var(--tw-sky-200);
 
   --code-keyword: var(--code-accent);
   --code-builtin: var(--primary);
@@ -36,7 +35,6 @@
 [data-theme='dark'] {
   --code-accent: var(--tw-sky-200);
   --code-tertiary: var(--tw-violet-200);
-  --code-selection: var(--tw-sky-800);
 }
 
 code[class*='language-'],
@@ -66,7 +64,8 @@ pre[class*='language-']::-moz-selection,
 pre[class*='language-'] ::-moz-selection,
 code[class*='language-']::-moz-selection,
 code[class*='language-'] ::-moz-selection {
-  background: var(--code-selection);
+  background: var(--selection);
+  color: var(--selection-foreground);
   text-shadow: none;
 }
 
@@ -74,7 +73,8 @@ pre[class*='language-']::selection,
 pre[class*='language-'] ::selection,
 code[class*='language-']::selection,
 code[class*='language-'] ::selection {
-  background: var(--code-selection);
+  background: var(--selection);
+  color: var(--selection-foreground);
   text-shadow: none;
 }
 
