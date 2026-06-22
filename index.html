@@ -6,6 +6,8 @@
     <title>PunkwebUI</title>
     <script type="text/javascript" src="/static/theme.js"></script>
     <link rel="stylesheet" href="dist/css/punkweb-ui.min.css" />
+    <link rel="stylesheet" href="static/prism.css" />
+    <link rel="stylesheet" href="static/prism-punkweb.css" />
   </head>
   <body>
     <div class="pw-container xl">
@@ -611,7 +613,7 @@
           <hr />
           <pre class="language-javascript">
 <code class="language-javascript">// Loop through Divs using Javascript.
-var divs = document.querySelectorAll('div'), i;
+var divs = document.querySelectorAll('div');
 
 for (i = 0; i < divs.length; ++i) {
   divs[i].style.color = "green";
@@ -664,5 +666,6 @@ for (i = 0; i < divs.length; ++i) {
         </details>
       </div>
     </div>
+    <script type="text/javascript" src="static/prism.js"></script>
   </body>
 </html>

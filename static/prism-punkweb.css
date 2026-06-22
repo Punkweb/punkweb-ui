@@ -1,7 +1,7 @@
 :root {
   --code-keyword: var(--accent);
   --code-builtin: var(--primary);
-  --code-comment: var(--tw-gray-500);
+  --code-comment: var(--muted-foreground);
   --code-punctuation: var(--foreground);
   --code-operator: var(--foreground);
 
@@ -15,9 +15,9 @@
 
   --code-method: var(--primary);
   --code-function: var(--primary);
-  --code-parameter: var(--tertiary);
+  --code-parameter: var(--accent); /* tertiary */
   --code-property: var(--foreground);
-  --code-property-access: var(--tertiary);
+  --code-property-access: var(--accent); /* tertiary */
   --code-tag: var(--primary);
 
   --code-script: var(--foreground);
@@ -25,7 +25,7 @@
   --code-selector: var(--primary);
   --code-attr-name: var(--accent);
   --code-attr-value: var(--primary);
-  --code-entity: var(--tertiary);
+  --code-entity: var(--accent); /* tertiary */
   --code-important: var(--accent);
 }
 
@@ -38,6 +38,7 @@ pre[class*='language-'] {
   font-size: 0.875rem;
   line-height: 1.5;
   text-align: left;
+  text-shadow: none;
   white-space: pre;
   word-break: normal;
   word-spacing: normal;
@@ -130,6 +131,7 @@ pre > code.highlight {
 
 .token.operator {
   color: var(--code-operator);
+  background: none;
 }
 
 .token.decorator {
