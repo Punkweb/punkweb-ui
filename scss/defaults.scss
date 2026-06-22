@@ -180,8 +180,8 @@ input[type='button'],
 .pw-button,
 a.pw-button {
   align-items: center;
-  background-color: var(--button-background);
-  border: var(--border-width) solid var(--button-background);
+  background-color: var(--button);
+  border: var(--border-width) solid var(--button);
   color: var(--button-foreground);
   cursor: pointer;
   display: inline-flex;
@@ -206,7 +206,7 @@ a.pw-button:hover,
 input[type='submit']:enabled:hover,
 input[type='reset']:enabled:hover,
 input[type='button']:enabled:hover {
-  background-color: functions.theme-lighten(var(--button-background), 10%);
+  background-color: functions.theme-lighten(var(--button), 10%);
 }
 
 input,

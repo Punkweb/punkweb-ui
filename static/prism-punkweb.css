@@ -1,15 +1,12 @@
 :root {
-  --code-accent: var(--tw-sky-700);
-  --code-tertiary: var(--tw-violet-700);
-
-  --code-keyword: var(--code-accent);
+  --code-keyword: var(--accent);
   --code-builtin: var(--primary);
   --code-comment: var(--tw-gray-500);
   --code-punctuation: var(--foreground);
   --code-operator: var(--foreground);
 
   --code-decorator: var(--primary);
-  --code-variable: var(--code-accent);
+  --code-variable: var(--accent);
 
   --code-string: var(--primary);
   --code-number: var(--primary);
@@ -18,23 +15,18 @@
 
   --code-method: var(--primary);
   --code-function: var(--primary);
-  --code-parameter: var(--code-tertiary);
+  --code-parameter: var(--tertiary);
   --code-property: var(--foreground);
-  --code-property-access: var(--code-tertiary);
+  --code-property-access: var(--tertiary);
   --code-tag: var(--primary);
 
   --code-script: var(--foreground);
   --code-class-name: var(--primary);
   --code-selector: var(--primary);
-  --code-attr-name: var(--code-accent);
+  --code-attr-name: var(--accent);
   --code-attr-value: var(--primary);
-  --code-entity: var(--code-tertiary);
-  --code-important: var(--code-accent);
-}
-
-[data-theme='dark'] {
-  --code-accent: var(--tw-sky-200);
-  --code-tertiary: var(--tw-violet-200);
+  --code-entity: var(--tertiary);
+  --code-important: var(--accent);
 }
 
 code[class*='language-'],

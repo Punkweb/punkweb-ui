@@ -19,14 +19,23 @@
   --foreground: var(--tw-gray-950);
   --border: var(--tw-gray-300);
 
-  --selection: var(--tw-emerald-300);
-  --selection-foreground: var(--foreground);
+  --primary: var(--tw-emerald-700);
+  --primary-foreground: white;
+
+  --secondary: var(--tw-gray-700);
+  --secondary-foreground: white;
+
+  --accent: var(--tw-sky-700);
+  --accent-foreground: white;
+
+  --tertiary: var(--tw-violet-700);
+  --tertiary-foreground: white;
 
   --muted: var(--tw-gray-200);
   --muted-foreground: var(--tw-gray-600);
 
-  --primary: var(--tw-emerald-700);
-  --primary-foreground: white;
+  --selection: var(--tw-emerald-300);
+  --selection-foreground: var(--foreground);
 
   --mark: var(--tw-amber-100);
   --error: var(--tw-red-600);
@@ -44,7 +53,7 @@
   --blockquote-cite-foreground: var(--muted-foreground);
   --blockquote-foreground: var(--foreground);
 
-  --button-background: var(--tw-gray-200);
+  --button: var(--tw-gray-200);
   --button-foreground: var(--foreground);
 
   --callout-background: var(--muted);
@@ -60,14 +69,23 @@
   --foreground: var(--tw-gray-50);
   --border: var(--tw-gray-700);
 
-  --selection: var(--tw-emerald-700);
+  --primary: var(--tw-emerald-300);
+  --primary-foreground: var(--tw-gray-950);
+
+  --secondary: var(--tw-gray-300);
+  --secondary-foreground: var(--tw-gray-950);
+
+  --accent: var(--tw-sky-300);
+  --accent-foreground: var(--tw-gray-950);
+
+  --tertiary: var(--tw-violet-300);
+  --tertiary-foreground: var(--tw-gray-950);
 
   --muted: var(--tw-gray-800);
   --muted-foreground: var(--tw-gray-400);
 
-  --primary: var(--tw-emerald-300);
-  --primary-foreground: var(--tw-gray-950);
+  --selection: var(--tw-emerald-700);
 
-  --button-background: var(--tw-gray-800);
+  --button: var(--tw-gray-800);
   --button-foreground: var(--foreground);
 }
