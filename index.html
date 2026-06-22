@@ -1,707 +1,665 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PunkwebUI</title>
-  <script type="text/javascript" src="/static/theme.js"></script>
-  <link rel="stylesheet" href="dist/css/punkweb-ui.min.css" />
-</head>
-
-<body>
-  <div class="pw-container xl">
-    <div class="flex items-center justify-between gap-4 my-8">
-      <h1 class="my-0">PunkwebUI</h1>
-      <button class="pw-button icon" id="theme-toggle">&#9728;</button>
-    </div>
-    <div class="flex flex-col gap-2 my-8">
-      <details>
-        <summary>Avatar</summary>
-        <h4>Image</h4>
-        <div class="pw-avatar">
-          <img class="pw-avatar-image" src="https://picsum.photos/200" />
-        </div>
-        <h4>Fallback</h4>
-        <div class="pw-avatar">
-          <div class="pw-avatar-fallback">PW</div>
-        </div>
-        <h4>Sizes</h4>
-        <div class="flex flex-wrap items-center gap-2">
-          <div class="pw-avatar xs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PunkwebUI</title>
+    <script type="text/javascript" src="/static/theme.js"></script>
+    <link rel="stylesheet" href="dist/css/punkweb-ui.min.css" />
+  </head>
+  <body>
+    <div class="pw-container xl">
+      <div class="flex items-center justify-between gap-4 my-8">
+        <h1 class="my-0">PunkwebUI</h1>
+        <button class="pw-button icon" id="theme-toggle">&#9728;</button>
+      </div>
+      <div class="flex flex-col gap-2 my-8">
+        <details>
+          <summary>Avatar</summary>
+          <h4>Image</h4>
+          <div class="pw-avatar">
             <img class="pw-avatar-image" src="https://picsum.photos/200" />
           </div>
-          <div class="pw-avatar sm">
-            <img class="pw-avatar-image" src="https://picsum.photos/200" />
+          <h4>Fallback</h4>
+          <div class="pw-avatar">
+            <div class="pw-avatar-fallback">PW</div>
           </div>
-          <div class="pw-avatar md">
-            <img class="pw-avatar-image" src="https://picsum.photos/200" />
-          </div>
-          <div class="pw-avatar lg">
-            <img class="pw-avatar-image" src="https://picsum.photos/200" />
-          </div>
-          <div class="pw-avatar xl">
-            <img class="pw-avatar-image" src="https://picsum.photos/200" />
-          </div>
-        </div>
-      </details>
-      <details>
-        <summary>Badge</summary>
-        <h4>Default</h4>
-        <div class="pw-badge">Badge</div>
-        <h4>Rounded</h4>
-        <div class="pw-badge rounded-3xl">Badge</div>
-        <h4>Sizes</h4>
-        <div class="flex flex-wrap items-center gap-2">
-          <div class="pw-badge xs">Badge</div>
-          <div class="pw-badge sm">Badge</div>
-          <div class="pw-badge md">Badge</div>
-          <div class="pw-badge lg">Badge</div>
-          <div class="pw-badge xl">Badge</div>
-        </div>
-      </details>
-      <details>
-        <summary>Blockquote</summary>
-        <h4>Default</h4>
-        <blockquote>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </blockquote>
-        <h4>Cite</h4>
-        <blockquote>
-          <cite>Punkweb said:</cite>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </blockquote>
-      </details>
-      <details>
-        <summary>Breadcrumb</summary>
-        <h4>Default</h4>
-        <nav>
-          <ul class="pw-breadcrumb">
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">Members</a>
-            </li>
-            <li class="active">Punkweb</li>
-          </ul>
-        </nav>
-      </details>
-      <details>
-        <summary>Button</summary>
-        <h4>Default</h4>
-        <div class="flex flex-wrap items-center gap-2">
-          <button>Default</button>
-          <input type="reset" value="Reset" />
-          <input type="submit" value="Submit" />
-          <a href="#" class="pw-button">Link</a>
-          <button disabled>Disabled</button>
-        </div>
-        <h4>Icon</h4>
-        <div class="flex items-center gap-2">
-          <button>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="w-5 h-5">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-            </svg>
-            Settings
-          </button>
-          <button>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="w-5 h-5">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
-            </svg>
-          </button>
-        </div>
-        <h4>Colors</h4>
-        <div class="flex items-center gap-2">
-          <button class="pw-button primary">Primary</button>
-        </div>
-        <h4>Rounded</h4>
-        <button class="rounded-3xl">Button</button>
-        <h4>Sizes</h4>
-        <div class="flex flex-wrap items-center gap-2">
-          <button class="pw-button xs">Button</button>
-          <button class="pw-button sm">Button</button>
-          <button class="pw-button md">Button</button>
-          <button class="pw-button lg">Button</button>
-          <button class="pw-button xl">Button</button>
-        </div>
-      </details>
-      <details>
-        <summary>Callout</summary>
-        <h4>Default</h4>
-        <div class="pw-callout">
-          <h4 class="mt-0">Header</h4>
-          <p class="mb-0">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            rhoncus tempor neque, sed malesuada eros dapibus vel. Aliquam in
-            ligula vitae tortor porttitor laoreet iaculis finibus est.
-          </p>
-        </div>
-      </details>
-      <details>
-        <summary>Card</summary>
-        <h4>Default</h4>
-        <div class="pw-card">
-          <h4 class="mt-0">Title</h4>
-          <p class="mb-0">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            rhoncus tempor neque, sed malesuada eros dapibus vel. Aliquam in
-            ligula vitae tortor porttitor laoreet iaculis finibus est.
-          </p>
-        </div>
-      </details>
-      <details>
-        <summary>Dialog</summary>
-        <h4>Default</h4>
-        <div class="pw-dialog">
-          <div class="pw-dialog-header">
-            Confirm
-          </div>
-          <div class="pw-dialog-body">
-            <p>Are you sure you want to delete this item?</p>
-            <div class="pw-dialog-actions">
-              <button>Cancel</button>
-              <button class="pw-button primary">Delete</button>
+          <h4>Sizes</h4>
+          <div class="flex flex-wrap items-center gap-2">
+            <div class="pw-avatar xs">
+              <img class="pw-avatar-image" src="https://picsum.photos/200" />
+            </div>
+            <div class="pw-avatar sm">
+              <img class="pw-avatar-image" src="https://picsum.photos/200" />
+            </div>
+            <div class="pw-avatar md">
+              <img class="pw-avatar-image" src="https://picsum.photos/200" />
+            </div>
+            <div class="pw-avatar lg">
+              <img class="pw-avatar-image" src="https://picsum.photos/200" />
+            </div>
+            <div class="pw-avatar xl">
+              <img class="pw-avatar-image" src="https://picsum.photos/200" />
             </div>
           </div>
-        </div>
-      </details>
-      <details>
-        <summary>Form</summary>
-        <h4>Default</h4>
-        <form class="pw-form my-12" style="max-width: 320px">
-          <div class="pw-form-group">
-            <label for="email">Email address</label>
-            <input class="w-full" id="email" name="email" type="email" />
+        </details>
+        <details>
+          <summary>Badge</summary>
+          <h4>Default</h4>
+          <div class="pw-badge">Badge</div>
+          <h4>Rounded</h4>
+          <div class="pw-badge rounded-3xl">Badge</div>
+          <h4>Sizes</h4>
+          <div class="flex flex-wrap items-center gap-2">
+            <div class="pw-badge xs">Badge</div>
+            <div class="pw-badge sm">Badge</div>
+            <div class="pw-badge md">Badge</div>
+            <div class="pw-badge lg">Badge</div>
+            <div class="pw-badge xl">Badge</div>
           </div>
-          <div class="pw-form-group">
-            <label for="password">Password</label>
-            <input class="w-full" id="password" name="password" type="password" />
+        </details>
+        <details>
+          <summary>Blockquote</summary>
+          <h4>Default</h4>
+          <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote>
+          <h4>Cite</h4>
+          <blockquote>
+            <cite>Punkweb said:</cite>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </blockquote>
+        </details>
+        <details>
+          <summary>Breadcrumb</summary>
+          <h4>Default</h4>
+          <nav>
+            <ul class="pw-breadcrumb">
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">Members</a>
+              </li>
+              <li class="active">Punkweb</li>
+            </ul>
+          </nav>
+        </details>
+        <details>
+          <summary>Button</summary>
+          <h4>Default</h4>
+          <div class="flex flex-wrap items-center gap-2">
+            <button>Default</button>
+            <input type="reset" value="Reset" />
+            <input type="submit" value="Submit" />
+            <a href="#" class="pw-button">Link</a>
+            <button disabled>Disabled</button>
           </div>
-          <div class="pw-form-group check">
-            <label for="remember-me">Remember me</label>
-            <input id="remember-me" type="checkbox" name="remember" />
-          </div>
-          <div class="pw-form-actions">
-            <button class="pw-button w-full primary" type="submit">
-              Login
+          <h4>Icon</h4>
+          <div class="flex items-center gap-2">
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z"
+                />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+              </svg>
+              Settings
+            </button>
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
+                />
+              </svg>
             </button>
           </div>
-        </form>
-        <h4>Horizontal</h4>
-        <form class="pw-form horizontal my-12">
-          <div class="pw-form-group">
-            <label for="search">Search</label>
-            <input id="search" name="search" type="email" />
+          <h4>Colors</h4>
+          <div class="flex items-center gap-2">
+            <button class="pw-button primary">Primary</button>
           </div>
-          <div class="pw-form-group">
-            <label for="sort">Sort</label>
-            <select id="sort" name="sort">
+          <h4>Rounded</h4>
+          <button class="rounded-3xl">Button</button>
+          <h4>Sizes</h4>
+          <div class="flex flex-wrap items-center gap-2">
+            <button class="pw-button xs">Button</button>
+            <button class="pw-button sm">Button</button>
+            <button class="pw-button md">Button</button>
+            <button class="pw-button lg">Button</button>
+            <button class="pw-button xl">Button</button>
+          </div>
+        </details>
+        <details>
+          <summary>Callout</summary>
+          <h4>Default</h4>
+          <div class="pw-callout">
+            <h4 class="mt-0">Header</h4>
+            <p class="mb-0">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rhoncus tempor neque, sed malesuada eros
+              dapibus vel. Aliquam in ligula vitae tortor porttitor laoreet iaculis finibus est.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>Card</summary>
+          <h4>Default</h4>
+          <div class="pw-card">
+            <h4 class="mt-0">Title</h4>
+            <p class="mb-0">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rhoncus tempor neque, sed malesuada eros
+              dapibus vel. Aliquam in ligula vitae tortor porttitor laoreet iaculis finibus est.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>Dialog</summary>
+          <h4>Default</h4>
+          <div class="pw-dialog">
+            <div class="pw-dialog-header">Confirm</div>
+            <div class="pw-dialog-body">
+              <p>Are you sure you want to delete this item?</p>
+              <div class="pw-dialog-actions">
+                <button>Cancel</button>
+                <button class="pw-button primary">Delete</button>
+              </div>
+            </div>
+          </div>
+        </details>
+        <details>
+          <summary>Form</summary>
+          <h4>Default</h4>
+          <form class="pw-form my-12" style="max-width: 320px">
+            <div class="pw-form-group">
+              <label for="email">Email address</label>
+              <input class="w-full" id="email" name="email" type="email" />
+            </div>
+            <div class="pw-form-group">
+              <label for="password">Password</label>
+              <input class="w-full" id="password" name="password" type="password" />
+            </div>
+            <div class="pw-form-group check">
+              <label for="remember-me">Remember me</label>
+              <input id="remember-me" type="checkbox" name="remember" />
+            </div>
+            <div class="pw-form-actions">
+              <button class="pw-button w-full primary" type="submit">Login</button>
+            </div>
+          </form>
+          <h4>Horizontal</h4>
+          <form class="pw-form horizontal my-12">
+            <div class="pw-form-group">
+              <label for="search">Search</label>
+              <input id="search" name="search" type="email" />
+            </div>
+            <div class="pw-form-group">
+              <label for="sort">Sort</label>
+              <select id="sort" name="sort">
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+            </div>
+            <div class="pw-form-actions">
+              <button type="submit">Search</button>
+            </div>
+          </form>
+          <h4>Columns</h4>
+          <form class="pw-form my-12" style="max-width: 768px">
+            <div class="pw-form-row">
+              <div class="flex-1">
+                <div class="pw-form-group">
+                  <label for="firstname"> First Name </label>
+                  <input class="w-full" id="firstname" name="firstname" type="text" />
+                </div>
+              </div>
+              <div class="flex-1">
+                <div class="pw-form-group">
+                  <label for="lastname">Last Name</label>
+                  <input class="w-full" id="lastname" name="lastname" type="text" />
+                </div>
+              </div>
+            </div>
+            <div class="pw-form-group">
+              <label for="address">Address</label>
+              <input class="w-full" id="address" name="address" type="text" />
+            </div>
+            <div class="pw-form-group">
+              <label for="address2">Address 2</label>
+              <input class="w-full" id="address2" name="address2" type="text" />
+            </div>
+            <div class="pw-form-row">
+              <div class="flex-3">
+                <div class="pw-form-group">
+                  <label for="city">City</label>
+                  <input class="w-full" id="city" name="city" type="text" />
+                </div>
+              </div>
+              <div class="flex-2">
+                <div class="pw-form-group">
+                  <label for="state">State</label>
+                  <select class="w-full" id="state" name="state">
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="flex-1">
+                <div class="pw-form-group">
+                  <label for="zip">Zip</label>
+                  <input class="w-full" id="zip" name="zip" type="text" />
+                </div>
+              </div>
+            </div>
+            <div class="pw-form-actions end">
+              <button type="reset">Cancel</button>
+              <button class="pw-button primary" type="submit">Send</button>
+            </div>
+          </form>
+        </details>
+        <details>
+          <summary>Input</summary>
+          <h4>Default</h4>
+          <input />
+          <h4>Disabled</h4>
+          <input disabled value="Disabled" />
+          <h4>Readonly</h4>
+          <input readonly value="Readonly" />
+          <h4>Placeholder</h4>
+          <input placeholder="Placeholder" />
+          <h4>Rounded</h4>
+          <input class="rounded-3xl" />
+          <h4>Label</h4>
+          <label for="label-example">Username</label>
+          <input id="label-example" />
+          <h4>Hint</h4>
+          <input />
+          <p class="font-size-sm text-muted">Password must contain 8 characters</p>
+          <h4>Error</h4>
+          <input />
+          <p class="font-size-sm text-error">Password must contain 8 characters</p>
+          <h4>Sizes</h4>
+          <div class="flex flex-wrap items-start gap-2">
+            <input class="pw-input xs" placeholder="Extra Small" />
+            <input class="pw-input sm" placeholder="Small" />
+            <input class="pw-input md" placeholder="Medium" />
+            <input class="pw-input lg" placeholder="Large" />
+            <input class="pw-input xl" placeholder="Extra Large" />
+          </div>
+          <h4>Textarea</h4>
+          <textarea></textarea>
+          <h4>Textarea disabled</h4>
+          <textarea disabled>Disabled</textarea>
+          <h4>Textarea readonly</h4>
+          <textarea readonly>Readonly</textarea>
+          <h4>Select</h4>
+          <select>
+            <optgroup label="Option Group 1">
               <option value="1">Option 1</option>
               <option value="2">Option 2</option>
-              <option value="3">Option 3</option>
-            </select>
+            </optgroup>
+            <optgroup label="Option Group 2">
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3" disabled>Disabled Option</option>
+            </optgroup>
+          </select>
+          <h4>Select disabled</h4>
+          <select disabled>
+            <optgroup label="Option Group 1">
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+            </optgroup>
+            <optgroup label="Option Group 2">
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3" disabled>Disabled Option</option>
+            </optgroup>
+          </select>
+          <h4>Radio</h4>
+          <label>
+            <input type="radio" name="radio_button" value="radio_1" />
+            Radio 1
+          </label>
+          <label>
+            <input type="radio" name="radio_button" value="radio_2" />
+            Radio 2
+          </label>
+          <label>
+            <input type="radio" name="radio_button" value="radio_3" />
+            Radio 3
+          </label>
+          <label>
+            <input type="radio" name="radio_button" value="radio_4" disabled />
+            Radio Disabled
+          </label>
+          <h4>Checkbox</h4>
+          <label>
+            <input type="checkbox" name="checkboxes" value="check_1" />
+            Checkbox 1
+          </label>
+          <label>
+            <input type="checkbox" name="checkboxes" value="check_2" />
+            Checkbox 2
+          </label>
+          <label>
+            <input type="checkbox" name="checkboxes" value="check_3" />
+            Checkbox 3
+          </label>
+          <label>
+            <input type="checkbox" name="checkboxes" value="check_4" disabled />
+            Checkbox Disabled
+          </label>
+          <h4>File</h4>
+          <input type="file" />
+          <h4>Number</h4>
+          <input type="number" min="0" max="10" step="1" value="5" />
+          <h4>Date</h4>
+          <input type="date" />
+          <h4>Time</h4>
+          <input type="time" />
+          <h4>Color</h4>
+          <input type="color" />
+          <h4>Datalist</h4>
+          <input list="browsers" name="browser" type="datalist" id="datalist" />
+          <datalist id="browsers">
+            <option value="Internet Explorer" />
+            <option value="Firefox" />
+            <option value="Chrome" />
+            <option value="Opera" />
+            <option value="Safari" />
+          </datalist>
+          <h4>Range</h4>
+          <input type="range" name="points" min="1" max="10" />
+          <h4>Output</h4>
+          <output name="result">42</output>
+          <h4>Progress</h4>
+          <progress value="65" max="100"></progress>
+          <h4>Progress indeterminate</h4>
+          <progress></progress>
+          <h4>Meter</h4>
+          <meter min="200" max="500" value="350">350 degrees</meter>
+        </details>
+        <details>
+          <summary>Media</summary>
+          <h4>Audio</h4>
+          <audio controls>
+            <source src="https://simpl.info/audio/audio/audio.ogv" type="audio/ogg" />
+            <source src="https://simpl.info/audio/audio/audio.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+          <h4>Video</h4>
+          <video width="320" height="240" controls>
+            <source
+              src="https://www.html5rocks.com/en/tutorials/video/basics/devstories.webm"
+              type='video/webm;codecs="vp8, vorbis"'
+            />
+            <source
+              src="https://www.html5rocks.com/en/tutorials/video/basics/devstories.mp4"
+              type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'
+            />
+            <track
+              src="https://www.html5rocks.com/en/tutorials/video/basics/devstories-en.vtt"
+              label="English subtitles"
+              kind="subtitles"
+              srclang="en"
+              default
+            />
+            Your browser does not support the video tag.
+          </video>
+          <h4>Iframe</h4>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/0sMtoedWaf0?si=jscQcnklK160El6c"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </details>
+        <details>
+          <summary>Pagination</summary>
+          <h4>Default</h4>
+          <nav>
+            <ul class="pw-pagination">
+              <li class="disabled">Prev</li>
+              <li class="active">1</li>
+              <li>
+                <a href="#">2</a>
+              </li>
+              <li>
+                <a href="#">3</a>
+              </li>
+              <li>
+                <a href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+        </details>
+        <details>
+          <summary>Spinner</summary>
+          <h4>Default</h4>
+          <div class="pw-spinner"></div>
+          <h4>Sizes</h4>
+          <div class="flex flex-wrap items-center gap-4">
+            <div class="pw-spinner xs"></div>
+            <div class="pw-spinner sm"></div>
+            <div class="pw-spinner md"></div>
+            <div class="pw-spinner lg"></div>
+            <div class="pw-spinner xl"></div>
           </div>
-          <div class="pw-form-actions">
-            <button type="submit">
-              Search
-            </button>
+          <h4>Centered</h4>
+          <div class="pw-spinner-container">
+            <div class="pw-spinner"></div>
           </div>
-        </form>
-        <h4>Columns</h4>
-        <form class="pw-form my-12" style="max-width: 768px">
-          <div class="pw-form-row">
-            <div class="flex-1">
-              <div class="pw-form-group">
-                <label for="firstname">
-                  First Name
-                </label>
-                <input class="w-full" id="firstname" name="firstname" type="text" />
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="pw-form-group">
-                <label for="lastname">Last Name</label>
-                <input class="w-full" id="lastname" name="lastname" type="text" />
-              </div>
-            </div>
+          <h4>Message</h4>
+          <div class="pw-spinner-container">
+            <div class="pw-spinner"></div>
+            <div class="font-size-sm text-muted">Loading...</div>
           </div>
-          <div class="pw-form-group">
-            <label for="address">Address</label>
-            <input class="w-full" id="address" name="address" type="text" />
+        </details>
+        <details>
+          <summary>Table</summary>
+          <div class="pw-table-container">
+            <table>
+              <caption>
+                This is a table caption
+              </caption>
+              <thead>
+                <tr>
+                  <th>Table Header 1</th>
+                  <th>Table Header 2</th>
+                  <th>Table Header 3</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Division 1</td>
+                  <td>Division 2</td>
+                  <td>Division 3</td>
+                </tr>
+                <tr>
+                  <td>Division 1</td>
+                  <td>Division 2</td>
+                  <td>Division 3</td>
+                </tr>
+                <tr>
+                  <td>Division 1</td>
+                  <td>Division 2</td>
+                  <td>Division 3</td>
+                </tr>
+                <tr>
+                  <td colspan="3">A row with a cell spanning all 3 columns</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>Table Footer 1</td>
+                  <td>Table Footer 2</td>
+                  <td>Table Footer 3</td>
+                </tr>
+              </tfoot>
+            </table>
           </div>
-          <div class="pw-form-group">
-            <label for="address2">Address 2</label>
-            <input class="w-full" id="address2" name="address2" type="text" />
-          </div>
-          <div class="pw-form-row">
-            <div class="flex-3">
-              <div class="pw-form-group">
-                <label for="city">City</label>
-                <input class="w-full" id="city" name="city" type="text" />
-              </div>
-            </div>
-            <div class="flex-2">
-              <div class="pw-form-group">
-                <label for="state">State</label>
-                <select class="w-full" id="state" name="state">
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                  <option value="3">Option 3</option>
-                </select>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="pw-form-group">
-                <label for="zip">Zip</label>
-                <input class="w-full" id="zip" name="zip" type="text" />
-              </div>
-            </div>
-          </div>
-          <div class="pw-form-actions end">
-            <button type="reset">Cancel</button>
-            <button class="pw-button primary" type="submit">Send</button>
-          </div>
-        </form>
-      </details>
-      <details>
-        <summary>Input</summary>
-        <h4>Default</h4>
-        <input />
-        <h4>Disabled</h4>
-        <input disabled value="Disabled" />
-        <h4>Readonly</h4>
-        <input readonly value="Readonly" />
-        <h4>Placeholder</h4>
-        <input placeholder="Placeholder" />
-        <h4>Rounded</h4>
-        <input class="rounded-3xl" />
-        <h4>Label</h4>
-        <label for="label-example">Username</label>
-        <input id="label-example" />
-        <h4>Hint</h4>
-        <input />
-        <p class="font-size-sm text-muted">Password must contain 8 characters</p>
-        <h4>Error</h4>
-        <input />
-        <p class="font-size-sm text-error">Password must contain 8 characters</p>
-        <h4>Sizes</h4>
-        <div class="flex flex-wrap items-start gap-2">
-          <input class="pw-input xs" placeholder="Extra Small" />
-          <input class="pw-input sm" placeholder="Small" />
-          <input class="pw-input md" placeholder="Medium" />
-          <input class="pw-input lg" placeholder="Large" />
-          <input class="pw-input xl" placeholder="Extra Large" />
-        </div>
-        <h4>Textarea</h4>
-        <textarea></textarea>
-        <h4>Textarea disabled</h4>
-        <textarea disabled>Disabled</textarea>
-        <h4>Textarea readonly</h4>
-        <textarea readonly>Readonly</textarea>
-        <h4>Select</h4>
-        <select>
-          <optgroup label="Option Group 1">
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-          </optgroup>
-          <optgroup label="Option Group 2">
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3" disabled>Disabled Option</option>
-          </optgroup>
-        </select>
-        <h4>Select disabled</h4>
-        <select disabled>
-          <optgroup label="Option Group 1">
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-          </optgroup>
-          <optgroup label="Option Group 2">
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3" disabled>Disabled Option</option>
-          </optgroup>
-        </select>
-        <h4>Radio</h4>
-        <label>
-          <input type="radio" name="radio_button" value="radio_1" />
-          Radio 1
-        </label>
-        <label>
-          <input type="radio" name="radio_button" value="radio_2" />
-          Radio 2
-        </label>
-        <label>
-          <input type="radio" name="radio_button" value="radio_3" />
-          Radio 3
-        </label>
-        <label>
-          <input type="radio" name="radio_button" value="radio_4" disabled />
-          Radio Disabled
-        </label>
-        <h4>Checkbox</h4>
-        <label>
-          <input type="checkbox" name="checkboxes" value="check_1" />
-          Checkbox 1
-        </label>
-        <label>
-          <input type="checkbox" name="checkboxes" value="check_2" />
-          Checkbox 2
-        </label>
-        <label>
-          <input type="checkbox" name="checkboxes" value="check_3" />
-          Checkbox 3
-        </label>
-        <label>
-          <input type="checkbox" name="checkboxes" value="check_4" disabled />
-          Checkbox Disabled
-        </label>
-        <h4>File</h4>
-        <input type="file" />
-        <h4>Number</h4>
-        <input type="number" min="0" max="10" step="1" value="5" />
-        <h4>Date</h4>
-        <input type="date" />
-        <h4>Time</h4>
-        <input type="time" />
-        <h4>Color</h4>
-        <input type="color" />
-        <h4>Datalist</h4>
-        <input list="browsers" name="browser" type="datalist" id="datalist" />
-        <datalist id="browsers">
-          <option value="Internet Explorer" />
-          <option value="Firefox" />
-          <option value="Chrome" />
-          <option value="Opera" />
-          <option value="Safari" />
-        </datalist>
-        <h4>Range</h4>
-        <input type="range" name="points" min="1" max="10" />
-        <h4>Output</h4>
-        <output name="result">42</output>
-        <h4>Progress</h4>
-        <progress value="65" max="100"></progress>
-        <h4>Progress indeterminate</h4>
-        <progress></progress>
-        <h4>Meter</h4>
-        <meter min="200" max="500" value="350">350 degrees</meter>
-      </details>
-      <details>
-        <summary>Media</summary>
-        <h4>Audio</h4>
-        <audio controls>
-          <source src="https://simpl.info/audio/audio/audio.ogv" type="audio/ogg" />
-          <source src="https://simpl.info/audio/audio/audio.mp3" type="audio/mpeg" />
-          Your browser does not support the audio element.
-        </audio>
-        <h4>Video</h4>
-        <video width="320" height="240" controls>
-          <source src="https://www.html5rocks.com/en/tutorials/video/basics/devstories.webm"
-            type='video/webm;codecs="vp8, vorbis"' />
-          <source src="https://www.html5rocks.com/en/tutorials/video/basics/devstories.mp4"
-            type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
-          <track src="https://www.html5rocks.com/en/tutorials/video/basics/devstories-en.vtt" label="English subtitles"
-            kind="subtitles" srclang="en" default />
-          Your browser does not support the video tag.
-        </video>
-        <h4>Iframe</h4>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/0sMtoedWaf0?si=jscQcnklK160El6c"
-          title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </details>
-      <details>
-        <summary>Pagination</summary>
-        <h4>Default</h4>
-        <nav>
-          <ul class="pw-pagination">
-            <li class="disabled">
-              Prev
-            </li>
-            <li class="active">
-              1
-            </li>
-            <li>
-              <a href="#">2</a>
-            </li>
-            <li>
-              <a href="#">3</a>
-            </li>
-            <li>
-              <a href="#">Next</a>
-            </li>
+        </details>
+        <details>
+          <summary>Tabs</summary>
+          <ul class="pw-tabs">
+            <li>Accounts</li>
+            <li class="active">Projects</li>
+            <li class="disabled">Settings</li>
           </ul>
-        </nav>
-      </details>
-      <details>
-        <summary>Spinner</summary>
-        <h4>Default</h4>
-        <div class="pw-spinner"></div>
-        <h4>Sizes</h4>
-        <div class="flex flex-wrap items-center gap-4">
-          <div class="pw-spinner xs"></div>
-          <div class="pw-spinner sm"></div>
-          <div class="pw-spinner md"></div>
-          <div class="pw-spinner lg"></div>
-          <div class="pw-spinner xl"></div>
-        </div>
-        <h4>Centered</h4>
-        <div class="pw-spinner-container">
-          <div class="pw-spinner"></div>
-        </div>
-        <h4>Message</h4>
-        <div class="pw-spinner-container">
-          <div class="pw-spinner"></div>
-          <div class="font-size-sm text-muted">Loading...</div>
-        </div>
-      </details>
-      <details>
-        <summary>Table</summary>
-        <div class="pw-table-container">
-          <table>
-            <caption>This is a table caption</caption>
-            <thead>
-              <tr>
-                <th>Table Header 1</th>
-                <th>Table Header 2</th>
-                <th>Table Header 3</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Division 1</td>
-                <td>Division 2</td>
-                <td>Division 3</td>
-              </tr>
-              <tr>
-                <td>Division 1</td>
-                <td>Division 2</td>
-                <td>Division 3</td>
-              </tr>
-              <tr>
-                <td>Division 1</td>
-                <td>Division 2</td>
-                <td>Division 3</td>
-              </tr>
-              <tr>
-                <td colspan="3">A row with a cell spanning all 3 columns</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td>Table Footer 1</td>
-                <td>Table Footer 2</td>
-                <td>Table Footer 3</td>
-              </tr>
-            </tfoot>
-          </table>
-        </div>
-      </details>
-      <details>
-        <summary>Tabs</summary>
-        <ul class="pw-tabs">
-          <li>Accounts</li>
-          <li class="active">Projects</li>
-          <li class="disabled">Settings</li>
-        </ul>
-      </details>
-      <details>
-        <summary>Typography</summary>
-        <h1>Heading 1</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <h4>Heading 4</h4>
-        <h5>Heading 5</h5>
-        <h6>Heading 6</h6>
-        <hr />
-        <h1>Heading 1</h1>
-        <p>
-          Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus.
-          Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida
-          vehicula,
-          nisl.
-        </p>
-        <h2>Heading 2</h2>
-        <p>
-          Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus.
-          Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida
-          vehicula,
-          nisl.
-        </p>
-        <h3>Heading 3</h3>
-        <p>
-          Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus.
-          Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida
-          vehicula,
-          nisl.
-        </p>
-        <h4>Heading 4</h4>
-        <p>
-          Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus.
-          Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida
-          vehicula,
-          nisl.
-        </p>
-        <h5>Heading 5</h5>
-        <p>
-          Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus.
-          Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida
-          vehicula,
-          nisl.
-        </p>
-        <h6>Heading 6</h6>
-        <p>
-          Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus.
-          Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida
-          vehicula,
-          nisl.
-        </p>
-        <hr />
-        <p>
-          The <a href="#">a element</a> and <a href="https://example.com" target="_blank">external a element</a>
-          examples
-        </p>
-        <p>
-          The <abbr>abbr element</abbr> and an <abbr title="Abbreviation">abbr</abbr> element with title examples
-        </p>
-        <p>
-          The <acronym title="A Cowboy Ran One New York Marathon">ACRONYM</acronym> element example
-        </p>
-        <p>
-          The <b>b element</b> example
-        </p>
-        <p>
-          The <cite>cite element</cite> example
-        </p>
-        <p>
-          The <code>code element</code> example
-        </p>
-        <p>
-          The <data value="3967381398">data element</data> example
-        </p>
-        <p>
-          The <del>del element</del> example
-        </p>
-        <p>
-          The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples
-        </p>
-        <p>
-          The <em>em element</em> example
-        </p>
-        <p>
-          The <i>i element</i> example
-        </p>
-        <p>
-          The <ins>ins element</ins> example
-        </p>
-        <p>
-          The <kbd>kbd element</kbd> example
-        </p>
-        <p>
-          The <mark>mark element</mark> example
-        </p>
-        <p>
-          The <q>q element</q> example
-        </p>
-        <p>
-          The <q>q element <q>inside</q> a q element</q> example
-        </p>
-        <p>
-          The <s>s element</s> example
-        </p>
-        <p>
-          The <samp>samp element</samp> example
-        </p>
-        <p>
-          The <small>small element</small> example
-        </p>
-        <p>
-          The <span>span element</span> example
-        </p>
-        <p>
-          The <strong>strong element</strong> example
-        </p>
-        <p>
-          The <sub>sub element</sub> example
-        </p>
-        <p>
-          The <sup>sup element</sup> example
-        </p>
-        <p>
-          The <time datetime="2005-05-15 19:00">time element</time> example
-        </p>
-        <p>
-          The <u>u element</u> example
-        </p>
-        <p>
-          The <var>var element</var> example
-        </p>
-        <hr />
-        <pre class="language-javascript">
+        </details>
+        <details>
+          <summary>Typography</summary>
+          <h1>Heading 1</h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          <h4>Heading 4</h4>
+          <h5>Heading 5</h5>
+          <h6>Heading 6</h6>
+          <hr />
+          <h1>Heading 1</h1>
+          <p>
+            Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec
+            faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec,
+            gravida vehicula, nisl.
+          </p>
+          <h2>Heading 2</h2>
+          <p>
+            Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec
+            faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec,
+            gravida vehicula, nisl.
+          </p>
+          <h3>Heading 3</h3>
+          <p>
+            Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec
+            faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec,
+            gravida vehicula, nisl.
+          </p>
+          <h4>Heading 4</h4>
+          <p>
+            Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec
+            faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec,
+            gravida vehicula, nisl.
+          </p>
+          <h5>Heading 5</h5>
+          <p>
+            Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec
+            faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec,
+            gravida vehicula, nisl.
+          </p>
+          <h6>Heading 6</h6>
+          <p>
+            Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec
+            faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec,
+            gravida vehicula, nisl.
+          </p>
+          <hr />
+          <p>
+            The <a href="#">a element</a> and <a href="https://example.com" target="_blank">external a element</a>
+            examples
+          </p>
+          <p>The <abbr>abbr element</abbr> and an <abbr title="Abbreviation">abbr</abbr> element with title examples</p>
+          <p>The <acronym title="A Cowboy Ran One New York Marathon">ACRONYM</acronym> element example</p>
+          <p>The <b>b element</b> example</p>
+          <p>The <cite>cite element</cite> example</p>
+          <p>The <code>code element</code> example</p>
+          <p>The <data value="3967381398">data element</data> example</p>
+          <p>The <del>del element</del> example</p>
+          <p>The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples</p>
+          <p>The <em>em element</em> example</p>
+          <p>The <i>i element</i> example</p>
+          <p>The <ins>ins element</ins> example</p>
+          <p>The <kbd>kbd element</kbd> example</p>
+          <p>The <mark>mark element</mark> example</p>
+          <p>The <q>q element</q> example</p>
+          <p>
+            The <q>q element <q>inside</q> a q element</q> example
+          </p>
+          <p>The <s>s element</s> example</p>
+          <p>The <samp>samp element</samp> example</p>
+          <p>The <small>small element</small> example</p>
+          <p>The <span>span element</span> example</p>
+          <p>The <strong>strong element</strong> example</p>
+          <p>The <sub>sub element</sub> example</p>
+          <p>The <sup>sup element</sup> example</p>
+          <p>The <time datetime="2005-05-15 19:00">time element</time> example</p>
+          <p>The <u>u element</u> example</p>
+          <p>The <var>var element</var> example</p>
+          <hr />
+          <pre class="language-javascript">
 <code class="language-javascript">// Loop through Divs using Javascript.
 var divs = document.querySelectorAll('div'), i;
 
 for (i = 0; i < divs.length; ++i) {
   divs[i].style.color = "green";
 }</code></pre>
-        <pre><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p></pre>
-        <ol>
-          <li>List Item 1</li>
-          <li>List Item 2</li>
-          <li>
-            List Item 3
-            <ol>
-              <li>List Item 3.1</li>
-              <li>
-                List Item 3.2
-                <ol>
-                  <li>List Item 3.2.1</li>
-                  <li>List Item 3.2.2</li>
-                </ol>
-              </li>
-              <li>List Item 3.3</li>
-            </ol>
-          </li>
-          <li>List Item 4</li>
-        </ol>
-        <ul>
-          <li>List Item 1</li>
-          <li>List Item 2</li>
-          <li>
-            List Item 3
-            <ul>
-              <li>List Item 3.1</li>
-              <li>
-                List Item 3.2
-                <ul>
-                  <li>List Item 3.2.1</li>
-                  <li>List Item 3.2.2</li>
-                </ul>
-              </li>
-              <li>List Item 3.3</li>
-            </ul>
-          </li>
-          <li>List Item 4</li>
-        </ul>
-        <dl>
-          <dt>Definition Term 1</dt>
-          <dd>
-            Definition Description 1
-          </dd>
-          <dt>Definition Term 2</dt>
-          <dd>
-            Definition Description 2
-          </dd>
-        </dl>
-      </details>
+          <pre><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p></pre>
+          <ol>
+            <li>List Item 1</li>
+            <li>List Item 2</li>
+            <li>
+              List Item 3
+              <ol>
+                <li>List Item 3.1</li>
+                <li>
+                  List Item 3.2
+                  <ol>
+                    <li>List Item 3.2.1</li>
+                    <li>List Item 3.2.2</li>
+                  </ol>
+                </li>
+                <li>List Item 3.3</li>
+              </ol>
+            </li>
+            <li>List Item 4</li>
+          </ol>
+          <ul>
+            <li>List Item 1</li>
+            <li>List Item 2</li>
+            <li>
+              List Item 3
+              <ul>
+                <li>List Item 3.1</li>
+                <li>
+                  List Item 3.2
+                  <ul>
+                    <li>List Item 3.2.1</li>
+                    <li>List Item 3.2.2</li>
+                  </ul>
+                </li>
+                <li>List Item 3.3</li>
+              </ul>
+            </li>
+            <li>List Item 4</li>
+          </ul>
+          <dl>
+            <dt>Definition Term 1</dt>
+            <dd>Definition Description 1</dd>
+            <dt>Definition Term 2</dt>
+            <dd>Definition Description 2</dd>
+          </dl>
+        </details>
+      </div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>
