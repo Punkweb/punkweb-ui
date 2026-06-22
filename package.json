@@ -17,8 +17,5 @@
     "lite-server": "^2.6.1",
     "npm-run-all": "^4.1.5",
     "sass": "^1.93.3"
-  },
-  "dependencies": {
-    "normalize.css": "^8.0.1"
   }
 }
