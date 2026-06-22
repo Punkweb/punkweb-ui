@@ -17,19 +17,26 @@
 
   --background: var(--tw-gray-100);
   --foreground: var(--tw-gray-950);
+  --foreground-inverse: var(--tw-gray-50);
   --border: var(--tw-gray-300);
 
   --primary: var(--tw-emerald-700);
-  --primary-foreground: white;
-
-  --secondary: var(--tw-gray-700);
-  --secondary-foreground: white;
+  --primary-foreground: var(--foreground-inverse);
 
   --accent: var(--tw-sky-700);
-  --accent-foreground: white;
+  --accent-foreground: var(--foreground-inverse);
+  
+  --success: var(--tw-green-600);
+  --success-foreground: var(--foreground-inverse);
 
-  --tertiary: var(--tw-violet-700);
-  --tertiary-foreground: white;
+  --warning: var(--tw-yellow-500);
+  --warning-foreground: var(--foreground);
+
+  --error: var(--tw-red-600);
+  --error-foreground: var(--foreground-inverse);
+
+  --info: var(--tw-blue-400);
+  --info-foreground: var(--foreground-inverse);
 
   --muted: var(--tw-gray-200);
   --muted-foreground: var(--tw-gray-600);
@@ -53,7 +60,7 @@
   --blockquote-cite-foreground: var(--muted-foreground);
   --blockquote-foreground: var(--foreground);
 
-  --button: var(--tw-gray-200);
+  --button: var(--tw-gray-300);
   --button-foreground: var(--foreground);
 
   --callout-background: var(--muted);
@@ -67,25 +74,20 @@
 [data-theme='dark'] {
   --background: var(--tw-gray-900);
   --foreground: var(--tw-gray-50);
+  --foreground-inverse: var(--tw-gray-950);
   --border: var(--tw-gray-700);
 
   --primary: var(--tw-emerald-300);
-  --primary-foreground: var(--tw-gray-950);
-
-  --secondary: var(--tw-gray-300);
-  --secondary-foreground: var(--tw-gray-950);
-
   --accent: var(--tw-sky-300);
-  --accent-foreground: var(--tw-gray-950);
-
-  --tertiary: var(--tw-violet-300);
-  --tertiary-foreground: var(--tw-gray-950);
+  --success: var(--tw-green-300);
+  --warning: var(--tw-orange-300);
+  --error: var(--tw-red-300);
+  --info: var(--tw-blue-300);
 
   --muted: var(--tw-gray-800);
   --muted-foreground: var(--tw-gray-400);
 
   --selection: var(--tw-emerald-700);
 
-  --button: var(--tw-gray-800);
-  --button-foreground: var(--foreground);
+  --button: var(--tw-gray-700);
 }

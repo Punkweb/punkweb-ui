@@ -6,62 +6,64 @@
 }
 
 .pw-button {
+  &.outlined {
+    background-color: transparent;
+    border-color: var(--button);
+    color: var(--button);
+
+    &:enabled:hover {
+      background-color: functions.theme-lighten(var(--button), 10%);
+      color: var(--button-foreground);
+    }
+  }
+  &.ghost {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--button);
+
+    &:enabled:hover {
+      background-color: functions.theme-lighten(var(--button), 10%);
+      color: var(--button-foreground);
+    }
+  }
+
   &.primary {
-    background-color: var(--primary);
-    border-color: var(--primary);
-    color: var(--primary-foreground);
-
-    &:enabled:hover {
-      background-color: functions.theme-lighten(var(--primary), 10%);
-    }
+    --button: var(--primary);
+    --button-foreground: var(--primary-foreground);
   }
-
-  &.secondary {
-    background-color: var(--secondary);
-    border-color: var(--secondary);
-    color: var(--secondary-foreground);
-
-    &:enabled:hover {
-      background-color: functions.theme-lighten(var(--secondary), 10%);
-    }
-  }
-
   &.accent {
-    background-color: var(--accent);
-    border-color: var(--accent);
-    color: var(--accent-foreground);
-
-    &:enabled:hover {
-      background-color: functions.theme-lighten(var(--accent), 10%);
-    }
+    --button: var(--accent);
+    --button-foreground: var(--accent-foreground);
   }
-
-  &.tertiary {
-    background-color: var(--tertiary);
-    border-color: var(--tertiary);
-    color: var(--tertiary-foreground);
-
-    &:enabled:hover {
-      background-color: functions.theme-lighten(var(--tertiary), 10%);
-    }
+  &.success {
+    --button: var(--success);
+    --button-foreground: var(--success-foreground);
   }
-
+  &.warning {
+    --button: var(--warning);
+    --button-foreground: var(--warning-foreground);
+  }
+  &.error {
+    --button: var(--error);
+    --button-foreground: var(--error-foreground);
+  }
+  &.info {
+    --button: var(--info);
+    --button-foreground: var(--info-foreground);
+  }
+  
   &.xs {
     @include button-size(0.75rem, 0.25rem);
   }
-
   &.sm {
     @include button-size(0.875rem, 0.375rem);
   }
-
   &.md {
     @include button-size(1rem, 0.5rem);
   }
-
   &.lg {
     @include button-size(1.125rem, 0.625rem);
   }
-
   &.xl {
     @include button-size(1.25rem, 0.75rem);
   }
