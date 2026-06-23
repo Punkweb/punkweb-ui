@@ -8,8 +8,8 @@
 }
 
 *:focus-visible {
-  outline: var(--outline-width) solid var(--primary);
-  outline-offset: 1px;
+  outline: var(--outline-width) solid var(--outline);
+  outline-offset: var(--outline-offset);
 }
 
 ::selection {
@@ -64,21 +64,22 @@ code,
 pre,
 kbd,
 samp {
-  font-family: var(--font-mono);
+  font-family: var(--code-font);
 }
 
 code {
   @include mixins.rounded-sm;
-  background-color: var(--muted);
-  font-size: 0.875rem;
+  background-color: var(--code);
+  color: var(--code-foreground);
+  font-size: var(--code-font-size);
   padding: 0.125rem 0.25rem;
 }
 
 kbd {
   @include mixins.rounded-sm;
-  color: var(--foreground);
+  color: var(--code-foreground);
   border: var(--border-width) solid var(--border);
-  border-bottom: 3px solid var(--border);
+  border-bottom: 0.2rem solid var(--border);
   padding: 0.125rem 0.25rem;
 }
 
@@ -120,16 +121,16 @@ details[open] > :last-child {
 }
 
 blockquote {
-  background: var(--blockquote-background);
+  background: var(--blockquote);
   border-left: var(--blockquote-border-width) solid var(--blockquote-border);
   color: var(--blockquote-foreground);
   padding: 0.5rem 1rem;
 }
 
-blockquote > cite {
-  color: var(--muted-foreground);
+cite {
+  color: var(--cite-foreground);
   display: block;
-  font-size: 0.875rem;
+  font-size: var(--cite-font-size);
   font-style: italic;
 }
 

@@ -3,7 +3,7 @@
 .pw-badge {
   @include mixins.rounded-sm;
   align-items: center;
-  background-color: var(--badge-background);
+  background-color: var(--badge);
   border: var(--border-width) solid var(--badge-border);
   color: var(--badge-foreground);
   display: inline-flex;

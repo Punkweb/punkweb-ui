@@ -4,7 +4,7 @@
   @include mixins.rounded-sm;
   @include mixins.shadow-sm;
 
-  background-color: var(--card-background);
+  background-color: var(--card);
   border: var(--border-width) solid var(--border);
   color: var(--card-foreground);
   min-width: 16rem;

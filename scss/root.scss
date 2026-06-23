@@ -12,12 +12,15 @@
   --font-sans: 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', 'Nimbus Sans', sans-serif;
   --font-mono: 'Consolas', 'Liberation Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
 
-  --border-width: 1px;
-  --outline-width: 1px;
-
   --background: var(--tw-gray-100);
   --foreground: var(--tw-gray-950);
+
   --border: var(--tw-gray-300);
+  --border-width: 1px;
+
+  --outline: var(--primary);
+  --outline-offset: 1px;
+  --outline-width: 1px;
 
   --primary: var(--tw-blue-600);
   --primary-foreground: var(--tw-blue-50);
@@ -49,25 +52,31 @@
   --avatar-fallback: var(--muted);
   --avatar-fallback-foreground: var(--muted-foreground);
 
-  --badge-background: var(--muted);
+  --badge: var(--muted);
   --badge-border: var(--border);
   --badge-foreground: var(--foreground);
 
-  --blockquote-background: var(--muted);
+  --blockquote: var(--muted);
   --blockquote-border: var(--primary);
   --blockquote-border-width: 0.25rem;
-  --blockquote-cite-foreground: var(--muted-foreground);
   --blockquote-foreground: var(--foreground);
+  --cite-foreground: var(--muted-foreground);
+  --cite-font-size: 0.875rem;
 
   --button: var(--tw-gray-300);
   --button-foreground: var(--foreground);
 
-  --callout-background: var(--muted);
+  --callout: var(--muted);
   --callout-border: var(--border);
   --callout-foreground: var(--foreground);
 
-  --card-background: var(--background);
+  --card: var(--background);
   --card-foreground: var(--foreground);
+
+  --code: var(--muted);
+  --code-font: var(--font-mono);
+  --code-font-size: 0.875rem;
+  --code-foreground: var(--foreground);
 }
 
 [data-theme='dark'] {
@@ -75,8 +84,11 @@
   --foreground: var(--tw-gray-100);
   --border: var(--tw-gray-700);
 
-  --primary: var(--tw-blue-500);
-  --accent: var(--tw-violet-500);
+  --primary: var(--tw-blue-400);
+  --primary-foreground: var(--tw-blue-950);
+
+  --accent: var(--tw-violet-400);
+  --accent-foreground: var(--tw-violet-950);
 
   --muted: var(--tw-gray-800);
   --muted-foreground: var(--tw-gray-400);

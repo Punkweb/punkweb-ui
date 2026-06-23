@@ -2,7 +2,7 @@
 
 .pw-callout {
   @include mixins.rounded-sm;
-  background-color: var(--callout-background);
+  background-color: var(--callout);
   border: var(--border-width) solid var(--callout-border);
   color: var(--callout-foreground);
   padding: 0.75rem;
