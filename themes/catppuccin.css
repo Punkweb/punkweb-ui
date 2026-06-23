@@ -1,0 +1,117 @@
+:root {
+  /* Base */
+  --background: #eff1f5; /* base */
+  --foreground: #4c4f69; /* text */
+
+  --border: #ccd0da; /* surface0 */
+
+  /* Brand / semantic */
+  --primary: #8839ef; /* mauve */
+  --primary-foreground: #eff1f5;
+
+  --accent: #1e66f5; /* blue */
+  --accent-foreground: #eff1f5;
+
+  --success: #40a02b; /* green */
+  --success-foreground: #eff1f5;
+
+  --warning: #df8e1d; /* yellow */
+  --warning-foreground: #eff1f5;
+
+  --error: #d20f39; /* red */
+  --error-foreground: #eff1f5;
+
+  --info: #04a5e5; /* sky */
+  --info-foreground: #eff1f5;
+
+  /* UI */
+  --muted: #e6e9ef; /* surface0 */
+  --muted-foreground: #6c6f85; /* subtext0 */
+
+  --selection: #ccd0da;
+  --selection-foreground: #4c4f69;
+
+  --mark: #df8e1d;
+  --mark-foreground: #eff1f5;
+
+  /* Components */
+  --button: #ccd0da;
+  --button-foreground: #4c4f69;
+
+  --card: #e6e9ef;
+  --card-foreground: #4c4f69;
+
+  --code: #e6e9ef;
+  --code-foreground: #4c4f69;
+
+  --blockquote: #e6e9ef;
+  --blockquote-border: #8839ef;
+  --blockquote-foreground: #4c4f69;
+
+  --badge: #e6e9ef;
+  --badge-border: #ccd0da;
+  --badge-foreground: #4c4f69;
+
+  --callout: #e6e9ef;
+  --callout-border: #ccd0da;
+  --callout-foreground: #4c4f69;
+}
+
+[data-theme='dark'] {
+  /* Base */
+  --background: #24273a; /* base */
+  --foreground: #cad3f5; /* text */
+
+  --border: #363a4f; /* surface0 */
+
+  /* Brand / semantic */
+  --primary: #c6a0f6; /* mauve */
+  --primary-foreground: #24273a;
+
+  --accent: #8aadf4; /* blue */
+  --accent-foreground: #24273a;
+
+  --success: #a6da95; /* green */
+  --success-foreground: #24273a;
+
+  --warning: #eed49f; /* yellow */
+  --warning-foreground: #24273a;
+
+  --error: #ed8796; /* red */
+  --error-foreground: #24273a;
+
+  --info: #91d7e3; /* sky */
+  --info-foreground: #24273a;
+
+  /* UI */
+  --muted: #363a4f; /* surface0 */
+  --muted-foreground: #a5adcb; /* subtext0 */
+
+  --selection: #494d64; /* surface1 */
+  --selection-foreground: #cad3f5;
+
+  --mark: #eed49f;
+  --mark-foreground: #24273a;
+
+  /* Components */
+  --button: #363a4f;
+  --button-foreground: #cad3f5;
+
+  --card: #1e2030; /* mantle */
+  --card-foreground: #cad3f5;
+
+  --code: #363a4f;
+  --code-foreground: #cad3f5;
+
+  --blockquote: #363a4f;
+  --blockquote-border: #c6a0f6;
+  --blockquote-foreground: #cad3f5;
+
+  --badge: #363a4f;
+  --badge-border: #494d64;
+  --badge-foreground: #cad3f5;
+
+  --callout: #363a4f;
+  --callout-border: #494d64;
+  --callout-foreground: #cad3f5;
+}
