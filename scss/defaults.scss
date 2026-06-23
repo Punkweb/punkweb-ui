@@ -206,7 +206,17 @@ a.pw-button:hover,
 input[type='submit']:enabled:hover,
 input[type='reset']:enabled:hover,
 input[type='button']:enabled:hover {
-  background-color: functions.theme-lighten(var(--button), 10%);
+  background-color: functions.theme-darken(var(--button), 5%);
+  color: var(--button-foreground);
+}
+
+button:enabled:active,
+.pw-button:active,
+a.pw-button:active,
+input[type='submit']:enabled:active,
+input[type='reset']:enabled:active,
+input[type='button']:enabled:active {
+  background-color: var(--button);
 }
 
 input,

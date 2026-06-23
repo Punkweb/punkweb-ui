@@ -10,21 +10,11 @@
     background-color: transparent;
     border-color: var(--button);
     color: var(--button);
-
-    &:enabled:hover {
-      background-color: functions.theme-lighten(var(--button), 10%);
-      color: var(--button-foreground);
-    }
   }
   &.ghost {
     background-color: transparent;
     border-color: transparent;
     color: var(--button);
-
-    &:enabled:hover {
-      background-color: functions.theme-lighten(var(--button), 10%);
-      color: var(--button-foreground);
-    }
   }
 
   &.primary {
@@ -51,7 +41,7 @@
     --button: var(--info);
     --button-foreground: var(--info-foreground);
   }
-  
+
   &.xs {
     @include button-size(0.75rem, 0.25rem);
   }
