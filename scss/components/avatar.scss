@@ -11,7 +11,7 @@
   align-items: center;
   cursor: pointer;
   display: inline-flex;
-  font-size: 2rem;
+  font-size: 1.75rem;
   justify-content: center;
   overflow: hidden;
   user-select: none;
@@ -26,13 +26,13 @@
     @include avatar-size(3rem, 1.25rem);
   }
   &.md {
-    @include avatar-size(4rem, 2rem);
+    @include avatar-size(4rem, 1.75rem);
   }
   &.lg {
     @include avatar-size(6rem, 2.75rem);
   }
   &.xl {
-    @include avatar-size(8rem, 3.25rem);
+    @include avatar-size(8rem, 3.75rem);
   }
 
   &-image {
