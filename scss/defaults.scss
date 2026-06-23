@@ -56,7 +56,7 @@ a {
 mark {
   @include mixins.rounded-sm;
   background-color: var(--mark);
-  color: black;
+  color: var(--mark-foreground);
   padding: 0.125rem 0.25rem;
 }
 
