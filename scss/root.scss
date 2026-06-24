@@ -28,17 +28,17 @@
   --accent: var(--tw-violet-600);
   --accent-foreground: var(--tw-violet-50);
 
-  --success: var(--tw-green-500);
-  --success-foreground: var(--tw-green-950);
+  --success: var(--tw-green-600);
+  --success-foreground: var(--tw-green-50);
 
-  --warning: var(--tw-amber-500);
-  --warning-foreground: var(--tw-amber-950);
+  --warning: var(--tw-amber-600);
+  --warning-foreground: var(--tw-amber-50);
 
-  --error: var(--tw-red-500);
-  --error-foreground: var(--tw-red-950);
+  --error: var(--tw-red-600);
+  --error-foreground: var(--tw-red-50);
 
-  --info: var(--tw-sky-500);
-  --info-foreground: var(--tw-sky-950);
+  --info: var(--tw-sky-600);
+  --info-foreground: var(--tw-sky-50);
 
   --muted: var(--tw-gray-200);
   --muted-foreground: var(--tw-gray-600);
@@ -89,6 +89,18 @@
 
   --accent: var(--tw-violet-400);
   --accent-foreground: var(--tw-violet-950);
+
+  --success: var(--tw-green-400);
+  --success-foreground: var(--tw-green-950);
+
+  --warning: var(--tw-amber-400);
+  --warning-foreground: var(--tw-amber-950);
+
+  --error: var(--tw-red-400);
+  --error-foreground: var(--tw-red-950);
+
+  --info: var(--tw-sky-400);
+  --info-foreground: var(--tw-sky-950);
 
   --muted: var(--tw-gray-800);
   --muted-foreground: var(--tw-gray-400);
