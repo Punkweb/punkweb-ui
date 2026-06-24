@@ -1,0 +1,217 @@
+:root {
+  --code-keyword: var(--primary);
+  --code-builtin: var(--error);
+  --code-class-name: var(--warning);
+  --code-function: var(--accent);
+  --code-boolean: var(--warning);
+  --code-number: var(--warning);
+  --code-string: var(--success);
+  --code-code: var(--success);
+  --code-symbol: var(--warning);
+  --code-regex: var(--error);
+  --code-url: var(--success);
+  --code-operator: var(--info);
+  --code-variable: var(--foreground);
+  --code-constant: var(--warning);
+  --code-property: var(--accent);
+  --code-punctuation: var(--muted-foreground);
+  --code-important: var(--primary);
+  --code-comment: var(--muted-foreground);
+  --code-tag: var(--accent);
+  --code-attr-name: var(--warning);
+  --code-attr-value: var(--success);
+  --code-namespace: var(--warning);
+  --code-prolog: var(--primary);
+  --code-doctype: var(--primary);
+  --code-cdata: var(--info);
+  --code-entity: var(--error);
+  --code-atrule: var(--primary);
+  --code-selector: var(--accent);
+  --code-deleted: var(--error);
+  --code-inserted: var(--success);
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+  background: var(--muted);
+  color: var(--foreground);
+  direction: ltr;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  text-align: left;
+  text-shadow: none;
+  white-space: pre;
+  word-break: normal;
+  word-spacing: normal;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+pre[class*='language-']::-moz-selection,
+pre[class*='language-'] ::-moz-selection,
+code[class*='language-']::-moz-selection,
+code[class*='language-'] ::-moz-selection {
+  background: var(--selection);
+  color: var(--selection-foreground);
+  text-shadow: none;
+}
+
+pre[class*='language-']::selection,
+pre[class*='language-'] ::selection,
+code[class*='language-']::selection,
+code[class*='language-'] ::selection {
+  background: var(--selection);
+  color: var(--selection-foreground);
+  text-shadow: none;
+}
+
+/* Code blocks */
+pre[class*='language-'] {
+  border-radius: 0.5rem;
+  margin-block: 1rem 1rem;
+  overflow: auto;
+  padding: 1rem;
+}
+
+/* Inline code */
+:not(pre) > code[class*='language-'] {
+  border-radius: 0.25rem;
+  padding: 0.125rem;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+pre > code.highlight {
+  outline: 0.375rem solid var(--code-highlight);
+  outline-offset: 0.375rem;
+}
+
+/* https://prismjs.com/tokens.html */
+
+.token.keyword {
+  color: var(--code-keyword);
+}
+
+.token.builtin {
+  color: var(--code-builtin);
+}
+
+.token.class-name {
+  color: var(--code-class-name);
+}
+
+.token.function {
+  color: var(--code-function);
+}
+
+.token.boolean,
+.token.number {
+  color: var(--code-boolean);
+}
+
+.token.string,
+.token.char {
+  color: var(--code-string);
+}
+
+.token.symbol {
+  color: var(--code-symbol);
+}
+
+.token.regex {
+  color: var(--code-regex);
+}
+
+.token.url {
+  color: var(--code-url);
+}
+
+.token.operator {
+  color: var(--code-operator);
+}
+
+.token.variable {
+  color: var(--code-variable);
+}
+
+.token.constant {
+  color: var(--code-constant);
+}
+
+.token.property {
+  color: var(--code-property);
+}
+
+.token.punctuation {
+  color: var(--code-punctuation);
+}
+
+.token.important {
+  color: var(--code-important);
+}
+
+.token.comment {
+  color: var(--code-comment);
+}
+
+.token.tag {
+  color: var(--code-tag);
+}
+
+.token.attr-name {
+  color: var(--code-attr-name);
+}
+
+.token.attr-value {
+  color: var(--code-attr-value);
+}
+
+.token.namespace {
+  color: var(--code-namespace);
+}
+
+.token.prolog,
+.token.doctype {
+  color: var(--code-prolog);
+}
+
+.token.cdata {
+  color: var(--code-cdata);
+}
+
+.token.entity {
+  color: var(--code-entity);
+}
+
+.token.atrule {
+  color: var(--code-atrule);
+}
+
+.token.selector {
+  color: var(--code-selector);
+}
+
+/* Diff */
+
+.token.deleted {
+  color: var(--code-deleted);
+}
+
+.token.inserted {
+  color: var(--code-inserted);
+}
