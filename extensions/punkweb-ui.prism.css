@@ -6,7 +6,7 @@
   --code-boolean: var(--primary);
   --code-number: var(--error);
   --code-string: var(--success);
-  --code-code: var(--success);
+  --code-char: var(--success);
   --code-symbol: var(--primary);
   --code-regex: var(--warning);
   --code-url: var(--primary);
@@ -119,14 +119,20 @@ pre > code.highlight {
   color: var(--code-function);
 }
 
-.token.boolean,
-.token.number {
+.token.boolean {
   color: var(--code-boolean);
 }
 
-.token.string,
-.token.char {
+.token.number {
+  color: var(--code-number);
+}
+
+.token.string {
   color: var(--code-string);
+}
+
+.token.char {
+  color: var(--code-char);
 }
 
 .token.symbol {
@@ -185,9 +191,12 @@ pre > code.highlight {
   color: var(--code-namespace);
 }
 
-.token.prolog,
-.token.doctype {
+.token.prolog {
   color: var(--code-prolog);
+}
+
+.token.doctype {
+  color: var(--code-doctype);
 }
 
 .token.cdata {
