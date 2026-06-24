@@ -1,8 +1,3 @@
-/* =========================
-   GRUVBOX PALETTE
-   ========================= */
-
-/* Light (Gruvbox Light Medium) */
 :root {
   --gruvbox-bg: #fbf1c7;
   --gruvbox-surface: #ebdbb2;
@@ -20,7 +15,6 @@
   --gruvbox-orange: #d65d0e;
 }
 
-/* Dark (Gruvbox Dark Medium) */
 [data-theme='dark'] {
   --gruvbox-bg: #282828;
   --gruvbox-surface: #3c3836;
@@ -38,11 +32,6 @@
   --gruvbox-orange: #fe8019;
 }
 
-/* =========================
-   SEMANTIC TOKENS
-   ========================= */
-
-/* Light Theme */
 :root {
   --background: var(--gruvbox-bg);
   --foreground: var(--gruvbox-text);
@@ -98,7 +87,6 @@
   --callout-foreground: var(--foreground);
 }
 
-/* Dark Theme */
 [data-theme='dark'] {
   --background: var(--gruvbox-bg);
   --foreground: var(--gruvbox-text);

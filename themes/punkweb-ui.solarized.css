@@ -1,8 +1,3 @@
-/* =========================
-   SOLARIZED PALETTE
-   ========================= */
-
-/* Light (Solarized Light) */
 :root {
   --sol-base03: #002b36;
   --sol-base02: #073642;
@@ -23,7 +18,6 @@
   --sol-green: #859900;
 }
 
-/* Dark (Solarized Dark) */
 [data-theme='dark'] {
   --sol-base03: #002b36;
   --sol-base02: #073642;
@@ -44,11 +38,6 @@
   --sol-green: #859900;
 }
 
-/* =========================
-   SEMANTIC TOKENS
-   ========================= */
-
-/* Light Theme */
 :root {
   --background: var(--sol-base3);
   --foreground: var(--sol-base00);
@@ -104,7 +93,6 @@
   --callout-foreground: var(--foreground);
 }
 
-/* Dark Theme */
 [data-theme='dark'] {
   --background: var(--sol-base03);
   --foreground: var(--sol-base0);
