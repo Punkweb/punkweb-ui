@@ -1,0 +1,155 @@
+/* =========================
+   GRUVBOX PALETTE
+   ========================= */
+
+/* Light (Gruvbox Light Medium) */
+:root {
+  --gruvbox-bg: #fbf1c7;
+  --gruvbox-surface: #ebdbb2;
+  --gruvbox-border: #d5c4a1;
+
+  --gruvbox-text: #3c3836;
+  --gruvbox-muted: #7c6f64;
+
+  --gruvbox-red: #cc241d;
+  --gruvbox-green: #98971a;
+  --gruvbox-yellow: #d79921;
+  --gruvbox-blue: #458588;
+  --gruvbox-purple: #b16286;
+  --gruvbox-aqua: #689d6a;
+  --gruvbox-orange: #d65d0e;
+}
+
+/* Dark (Gruvbox Dark Medium) */
+[data-theme='dark'] {
+  --gruvbox-bg: #282828;
+  --gruvbox-surface: #3c3836;
+  --gruvbox-border: #504945;
+
+  --gruvbox-text: #ebdbb2;
+  --gruvbox-muted: #a89984;
+
+  --gruvbox-red: #fb4934;
+  --gruvbox-green: #b8bb26;
+  --gruvbox-yellow: #fabd2f;
+  --gruvbox-blue: #83a598;
+  --gruvbox-purple: #d3869b;
+  --gruvbox-aqua: #8ec07c;
+  --gruvbox-orange: #fe8019;
+}
+
+/* =========================
+   SEMANTIC TOKENS
+   ========================= */
+
+/* Light Theme */
+:root {
+  --background: var(--gruvbox-bg);
+  --foreground: var(--gruvbox-text);
+
+  --border: var(--gruvbox-border);
+
+  --primary: var(--gruvbox-blue);
+  --primary-foreground: #fbf1c7;
+
+  --accent: var(--gruvbox-purple);
+  --accent-foreground: #fbf1c7;
+
+  --success: var(--gruvbox-green);
+  --success-foreground: #1d2021;
+
+  --warning: var(--gruvbox-yellow);
+  --warning-foreground: #1d2021;
+
+  --error: var(--gruvbox-red);
+  --error-foreground: #fbf1c7;
+
+  --info: var(--gruvbox-aqua);
+  --info-foreground: #1d2021;
+
+  --muted: var(--gruvbox-surface);
+  --muted-foreground: var(--gruvbox-muted);
+
+  --selection: var(--gruvbox-border);
+  --selection-foreground: var(--foreground);
+
+  --mark: var(--gruvbox-yellow);
+  --mark-foreground: #1d2021;
+
+  --button: var(--gruvbox-border);
+  --button-foreground: var(--foreground);
+
+  --card: var(--gruvbox-surface);
+  --card-foreground: var(--foreground);
+
+  --code: var(--gruvbox-surface);
+  --code-foreground: var(--foreground);
+
+  --blockquote: var(--gruvbox-surface);
+  --blockquote-border: var(--gruvbox-blue);
+  --blockquote-foreground: var(--foreground);
+
+  --badge: var(--gruvbox-surface);
+  --badge-border: var(--gruvbox-border);
+  --badge-foreground: var(--foreground);
+
+  --callout: var(--gruvbox-surface);
+  --callout-border: var(--gruvbox-border);
+  --callout-foreground: var(--foreground);
+}
+
+/* Dark Theme */
+[data-theme='dark'] {
+  --background: var(--gruvbox-bg);
+  --foreground: var(--gruvbox-text);
+
+  --border: var(--gruvbox-border);
+
+  --primary: var(--gruvbox-blue);
+  --primary-foreground: var(--gruvbox-bg);
+
+  --accent: var(--gruvbox-purple);
+  --accent-foreground: var(--gruvbox-bg);
+
+  --success: var(--gruvbox-green);
+  --success-foreground: var(--gruvbox-bg);
+
+  --warning: var(--gruvbox-yellow);
+  --warning-foreground: var(--gruvbox-bg);
+
+  --error: var(--gruvbox-red);
+  --error-foreground: var(--gruvbox-bg);
+
+  --info: var(--gruvbox-aqua);
+  --info-foreground: var(--gruvbox-bg);
+
+  --muted: var(--gruvbox-surface);
+  --muted-foreground: var(--gruvbox-muted);
+
+  --selection: var(--gruvbox-border);
+  --selection-foreground: var(--gruvbox-text);
+
+  --mark: var(--gruvbox-yellow);
+  --mark-foreground: var(--gruvbox-bg);
+
+  --button: var(--gruvbox-surface);
+  --button-foreground: var(--gruvbox-text);
+
+  --card: var(--gruvbox-surface);
+  --card-foreground: var(--gruvbox-text);
+
+  --code: var(--gruvbox-surface);
+  --code-foreground: var(--gruvbox-text);
+
+  --blockquote: var(--gruvbox-surface);
+  --blockquote-border: var(--gruvbox-blue);
+  --blockquote-foreground: var(--gruvbox-text);
+
+  --badge: var(--gruvbox-surface);
+  --badge-border: var(--gruvbox-border);
+  --badge-foreground: var(--gruvbox-text);
+
+  --callout: var(--gruvbox-surface);
+  --callout-border: var(--gruvbox-border);
+  --callout-foreground: var(--gruvbox-text);
+}

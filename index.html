@@ -4,17 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PunkwebUI</title>
-    <script type="text/javascript" src="/static/theme.js"></script>
+    <script type="text/javascript" src="static/theme.js"></script>
     <link rel="stylesheet" href="dist/css/punkweb-ui.min.css" />
-    <link rel="stylesheet" href="themes/catppuccin.css" />
-    <link rel="stylesheet" href="static/prism.css" />
-    <link rel="stylesheet" href="static/prism-punkweb.css" />
+    <link rel="stylesheet" href="extensions/punkweb-ui.prism.css" />
+    <link rel="stylesheet" href="themes/punkweb-ui.catppuccin.css" />
   </head>
   <body>
     <div class="pw-container xl">
       <div class="flex items-center justify-between gap-4 my-8">
         <h1 class="my-0">PunkwebUI</h1>
-        <button class="pw-button icon" id="theme-toggle">&#9728;</button>
+        <button class="pw-button icon fixed" style="top: 2rem; right: 2rem;" id="theme-toggle">&#9728;</button>
       </div>
       <div class="flex flex-col gap-2 my-8">
         <details>
@@ -633,12 +632,41 @@
           <p>The <var>var element</var> example</p>
           <hr />
           <pre class="language-javascript">
-<code class="language-javascript">// Loop through Divs using Javascript.
-var divs = document.querySelectorAll('div');
+<code class="language-javascript">// Set theme before DOM is loaded to avoid FOUC
 
-for (i = 0; i < divs.length; ++i) {
-  divs[i].style.color = "green";
-}</code></pre>
+(function () {
+  var html = document.documentElement;
+  var savedTheme = localStorage.getItem('pw-theme');
+  if (savedTheme) {
+    html.setAttribute('data-theme', savedTheme);
+  }
+})();
+
+// After DOM is loaded, set the toggle button character and register event listener
+document.addEventListener('DOMContentLoaded', function () {
+  var html = document.documentElement;
+  var themeToggle = document.getElementById('theme-toggle');
+  var savedTheme = localStorage.getItem('pw-theme');
+  var character = {
+    light: '&#9790', // moon
+    dark: '&#9728;', // sun
+  };
+
+  if (themeToggle) {
+    if (savedTheme) {
+      themeToggle.innerHTML = character[savedTheme === 'dark' ? 'dark' : 'light'];
+    }
+
+    themeToggle.addEventListener('click', function () {
+      var currentTheme = html.getAttribute('data-theme');
+      var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', newTheme);
+      themeToggle.innerHTML = character[newTheme === 'dark' ? 'dark' : 'light'];
+      localStorage.setItem('pw-theme', newTheme);
+    });
+  }
+});
+</code></pre>
           <pre><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</p></pre>
           <ol>
             <li>List Item 1</li>

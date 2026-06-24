@@ -4,15 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PunkwebUI — Documentation</title>
-    <script>
-      (function () {
-        var saved = localStorage.getItem('pw-theme');
-        if (saved) document.documentElement.setAttribute('data-theme', saved);
-      })();
-    </script>
+    <script type="text/javascript" src="static/theme.js"></script>
     <link rel="stylesheet" href="dist/css/punkweb-ui.min.css" />
-    <link rel="stylesheet" href="static/prism.css" />
-    <link rel="stylesheet" href="static/prism-punkweb.css" />
+    <link rel="stylesheet" href="extensions/punkweb-ui.prism.css" />
+    <link rel="stylesheet" href="themes/punkweb-ui.catppuccin.css" />
     <style>
       /* Docs-specific layout */
       .docs-layout {
@@ -205,6 +200,7 @@
     </style>
   </head>
   <body>
+    <button class="pw-button icon fixed" style="top: 2rem; right: 2rem" id="theme-toggle">&#9728;</button>
     <div class="docs-layout">
       <!-- Sidebar -->
       <nav class="docs-sidebar">
@@ -249,11 +245,10 @@
           <div>
             <h1 style="margin-bottom: 0.25rem">PunkwebUI</h1>
             <p style="margin: 0; color: var(--muted-foreground); font-size: 0.9rem">
-              v0.5.0 &mdash; Lightweight CSS framework with classless defaults, utility classes, and essential
+              v0.6.0 &mdash; Lightweight CSS framework with classless defaults, utility classes, and essential
               components.
             </p>
           </div>
-          <button class="pw-button icon" id="theme-toggle" title="Toggle theme">&#9728;</button>
         </div>
 
         <!-- ===================== GETTING STARTED ===================== -->
@@ -280,11 +275,7 @@
           </div>
 
           <h3>Dark Mode</h3>
-          <p>
-            Add <code>data-theme="dark"</code> to your <code>&lt;html&gt;</code> or <code>&lt;body&gt;</code> tag.
-            PunkwebUI ships a small optional JS helper (<code>/static/theme.js</code>) that persists the user's
-            preference in <code>localStorage</code> under the key <code>pw-theme</code>.
-          </p>
+          <p>Add <code>data-theme="dark"</code> to your <code>&lt;html&gt;</code> or <code>&lt;body&gt;</code> tag.</p>
           <div class="docs-code">
             <pre><code>&lt;html lang="en" data-theme="dark"&gt;</code></pre>
           </div>
@@ -2304,20 +2295,6 @@ console.log(greeting);</code></pre>
     </script>
     <script src="static/prism.js"></script>
     <script>
-      // Theme toggle
-      var btn = document.getElementById('theme-toggle');
-      function applyTheme(theme) {
-        document.documentElement.setAttribute('data-theme', theme);
-        btn.innerHTML = theme === 'dark' ? '&#9728;' : '&#9790;';
-        localStorage.setItem('pw-theme', theme);
-      }
-      // Init button label
-      applyTheme(document.documentElement.getAttribute('data-theme') || 'dark');
-      btn.addEventListener('click', function () {
-        var current = document.documentElement.getAttribute('data-theme');
-        applyTheme(current === 'dark' ? 'light' : 'dark');
-      });
-
       // Highlight active sidebar link on scroll
       var sections = document.querySelectorAll('.docs-section');
       var sidebarLinks = document.querySelectorAll('.docs-sidebar a');

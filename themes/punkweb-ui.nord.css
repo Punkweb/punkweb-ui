@@ -1,0 +1,165 @@
+/* =========================
+   NORD COLOR PALETTE
+   ========================= */
+
+/* Light (Snow Storm base) */
+:root {
+  --nord0: #2e3440; /* polar night */
+  --nord1: #3b4252;
+  --nord2: #434c5e;
+  --nord3: #4c566a;
+
+  --nord4: #d8dee9; /* snow storm */
+  --nord5: #e5e9f0;
+  --nord6: #eceff4;
+
+  --nord7: #8fbcbb; /* frost */
+  --nord8: #88c0d0;
+  --nord9: #81a1c1;
+  --nord10: #5e81ac;
+
+  --nord11: #bf616a; /* aurora */
+  --nord12: #d08770;
+  --nord13: #ebcb8b;
+  --nord14: #a3be8c;
+  --nord15: #b48ead;
+}
+
+/* Dark (Polar Night base) */
+[data-theme='dark'] {
+  --nord0: #2e3440;
+  --nord1: #3b4252;
+  --nord2: #434c5e;
+  --nord3: #4c566a;
+
+  --nord4: #d8dee9;
+  --nord5: #e5e9f0;
+  --nord6: #eceff4;
+
+  --nord7: #8fbcbb;
+  --nord8: #88c0d0;
+  --nord9: #81a1c1;
+  --nord10: #5e81ac;
+
+  --nord11: #bf616a;
+  --nord12: #d08770;
+  --nord13: #ebcb8b;
+  --nord14: #a3be8c;
+  --nord15: #b48ead;
+}
+
+/* =========================
+   SEMANTIC TOKENS
+   ========================= */
+
+/* Light Theme Mapping */
+:root {
+  --background: var(--nord6);
+  --foreground: var(--nord0);
+
+  --border: var(--nord4);
+
+  --primary: var(--nord10);
+  --primary-foreground: var(--nord6);
+
+  --accent: var(--nord9);
+  --accent-foreground: var(--nord6);
+
+  --success: var(--nord14);
+  --success-foreground: var(--nord0);
+
+  --warning: var(--nord13);
+  --warning-foreground: var(--nord0);
+
+  --error: var(--nord11);
+  --error-foreground: var(--nord6);
+
+  --info: var(--nord8);
+  --info-foreground: var(--nord0);
+
+  --muted: var(--nord5);
+  --muted-foreground: var(--nord3);
+
+  --selection: var(--nord4);
+  --selection-foreground: var(--nord0);
+
+  --mark: var(--nord13);
+  --mark-foreground: var(--nord0);
+
+  --button: var(--nord4);
+  --button-foreground: var(--nord0);
+
+  --card: var(--nord5);
+  --card-foreground: var(--nord0);
+
+  --code: var(--nord5);
+  --code-foreground: var(--nord0);
+
+  --blockquote: var(--nord5);
+  --blockquote-border: var(--nord10);
+  --blockquote-foreground: var(--nord0);
+
+  --badge: var(--nord5);
+  --badge-border: var(--nord4);
+  --badge-foreground: var(--nord0);
+
+  --callout: var(--nord5);
+  --callout-border: var(--nord4);
+  --callout-foreground: var(--nord0);
+}
+
+/* Dark Theme Mapping */
+[data-theme='dark'] {
+  --background: var(--nord0);
+  --foreground: var(--nord6);
+
+  --border: var(--nord2);
+
+  --primary: var(--nord9);
+  --primary-foreground: var(--nord0);
+
+  --accent: var(--nord8);
+  --accent-foreground: var(--nord0);
+
+  --success: var(--nord14);
+  --success-foreground: var(--nord0);
+
+  --warning: var(--nord13);
+  --warning-foreground: var(--nord0);
+
+  --error: var(--nord11);
+  --error-foreground: var(--nord0);
+
+  --info: var(--nord7);
+  --info-foreground: var(--nord0);
+
+  --muted: var(--nord1);
+  --muted-foreground: var(--nord4);
+
+  --selection: var(--nord2);
+  --selection-foreground: var(--nord6);
+
+  --mark: var(--nord13);
+  --mark-foreground: var(--nord0);
+
+  --button: var(--nord1);
+  --button-foreground: var(--nord6);
+
+  --card: var(--nord1);
+  --card-foreground: var(--nord6);
+
+  --code: var(--nord1);
+  --code-foreground: var(--nord6);
+
+  --blockquote: var(--nord1);
+  --blockquote-border: var(--nord9);
+  --blockquote-foreground: var(--nord6);
+
+  --badge: var(--nord1);
+  --badge-border: var(--nord2);
+  --badge-foreground: var(--nord6);
+
+  --callout: var(--nord1);
+  --callout-border: var(--nord2);
+  --callout-foreground: var(--nord6);
+}

@@ -1,0 +1,161 @@
+/* =========================
+   SOLARIZED PALETTE
+   ========================= */
+
+/* Light (Solarized Light) */
+:root {
+  --sol-base03: #002b36;
+  --sol-base02: #073642;
+  --sol-base01: #586e75;
+  --sol-base00: #657b83;
+  --sol-base0: #839496;
+  --sol-base1: #93a1a1;
+  --sol-base2: #eee8d5;
+  --sol-base3: #fdf6e3;
+
+  --sol-yellow: #b58900;
+  --sol-orange: #cb4b16;
+  --sol-red: #dc322f;
+  --sol-magenta: #d33682;
+  --sol-violet: #6c71c4;
+  --sol-blue: #268bd2;
+  --sol-cyan: #2aa198;
+  --sol-green: #859900;
+}
+
+/* Dark (Solarized Dark) */
+[data-theme='dark'] {
+  --sol-base03: #002b36;
+  --sol-base02: #073642;
+  --sol-base01: #586e75;
+  --sol-base00: #657b83;
+  --sol-base0: #839496;
+  --sol-base1: #93a1a1;
+  --sol-base2: #eee8d5;
+  --sol-base3: #fdf6e3;
+
+  --sol-yellow: #b58900;
+  --sol-orange: #cb4b16;
+  --sol-red: #dc322f;
+  --sol-magenta: #d33682;
+  --sol-violet: #6c71c4;
+  --sol-blue: #268bd2;
+  --sol-cyan: #2aa198;
+  --sol-green: #859900;
+}
+
+/* =========================
+   SEMANTIC TOKENS
+   ========================= */
+
+/* Light Theme */
+:root {
+  --background: var(--sol-base3);
+  --foreground: var(--sol-base00);
+
+  --border: var(--sol-base2);
+
+  --primary: var(--sol-blue);
+  --primary-foreground: var(--sol-base3);
+
+  --accent: var(--sol-violet);
+  --accent-foreground: var(--sol-base3);
+
+  --success: var(--sol-green);
+  --success-foreground: var(--sol-base3);
+
+  --warning: var(--sol-yellow);
+  --warning-foreground: var(--sol-base03);
+
+  --error: var(--sol-red);
+  --error-foreground: var(--sol-base3);
+
+  --info: var(--sol-cyan);
+  --info-foreground: var(--sol-base03);
+
+  --muted: var(--sol-base2);
+  --muted-foreground: var(--sol-base1);
+
+  --selection: var(--sol-base2);
+  --selection-foreground: var(--foreground);
+
+  --mark: var(--sol-yellow);
+  --mark-foreground: var(--sol-base03);
+
+  --button: var(--sol-base2);
+  --button-foreground: var(--foreground);
+
+  --card: var(--sol-base2);
+  --card-foreground: var(--foreground);
+
+  --code: var(--sol-base2);
+  --code-foreground: var(--foreground);
+
+  --blockquote: var(--sol-base2);
+  --blockquote-border: var(--sol-blue);
+  --blockquote-foreground: var(--foreground);
+
+  --badge: var(--sol-base2);
+  --badge-border: var(--sol-base2);
+  --badge-foreground: var(--foreground);
+
+  --callout: var(--sol-base2);
+  --callout-border: var(--sol-base2);
+  --callout-foreground: var(--foreground);
+}
+
+/* Dark Theme */
+[data-theme='dark'] {
+  --background: var(--sol-base03);
+  --foreground: var(--sol-base0);
+
+  --border: var(--sol-base02);
+
+  --primary: var(--sol-blue);
+  --primary-foreground: var(--sol-base03);
+
+  --accent: var(--sol-violet);
+  --accent-foreground: var(--sol-base03);
+
+  --success: var(--sol-green);
+  --success-foreground: var(--sol-base03);
+
+  --warning: var(--sol-yellow);
+  --warning-foreground: var(--sol-base03);
+
+  --error: var(--sol-red);
+  --error-foreground: var(--sol-base03);
+
+  --info: var(--sol-cyan);
+  --info-foreground: var(--sol-base03);
+
+  --muted: var(--sol-base02);
+  --muted-foreground: var(--sol-base01);
+
+  --selection: var(--sol-base02);
+  --selection-foreground: var(--sol-base0);
+
+  --mark: var(--sol-yellow);
+  --mark-foreground: var(--sol-base03);
+
+  --button: var(--sol-base02);
+  --button-foreground: var(--sol-base0);
+
+  --card: var(--sol-base02);
+  --card-foreground: var(--sol-base0);
+
+  --code: var(--sol-base02);
+  --code-foreground: var(--sol-base0);
+
+  --blockquote: var(--sol-base02);
+  --blockquote-border: var(--sol-blue);
+  --blockquote-foreground: var(--sol-base0);
+
+  --badge: var(--sol-base02);
+  --badge-border: var(--sol-base02);
+  --badge-foreground: var(--sol-base0);
+
+  --callout: var(--sol-base02);
+  --callout-border: var(--sol-base02);
+  --callout-foreground: var(--sol-base0);
+}
