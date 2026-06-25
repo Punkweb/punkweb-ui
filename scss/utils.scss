@@ -1,5 +1,4 @@
 @use 'mixins';
-@use 'tailwind-colors';
 
 // display
 
@@ -577,17 +576,17 @@
   }
 }
 
-// bg
-
-.bg {
-  @each $map, $color in tailwind-colors.$tw-color-list {
-    @each $key, $value in $map {
-      &-#{$color}-#{$key} {
-        background-color: #{$value};
-      }
-    }
-  }
-}
+// // bg
+//
+// .bg {
+//   @each $map, $color in tailwind-colors.$tw-color-list {
+//     @each $key, $value in $map {
+//       &-#{$color}-#{$key} {
+//         background-color: #{$value};
+//       }
+//     }
+//   }
+// }
 
 // border
 
@@ -614,13 +613,13 @@
     border-left: var(--border-width) solid var(--border);
   }
 
-  @each $map, $color in tailwind-colors.$tw-color-list {
-    @each $key, $value in $map {
-      &-#{$color}-#{$key} {
-        border-color: #{$value};
-      }
-    }
-  }
+  // @each $map, $color in tailwind-colors.$tw-color-list {
+  //   @each $key, $value in $map {
+  //     &-#{$color}-#{$key} {
+  //       border-color: #{$value};
+  //     }
+  //   }
+  // }
 }
 
 // text
@@ -688,13 +687,13 @@ $text-sizes: (
       font-size: $value;
     }
   }
-  @each $map, $color in tailwind-colors.$tw-color-list {
-    @each $key, $value in $map {
-      &-#{$color}-#{$key} {
-        color: #{$value};
-      }
-    }
-  }
+  // @each $map, $color in tailwind-colors.$tw-color-list {
+  //   @each $key, $value in $map {
+  //     &-#{$color}-#{$key} {
+  //       color: #{$value};
+  //     }
+  //   }
+  // }
 }
 
 // font
