@@ -70,27 +70,6 @@
 
   --mark: var(--sol-yellow);
   --mark-foreground: var(--sol-base03);
-
-  --button: var(--sol-base2);
-  --button-foreground: var(--foreground);
-
-  --card: var(--sol-base2);
-  --card-foreground: var(--foreground);
-
-  --code: var(--sol-base2);
-  --code-foreground: var(--foreground);
-
-  --blockquote: var(--sol-base2);
-  --blockquote-border: var(--sol-blue);
-  --blockquote-foreground: var(--foreground);
-
-  --badge: var(--sol-base2);
-  --badge-border: var(--sol-base2);
-  --badge-foreground: var(--foreground);
-
-  --callout: var(--sol-base2);
-  --callout-border: var(--sol-base2);
-  --callout-foreground: var(--foreground);
 }
 
 [data-theme='dark'] {
@@ -125,25 +104,4 @@
 
   --mark: var(--sol-yellow);
   --mark-foreground: var(--sol-base03);
-
-  --button: var(--sol-base02);
-  --button-foreground: var(--sol-base0);
-
-  --card: var(--sol-base02);
-  --card-foreground: var(--sol-base0);
-
-  --code: var(--sol-base02);
-  --code-foreground: var(--sol-base0);
-
-  --blockquote: var(--sol-base02);
-  --blockquote-border: var(--sol-blue);
-  --blockquote-foreground: var(--sol-base0);
-
-  --badge: var(--sol-base02);
-  --badge-border: var(--sol-base02);
-  --badge-foreground: var(--sol-base0);
-
-  --callout: var(--sol-base02);
-  --callout-border: var(--sol-base02);
-  --callout-foreground: var(--sol-base0);
 }

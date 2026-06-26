@@ -96,25 +96,4 @@
 
   --mark: var(--catppuccin-yellow);
   --mark-foreground: var(--catppuccin-base);
-
-  --button: var(--catppuccin-surface-0);
-  --button-foreground: var(--catppuccin-text);
-
-  --card: var(--catppuccin-mantle);
-  --card-foreground: var(--catppuccin-text);
-
-  --code: var(--catppuccin-mantle);
-  --code-foreground: var(--catppuccin-text);
-
-  --blockquote: var(--catppuccin-mantle);
-  --blockquote-border: var(--catppuccin-mauve);
-  --blockquote-foreground: var(--catppuccin-text);
-
-  --badge: var(--catppuccin-mantle);
-  --badge-border: var(--catppuccin-surface-1);
-  --badge-foreground: var(--catppuccin-text);
-
-  --callout: var(--catppuccin-mantle);
-  --callout-border: var(--catppuccin-surface-1);
-  --callout-foreground: var(--catppuccin-text);
 }
