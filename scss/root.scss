@@ -63,14 +63,14 @@
   --cite-foreground: var(--muted-foreground);
   --cite-font-size: 0.875rem;
 
-  --button: #{tailwind-colors.$tw-gray-300};
+  --button: var(--muted);
   --button-foreground: var(--foreground);
 
   --callout: var(--muted);
   --callout-border: var(--border);
   --callout-foreground: var(--foreground);
 
-  --card: var(--background);
+  --card: var(--muted);
   --card-foreground: var(--foreground);
 
   --code: var(--muted);
@@ -106,6 +106,4 @@
   --muted-foreground: #{tailwind-colors.$tw-gray-400};
 
   --selection: #{tailwind-colors.$tw-blue-700};
-
-  --button: #{tailwind-colors.$tw-gray-700};
 }

@@ -11,7 +11,7 @@
     @include mixins.font-bold;
     align-items: center;
     border-bottom: 2px solid transparent;
-    color: var(--muted-foreground);
+    color: var(--foreground);
     cursor: pointer;
     display: flex;
     font-size: 0.875rem;
