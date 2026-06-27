@@ -1,7 +1,7 @@
 @use '../mixins';
 
 .pw-badge {
-  @include mixins.rounded-sm;
+  @include mixins.rounded;
   align-items: center;
   background-color: var(--badge);
   border: var(--border-width) solid var(--badge-border);

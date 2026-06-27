@@ -69,6 +69,24 @@
   --code-font: var(--font-mono);
   --code-font-size: 0.875rem;
   --code-foreground: var(--foreground);
+
+  --shadow: rgba(0, 0, 0, 0.1);
+  --shadow-xs: 0 1px 2px var(--shadow);
+  --shadow-sm: 0 2px 4px var(--shadow);
+  --shadow-md: 0 4px 8px var(--shadow);
+  --shadow-lg: 0 8px 16px var(--shadow);
+  --shadow-xl: 0 16px 24px var(--shadow);
+
+  --radius: var(--radius-md);
+  --radius-step: 0.125rem;
+  --radius-xs: calc(var(--radius-step) * 0.5);
+  --radius-sm: calc(var(--radius-step) * 1);
+  --radius-md: calc(var(--radius-step) * 2);
+  --radius-lg: calc(var(--radius-step) * 3);
+  --radius-xl: calc(var(--radius-step) * 4);
+  --radius-2xl: calc(var(--radius-step) * 8);
+  --radius-3xl: calc(var(--radius-step) * 12);
+  --radius-4xl: calc(var(--radius-step) * 16);
 }
 
 [data-theme='dark'] {

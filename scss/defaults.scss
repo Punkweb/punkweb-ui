@@ -54,7 +54,7 @@ a {
 }
 
 mark {
-  @include mixins.rounded-sm;
+  @include mixins.rounded;
   background-color: var(--mark);
   color: var(--mark-foreground);
   padding: 0.125rem 0.25rem;
@@ -68,7 +68,7 @@ samp {
 }
 
 code {
-  @include mixins.rounded-sm;
+  @include mixins.rounded;
   background-color: var(--code);
   color: var(--code-foreground);
   font-size: var(--code-font-size);
@@ -76,7 +76,7 @@ code {
 }
 
 kbd {
-  @include mixins.rounded-sm;
+  @include mixins.rounded;
   color: var(--code-foreground);
   border: var(--border-width) solid var(--border);
   border-bottom: 0.2rem solid var(--border);
@@ -95,7 +95,7 @@ pre code {
 }
 
 details {
-  @include mixins.rounded-sm;
+  @include mixins.rounded;
   border: var(--border-width) solid var(--border);
   padding: 0.75rem 1rem;
 }
@@ -164,7 +164,7 @@ select,
 button,
 .pw-button,
 a.pw-button {
-  @include mixins.rounded-sm;
+  @include mixins.rounded;
   @include mixins.shadow-none;
   display: inline-block;
   font-family: inherit;

@@ -1,7 +1,7 @@
 @use '../mixins';
 
 .pw-breadcrumb {
-  @include mixins.rounded-sm;
+  @include mixins.rounded;
   align-items: center;
   display: flex;
   flex-wrap: wrap;

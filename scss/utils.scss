@@ -245,7 +245,7 @@
 // rounded
 
 .rounded {
-  @include mixins.rounded-sm;
+  @include mixins.rounded;
 
   &-none {
     @include mixins.rounded-none;
@@ -270,6 +270,9 @@
   }
   &-3xl {
     @include mixins.rounded-3xl;
+  }
+  &-4xl {
+    @include mixins.rounded-4xl;
   }
   &-full {
     @include mixins.rounded-full;

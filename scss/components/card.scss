@@ -1,7 +1,7 @@
 @use '../mixins';
 
 .pw-card {
-  @include mixins.rounded-sm;
+  @include mixins.rounded;
   @include mixins.shadow-sm;
 
   background-color: var(--card);
