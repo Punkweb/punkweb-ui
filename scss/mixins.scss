@@ -69,17 +69,6 @@
   border-radius: 100%;
 }
 
-// Transition
-@mixin transition {
-  transition: all 0.3s ease;
-}
-@mixin transition-fast {
-  transition: all 0.15s ease;
-}
-@mixin transition-slow {
-  transition: all 0.5s ease;
-}
-
 // Breakpoints
 
 $breakpoints: (

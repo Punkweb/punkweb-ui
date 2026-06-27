@@ -13,7 +13,7 @@
     <div class="pw-container xl">
       <div class="flex items-center justify-between gap-4 my-8">
         <h1 class="my-0">PunkwebUI</h1>
-        <button class="pw-button icon fixed" style="top: 2rem; right: 2rem;" id="theme-toggle">&#9728;</button>
+        <button class="pw-button icon fixed" style="top: 2rem; right: 2rem" id="theme-toggle">&#9728;</button>
       </div>
       <div class="flex flex-col gap-2 my-8">
         <details>
@@ -315,10 +315,10 @@
           <input id="label-example" />
           <h4>Hint</h4>
           <input />
-          <p class="font-size-sm text-muted">Password must contain 8 characters</p>
+          <p class="text-sm text-muted-foreground">Password must contain 8 characters</p>
           <h4>Error</h4>
           <input />
-          <p class="font-size-sm text-error">Password must contain 8 characters</p>
+          <p class="text-sm text-error">Password must contain 8 characters</p>
           <h4>Sizes</h4>
           <div class="flex flex-wrap items-start gap-2">
             <input class="pw-input xs" placeholder="Extra Small" />
@@ -498,7 +498,7 @@
           <h4>Message</h4>
           <div class="pw-spinner-container">
             <div class="pw-spinner"></div>
-            <div class="font-size-sm text-muted">Loading...</div>
+            <div class="text-sm text-muted-foreground">Loading...</div>
           </div>
         </details>
         <details>
@@ -648,7 +648,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var themeToggle = document.getElementById('theme-toggle');
   var savedTheme = localStorage.getItem('pw-theme');
   var character = {
-    light: '&#9790', // moon
+    light: '&#9790;', // moon
     dark: '&#9728;', // sun
   };
 

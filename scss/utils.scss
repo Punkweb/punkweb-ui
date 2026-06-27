@@ -1,4 +1,5 @@
-@use 'mixins';
+@use './colors';
+@use './mixins';
 
 // display
 
@@ -576,18 +577,6 @@
   }
 }
 
-// // bg
-//
-// .bg {
-//   @each $map, $color in tailwind-colors.$tw-color-list {
-//     @each $key, $value in $map {
-//       &-#{$color}-#{$key} {
-//         background-color: #{$value};
-//       }
-//     }
-//   }
-// }
-
 // border
 
 .border {
@@ -612,14 +601,6 @@
   &-l {
     border-left: var(--border-width) solid var(--border);
   }
-
-  // @each $map, $color in tailwind-colors.$tw-color-list {
-  //   @each $key, $value in $map {
-  //     &-#{$color}-#{$key} {
-  //       border-color: #{$value};
-  //     }
-  //   }
-  // }
 }
 
 // text
@@ -635,15 +616,6 @@ $text-sizes: (
 );
 
 .text {
-  &-muted {
-    color: var(--muted-foreground);
-  }
-  &-error {
-    color: var(--error);
-  }
-  &-primary {
-    color: var(--primary);
-  }
   &-left {
     text-align: left;
   }
@@ -687,13 +659,6 @@ $text-sizes: (
       font-size: $value;
     }
   }
-  // @each $map, $color in tailwind-colors.$tw-color-list {
-  //   @each $key, $value in $map {
-  //     &-#{$color}-#{$key} {
-  //       color: #{$value};
-  //     }
-  //   }
-  // }
 }
 
 // font
@@ -708,10 +673,28 @@ $font-weights: (
 );
 
 .font {
+  &-sans {
+    font-family: var(--font-sans);
+  }
+  &-mono {
+    font-family: var(--font-mono);
+  }
   @each $name, $value in $font-weights {
     &-#{$name} {
       font-weight: $value;
     }
+  }
+}
+
+@each $name in colors.$exported-colors {
+  .bg-#{$name} {
+    background-color: var(--#{$name});
+  }
+  .text-#{$name} {
+    color: var(--#{$name});
+  }
+  .border-#{$name} {
+    border-color: var(--#{$name});
   }
 }
 
