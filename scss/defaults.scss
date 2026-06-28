@@ -127,9 +127,12 @@ blockquote {
   padding: 0.5rem 1rem;
 }
 
+blockquote > cite {
+  display: block;
+}
+
 cite {
   color: var(--cite-foreground);
-  display: block;
   font-size: var(--cite-font-size);
   font-style: italic;
 }

@@ -3,8 +3,32 @@
 .pw-callout {
   @include mixins.rounded;
   background-color: var(--callout);
-  border: var(--border-width) solid var(--callout-border);
   color: var(--callout-foreground);
   padding: 0.75rem;
   width: 100%;
+
+  &.primary {
+    --callout: var(--primary);
+    --callout-foreground: var(--primary-foreground);
+  }
+  &.accent {
+    --callout: var(--accent);
+    --callout-foreground: var(--accent-foreground);
+  }
+  &.success {
+    --callout: var(--success);
+    --callout-foreground: var(--success-foreground);
+  }
+  &.warning {
+    --callout: var(--warning);
+    --callout-foreground: var(--warning-foreground);
+  }
+  &.error {
+    --callout: var(--error);
+    --callout-foreground: var(--error-foreground);
+  }
+  &.info {
+    --callout: var(--info);
+    --callout-foreground: var(--info-foreground);
+  }
 }
