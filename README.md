@@ -43,7 +43,5 @@ To use the out of the box dark mode add `data-theme="dark"` to your `<html>` or 
 
 ```bash
 npm install
-npm start
+npm run dev
 ```
-
-This will watch SCSS files for changes and run lite-server for hot reloading
