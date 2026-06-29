@@ -1,5 +1,5 @@
-@use './colors';
 @use './mixins';
+@use './theme';
 
 // display
 
@@ -689,7 +689,7 @@ $font-weights: (
   }
 }
 
-@each $name in colors.$exported-colors {
+@each $name in theme.$theme-colors {
   .bg-#{$name} {
     background-color: var(--#{$name});
   }

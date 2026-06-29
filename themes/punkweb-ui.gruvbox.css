@@ -61,7 +61,4 @@
 
   --selection: var(--gruvbox-border);
   --selection-foreground: var(--foreground);
-
-  --mark: var(--gruvbox-yellow);
-  --mark-foreground: var(--gruvbox-bg);
 }

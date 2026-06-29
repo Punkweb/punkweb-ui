@@ -1,18 +1,38 @@
 @use './tailwind-colors';
 
+$theme-colors: (
+  background,
+  foreground,
+  border,
+  outline,
+  muted,
+  muted-foreground,
+  primary,
+  primary-foreground,
+  accent,
+  accent-foreground,
+  success,
+  success-foreground,
+  warning,
+  warning-foreground,
+  error,
+  error-foreground,
+  info,
+  info-foreground,
+  selection,
+  selection-foreground
+);
+
 :root {
-  --font-sans: 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', 'Nimbus Sans', sans-serif;
-  --font-mono: 'Consolas', 'Liberation Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
+  // theme colors
 
   --background: #{tailwind-colors.$tw-gray-100};
   --foreground: #{tailwind-colors.$tw-gray-950};
-
   --border: #{tailwind-colors.$tw-gray-300};
-  --border-width: 1px;
-
   --outline: var(--primary);
-  --outline-offset: 1px;
-  --outline-width: 1px;
+
+  --muted: #{tailwind-colors.$tw-gray-200};
+  --muted-foreground: #{tailwind-colors.$tw-gray-600};
 
   --primary: #{tailwind-colors.$tw-blue-600};
   --primary-foreground: #{tailwind-colors.$tw-blue-50};
@@ -32,14 +52,36 @@
   --info: #{tailwind-colors.$tw-sky-600};
   --info-foreground: #{tailwind-colors.$tw-sky-50};
 
-  --muted: #{tailwind-colors.$tw-gray-200};
-  --muted-foreground: #{tailwind-colors.$tw-gray-600};
-
   --selection: #{tailwind-colors.$tw-blue-200};
   --selection-foreground: var(--foreground);
 
-  --mark: #{tailwind-colors.$tw-amber-100};
-  --mark-foreground: #{tailwind-colors.$tw-amber-950};
+  // configuration
+
+  --border-width: 1px;
+  --font-mono: 'Consolas', 'Liberation Mono', 'Menlo', 'Monaco', 'Courier New', monospace;
+  --font-sans: 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', 'Nimbus Sans', sans-serif;
+  --outline-offset: 1px;
+  --outline-width: 2px;
+
+  --shadow: rgba(0, 0, 0, 0.1);
+  --shadow-xs: 0 1px 2px var(--shadow);
+  --shadow-sm: 0 2px 4px var(--shadow);
+  --shadow-md: 0 4px 8px var(--shadow);
+  --shadow-lg: 0 8px 16px var(--shadow);
+  --shadow-xl: 0 16px 24px var(--shadow);
+
+  --radius: var(--radius-md);
+  --radius-step: 0.125rem;
+  --radius-xs: calc(var(--radius-step) * 0.5);
+  --radius-sm: calc(var(--radius-step) * 1);
+  --radius-md: calc(var(--radius-step) * 2);
+  --radius-lg: calc(var(--radius-step) * 3);
+  --radius-xl: calc(var(--radius-step) * 4);
+  --radius-2xl: calc(var(--radius-step) * 8);
+  --radius-3xl: calc(var(--radius-step) * 12);
+  --radius-4xl: calc(var(--radius-step) * 16);
+
+  // components
 
   --avatar-fallback: var(--muted);
   --avatar-fallback-foreground: var(--muted-foreground);
@@ -60,31 +102,16 @@
   --callout: var(--muted);
   --callout-foreground: var(--foreground);
 
-  --card: var(--muted);
-  --card-foreground: var(--foreground);
+  --card: var(--);
+  --card-foreground: var(--muted-foreground);
 
   --code: var(--muted);
   --code-font: var(--font-mono);
   --code-font-size: 0.875rem;
   --code-foreground: var(--foreground);
 
-  --shadow: rgba(0, 0, 0, 0.1);
-  --shadow-xs: 0 1px 2px var(--shadow);
-  --shadow-sm: 0 2px 4px var(--shadow);
-  --shadow-md: 0 4px 8px var(--shadow);
-  --shadow-lg: 0 8px 16px var(--shadow);
-  --shadow-xl: 0 16px 24px var(--shadow);
-
-  --radius: var(--radius-md);
-  --radius-step: 0.125rem;
-  --radius-xs: calc(var(--radius-step) * 0.5);
-  --radius-sm: calc(var(--radius-step) * 1);
-  --radius-md: calc(var(--radius-step) * 2);
-  --radius-lg: calc(var(--radius-step) * 3);
-  --radius-xl: calc(var(--radius-step) * 4);
-  --radius-2xl: calc(var(--radius-step) * 8);
-  --radius-3xl: calc(var(--radius-step) * 12);
-  --radius-4xl: calc(var(--radius-step) * 16);
+  --mark: var(--warning);
+  --mark-foreground: var(--warning-foreground);
 }
 
 [data-theme='dark'] {

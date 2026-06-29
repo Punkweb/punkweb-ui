@@ -93,7 +93,4 @@
 
   --selection: var(--catppuccin-surface-1);
   --selection-foreground: var(--catppuccin-text);
-
-  --mark: var(--catppuccin-yellow);
-  --mark-foreground: var(--catppuccin-base);
 }

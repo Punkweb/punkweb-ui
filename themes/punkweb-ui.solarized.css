@@ -67,9 +67,6 @@
 
   --selection: var(--sol-base2);
   --selection-foreground: var(--foreground);
-
-  --mark: var(--sol-yellow);
-  --mark-foreground: var(--sol-base03);
 }
 
 [data-theme='dark'] {
@@ -101,7 +98,4 @@
 
   --selection: var(--sol-base02);
   --selection-foreground: var(--sol-base0);
-
-  --mark: var(--sol-yellow);
-  --mark-foreground: var(--sol-base03);
 }

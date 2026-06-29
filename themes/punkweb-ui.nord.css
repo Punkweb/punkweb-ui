@@ -49,9 +49,6 @@
 
   --selection: var(--nord4);
   --selection-foreground: var(--foreground);
-
-  --mark: var(--nord13);
-  --mark-foreground: var(--nord0);
 }
 
 [data-theme='dark'] {

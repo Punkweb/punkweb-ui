@@ -61,7 +61,4 @@
 
   --selection: var(--rp-highlight);
   --selection-foreground: var(--rp-text);
-
-  --mark: var(--rp-gold);
-  --mark-foreground: var(--rp-bg);
 }
