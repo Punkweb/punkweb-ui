@@ -18,10 +18,9 @@
 .pw-spinner {
   &:before {
     @include mixins.rounded-full;
-    animation: spin 1.5s linear infinite;
-    border: 0.375rem solid var(--border);
-    border-bottom-color: var(--primary);
-    border-top-color: var(--primary);
+    animation: spin 1s linear infinite;
+    border: 0.375rem solid var(--primary);
+    border-top-color: transparent;
     content: '';
     display: block;
     height: 3rem;
