@@ -5,16 +5,19 @@
   "files": [
     "dist/*.{css,map}",
     "extensions/*.css",
-    "scss/**/*.{css,scss}",
     "themes/**/*.css"
   ],
+  "style": "dist/punkweb-ui.min.css",
   "scripts": {
-    "dev": "vite",
-    "build:sass": "sass scss/punkweb-ui.scss dist/punkweb-ui.min.css --style compressed"
+    "dev": "run-p watch:sass serve",
+    "serve": "vite",
+    "build:sass": "sass scss/punkweb-ui.scss dist/punkweb-ui.min.css --style compressed",
+    "watch:sass": "sass scss/punkweb-ui.scss dist/punkweb-ui.min.css --style compressed --watch"
   },
   "author": "Punkweb (https://github.com/Punkweb/)",
   "license": "BSD-3-Clause",
   "devDependencies": {
+    "npm-run-all": "^4.1.5",
     "sass": "^1.93.3",
     "vite": "^8.1.0"
   }
