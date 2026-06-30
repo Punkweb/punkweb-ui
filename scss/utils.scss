@@ -701,6 +701,67 @@ $font-weights: (
   }
 }
 
+// animations
+
+.transition {
+  transition-property:
+    background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+
+  &-none {
+    transition-property: none;
+  }
+  &-all {
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    transition-duration: 150ms;
+  }
+}
+
+$duration-intervals: (75, 100, 150, 200, 300, 500, 700, 1000);
+@each $duration in $duration-intervals {
+  .duration-#{$duration} {
+    transition-duration: #{$duration}ms;
+  }
+}
+
+$delay-intervals: (75, 100, 150, 200, 300, 500, 700, 1000);
+@each $delay in $delay-intervals {
+  .delay-#{$delay} {
+    transition-delay: #{$delay}ms;
+  }
+}
+
+.ease-linear {
+  transition-timing-function: linear;
+}
+.ease-in {
+  transition-timing-function: ease-in;
+}
+.ease-out {
+  transition-timing-function: ease-out;
+}
+.ease-in-out {
+  transition-timing-function: ease-in-out;
+}
+
+.animate-none {
+  animation: none;
+}
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+.animate-ping {
+  animation: ping 1s ease-out infinite;
+}
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
 // responsive utilities
 
 @each $key, $value in mixins.$breakpoints {
