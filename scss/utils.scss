@@ -171,7 +171,7 @@
 @for $i from 0 through 100 {
   @if $i % 10 == 0 {
     .opacity-#{$i} {
-      opacity: $i;
+      opacity: $i / 100;
     }
   }
 }
@@ -855,7 +855,7 @@ $delay-intervals: (75, 100, 150, 200, 300, 500, 700, 1000);
       height: 100%;
     }
     .#{$key}\:h-screen {
-      height: 100vw;
+      height: 100vh;
     }
 
     @for $i from 1 through 12 {
@@ -892,7 +892,7 @@ $delay-intervals: (75, 100, 150, 200, 300, 500, 700, 1000);
       margin-top: auto;
       margin-bottom: auto;
     }
-    #{$key}\:.m-auto {
+    #{$key}\:m-auto {
       margin: auto;
     }
 
