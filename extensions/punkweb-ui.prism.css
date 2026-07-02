@@ -33,11 +33,11 @@
 
 code[class*='language-'],
 pre[class*='language-'] {
-  background: var(--muted);
-  color: var(--foreground);
+  background: var(--code);
+  color: var(--code-foreground);
   direction: ltr;
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
+  font-family: var(--code-font);
+  font-size: var(--code-font-size);
   line-height: 1.5;
   text-align: left;
   text-shadow: none;

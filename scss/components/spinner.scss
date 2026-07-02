@@ -10,7 +10,7 @@
   &:before {
     @include mixins.rounded-full;
     animation: spin 1s linear infinite;
-    border: 0.375rem solid var(--primary);
+    border: 0.375rem solid var(--spinner);
     border-top-color: transparent;
     content: '';
     display: block;

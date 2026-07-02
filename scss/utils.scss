@@ -171,7 +171,7 @@
 @for $i from 0 through 100 {
   @if $i % 10 == 0 {
     .opacity-#{$i} {
-      opacity: $i / 100;
+      opacity: calc($i / 100);
     }
   }
 }

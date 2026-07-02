@@ -103,15 +103,27 @@ $theme-colors: (
   --callout-foreground: var(--foreground);
 
   --card: var(--muted);
-  --card-foreground: var(--muted-foreground);
+  --card-foreground: var(--foreground);
 
   --code: var(--muted);
+  --code-foreground: var(--foreground);
   --code-font: var(--font-mono);
   --code-font-size: 0.875rem;
-  --code-foreground: var(--foreground);
+  --code-inline: var(--muted);
+  --code-inline-foreground: var(--foreground);
+
+  --dialog: var(--background);
+  --dialog-foreground: var(--foreground);
+  --dialog-header: var(--muted);
+  --dialog-header-foreground: var(--foreground);
+
+  --input: var(--background);
+  --input-foreground: var(--foreground);
 
   --mark: var(--warning);
   --mark-foreground: var(--warning-foreground);
+
+  --spinner: var(--primary);
 }
 
 [data-theme='dark'] {

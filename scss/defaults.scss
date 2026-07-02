@@ -69,8 +69,8 @@ samp {
 
 code {
   @include mixins.rounded;
-  background-color: var(--code);
-  color: var(--code-foreground);
+  background-color: var(--code-inline);
+  color: var(--code-inline-foreground);
   font-size: var(--code-font-size);
   padding: 0.125rem 0.25rem;
 }
@@ -91,6 +91,7 @@ pre {
 pre code {
   @include mixins.rounded-none;
   background-color: transparent;
+  color: var(--code-foreground);
   padding: 0;
 }
 
@@ -226,9 +227,9 @@ input[type='button']:enabled:active {
 input,
 select,
 textarea {
-  background-color: var(--background);
+  background-color: var(--input);
   border: var(--border-width) solid var(--border);
-  color: var(--foreground);
+  color: var(--input-foreground);
 }
 
 label {

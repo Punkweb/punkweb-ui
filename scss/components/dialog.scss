@@ -3,7 +3,9 @@
 .pw-dialog {
   @include mixins.rounded;
   @include mixins.shadow-md;
-  background-color: var(--background);
+  background-color: var(--dialog);
+  border: var(--border-width) solid var(--border);
+  color: var(--dialog-foreground);
   overflow: hidden;
   position: relative;
   width: fit-content;
@@ -30,8 +32,9 @@
   &-header {
     @include mixins.font-bold;
     align-items: center;
-    background-color: var(--muted);
+    background-color: var(--dialog-header);
     border-bottom: var(--border-width) solid var(--border);
+    color: var(--dialog-header-foreground);
     display: flex;
     font-size: 1rem;
     justify-content: space-between;
