@@ -112,6 +112,11 @@ $theme-colors: (
   --code-inline: var(--muted);
   --code-inline-foreground: var(--foreground);
 
+  --details: var(--background);
+  --details-foreground: var(--foreground);
+  --summary: var(--muted);
+  --summary-foreground: var(--foreground);
+
   --dialog: var(--background);
   --dialog-foreground: var(--foreground);
   --dialog-header: var(--muted);
@@ -131,6 +136,9 @@ $theme-colors: (
   --foreground: #{tailwind-colors.$tw-gray-100};
   --border: #{tailwind-colors.$tw-gray-700};
 
+  --muted: #{tailwind-colors.$tw-gray-800};
+  --muted-foreground: #{tailwind-colors.$tw-gray-400};
+
   --primary: #{tailwind-colors.$tw-blue-400};
   --primary-foreground: #{tailwind-colors.$tw-blue-950};
 
@@ -148,9 +156,6 @@ $theme-colors: (
 
   --info: #{tailwind-colors.$tw-cyan-400};
   --info-foreground: #{tailwind-colors.$tw-sky-950};
-
-  --muted: #{tailwind-colors.$tw-gray-800};
-  --muted-foreground: #{tailwind-colors.$tw-gray-400};
 
   --selection: #{tailwind-colors.$tw-blue-700};
 }

@@ -97,12 +97,17 @@ pre code {
 
 details {
   @include mixins.rounded;
+  background-color: var(--details);
+  color: var(--details-foreground);
   border: var(--border-width) solid var(--border);
   padding: 0.75rem 1rem;
 }
 
 summary {
   @include mixins.font-bold;
+  background-color: var(--summary);
+  border-radius: var(--radius);
+  color: var(--summary-foreground);
   cursor: pointer;
   padding: 0.75rem 1rem;
   margin: -0.75rem -1rem;
@@ -114,6 +119,9 @@ details[open] > summary + * {
 }
 
 details[open] > summary {
+  border-bottom: var(--border-width) solid var(--border);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   margin-bottom: 0.5rem;
 }
 
