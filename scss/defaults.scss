@@ -158,9 +158,8 @@ table {
 
 td,
 th {
-  border: var(--border-width) solid var(--border);
-  font-size: 0.875rem;
-  padding: 0.5rem;
+  border-bottom: var(--border-width) solid var(--border);
+  padding: 0.75rem;
   text-align: start;
 }
 
