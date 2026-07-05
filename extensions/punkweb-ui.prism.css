@@ -31,6 +31,9 @@
   --code-inserted: var(--success);
 }
 
+pre[class*='language-'] {
+  border: var(--border-width) solid var(--border);
+}
 code[class*='language-'],
 pre[class*='language-'] {
   background: var(--code);

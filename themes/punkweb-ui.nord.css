@@ -21,7 +21,7 @@
 }
 
 :root {
-  --surface: var(--nord6);
+  --background: var(--nord6);
   --elevated: var(--nord6);
   --muted: var(--nord5);
   --foreground: var(--nord0);
@@ -54,12 +54,12 @@
 }
 
 [data-theme='dark'] {
-  --surface: var(--nord0);
+  --background: var(--nord0);
   --elevated: var(--nord0);
   --muted: var(--nord1);
-  --border: var(--nord2);
   --foreground: var(--nord6);
   --muted-foreground: var(--nord4);
+  --border: var(--nord2);
 
   --neutral: var(--nord6);
   --neutral-foreground: var(--nord0);

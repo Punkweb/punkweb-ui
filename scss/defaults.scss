@@ -22,7 +22,7 @@ html {
 }
 
 body {
-  background-color: var(--surface);
+  background-color: var(--background);
   color: var(--foreground);
   font-size: 100%;
   line-height: 1.5;
@@ -102,8 +102,8 @@ details {
 
 summary {
   @include mixins.font-bold;
+  @include mixins.rounded;
   background-color: var(--summary);
-  border-radius: var(--radius);
   color: var(--summary-foreground);
   cursor: pointer;
   padding: 0.75rem 1rem;
@@ -131,7 +131,7 @@ blockquote {
   background: var(--blockquote);
   border-left: var(--blockquote-border-width) solid var(--blockquote-border);
   color: var(--blockquote-foreground);
-  padding: 0.5rem 1rem;
+  padding: 0.75rem;
 }
 
 blockquote > cite {
@@ -221,6 +221,7 @@ input:disabled,
 textarea:disabled,
 select:disabled,
 button[disabled] {
+  background-color: var(--muted);
   color: var(--muted-foreground);
   cursor: not-allowed;
   opacity: 0.5;

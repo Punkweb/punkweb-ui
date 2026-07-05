@@ -1,7 +1,7 @@
 @use './tailwind-colors';
 
 $theme-colors: (
-  surface,
+  background,
   elevated,
   muted,
   foreground,
@@ -9,10 +9,10 @@ $theme-colors: (
   border,
   primary,
   primary-foreground,
-  neutral,
-  neutral-foreground,
   accent,
   accent-foreground,
+  neutral,
+  neutral-foreground,
   info,
   info-foreground,
   success,
@@ -28,7 +28,7 @@ $theme-colors: (
 :root {
   // theme colors
 
-  --surface: #{tailwind-colors.$tw-gray-100};
+  --background: #{tailwind-colors.$tw-gray-50};
   --elevated: #{tailwind-colors.$tw-gray-50};
   --muted: #{tailwind-colors.$tw-gray-200};
   --foreground: #{tailwind-colors.$tw-gray-950};
@@ -88,7 +88,7 @@ $theme-colors: (
 
   // components
 
-  --anchor-foreground: var(--foreground);
+  --anchor-foreground: var(--primary);
 
   --avatar-fallback: var(--muted);
   --avatar-fallback-foreground: var(--muted-foreground);
@@ -112,7 +112,7 @@ $theme-colors: (
   --card: var(--elevated);
   --card-foreground: var(--foreground);
 
-  --code: var(--surface);
+  --code: var(--background);
   --code-foreground: var(--foreground);
   --code-font: var(--font-mono);
   --code-font-size: 0.875rem;
@@ -129,7 +129,7 @@ $theme-colors: (
   --dialog-header: var(--muted);
   --dialog-header-foreground: var(--foreground);
 
-  --input: var(--surface);
+  --input: var(--background);
   --input-foreground: var(--foreground);
 
   --label-foreground: var(--foreground);
@@ -142,7 +142,7 @@ $theme-colors: (
 }
 
 [data-theme='dark'] {
-  --surface: #{tailwind-colors.$tw-gray-950};
+  --background: #{tailwind-colors.$tw-gray-900};
   --elevated: #{tailwind-colors.$tw-gray-900};
   --muted: #{tailwind-colors.$tw-gray-800};
   --foreground: #{tailwind-colors.$tw-gray-50};
