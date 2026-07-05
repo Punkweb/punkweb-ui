@@ -87,6 +87,7 @@ $theme-colors: (
 
   // components
 
+  --anchor-foreground: var(--primary);
 
   --avatar-fallback: var(--muted);
   --avatar-fallback-foreground: var(--muted-foreground);
@@ -130,6 +131,8 @@ $theme-colors: (
   --input: var(--background);
   --input-foreground: var(--foreground);
 
+  --label-foreground: var(--foreground);
+  --label-font-size: 0.875rem;
 
   --mark: var(--warning);
   --mark-foreground: var(--warning-foreground);
