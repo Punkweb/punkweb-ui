@@ -46,11 +46,8 @@ hr {
 
 a {
   color: var(--anchor-foreground);
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 mark {
@@ -122,7 +119,7 @@ details[open] > summary {
   border-bottom: var(--border-width) solid var(--border);
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 details[open] > :last-child {
@@ -130,6 +127,7 @@ details[open] > :last-child {
 }
 
 blockquote {
+  @include mixins.rounded;
   background: var(--blockquote);
   border-left: var(--blockquote-border-width) solid var(--blockquote-border);
   color: var(--blockquote-foreground);

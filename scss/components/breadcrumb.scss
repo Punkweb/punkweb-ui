@@ -18,15 +18,16 @@
 
     a {
       color: var(--muted-foreground);
+      text-decoration: none;
 
       &:hover {
         color: var(--foreground);
-        text-decoration: none;
+        text-decoration: underline;
       }
     }
 
     &:not(:first-of-type)::before {
-      color: var(--foreground);
+      color: var(--muted-foreground);
       content: '›';
       display: inline-block;
       padding: 0 0.5rem;
