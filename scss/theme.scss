@@ -1,12 +1,12 @@
 @use './tailwind-colors';
 
 $theme-colors: (
-  background,
-  foreground,
-  border,
-  outline,
+  surface,
+  elevated,
   muted,
+  foreground,
   muted-foreground,
+  border,
   primary,
   primary-foreground,
   neutral,
@@ -28,17 +28,18 @@ $theme-colors: (
 :root {
   // theme colors
 
-  --background: #{tailwind-colors.$tw-gray-100};
-  --foreground: #{tailwind-colors.$tw-gray-950};
-  --border: #{tailwind-colors.$tw-gray-300};
+  --surface: #{tailwind-colors.$tw-gray-100};
+  --elevated: #{tailwind-colors.$tw-gray-50};
   --muted: #{tailwind-colors.$tw-gray-200};
+  --foreground: #{tailwind-colors.$tw-gray-950};
   --muted-foreground: #{tailwind-colors.$tw-gray-600};
+  --border: #{tailwind-colors.$tw-gray-300};
 
   --primary: #{tailwind-colors.$tw-blue-600};
   --primary-foreground: #{tailwind-colors.$tw-blue-50};
 
-  --accent: #{tailwind-colors.$tw-sky-600};
-  --accent-foreground: #{tailwind-colors.$tw-violet-50};
+  --accent: #{tailwind-colors.$tw-slate-600};
+  --accent-foreground: #{tailwind-colors.$tw-slate-50};
 
   --neutral: #{tailwind-colors.$tw-gray-900};
   --neutral-foreground: #{tailwind-colors.$tw-gray-50};
@@ -108,27 +109,27 @@ $theme-colors: (
   --callout: var(--muted);
   --callout-foreground: var(--foreground);
 
-  --card: var(--muted);
+  --card: var(--elevated);
   --card-foreground: var(--foreground);
 
-  --code: var(--muted);
+  --code: var(--surface);
   --code-foreground: var(--foreground);
   --code-font: var(--font-mono);
   --code-font-size: 0.875rem;
   --code-inline: var(--muted);
   --code-inline-foreground: var(--foreground);
 
-  --details: var(--background);
+  --details: var(--elevated);
   --details-foreground: var(--foreground);
   --summary: var(--muted);
   --summary-foreground: var(--foreground);
 
-  --dialog: var(--background);
+  --dialog: var(--elevated);
   --dialog-foreground: var(--foreground);
   --dialog-header: var(--muted);
   --dialog-header-foreground: var(--foreground);
 
-  --input: var(--background);
+  --input: var(--surface);
   --input-foreground: var(--foreground);
 
   --label-foreground: var(--foreground);
@@ -141,17 +142,18 @@ $theme-colors: (
 }
 
 [data-theme='dark'] {
-  --background: #{tailwind-colors.$tw-gray-900};
-  --foreground: #{tailwind-colors.$tw-gray-100};
-  --border: #{tailwind-colors.$tw-gray-700};
+  --surface: #{tailwind-colors.$tw-gray-950};
+  --elevated: #{tailwind-colors.$tw-gray-900};
   --muted: #{tailwind-colors.$tw-gray-800};
+  --foreground: #{tailwind-colors.$tw-gray-50};
   --muted-foreground: #{tailwind-colors.$tw-gray-400};
+  --border: #{tailwind-colors.$tw-gray-700};
 
   --primary: #{tailwind-colors.$tw-blue-400};
   --primary-foreground: #{tailwind-colors.$tw-blue-950};
 
-  --accent: #{tailwind-colors.$tw-sky-400};
-  --accent-foreground: #{tailwind-colors.$tw-violet-950};
+  --accent: #{tailwind-colors.$tw-slate-400};
+  --accent-foreground: #{tailwind-colors.$tw-slate-950};
 
   --neutral: #{tailwind-colors.$tw-gray-100};
   --neutral-foreground: #{tailwind-colors.$tw-gray-950};
