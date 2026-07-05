@@ -38,11 +38,11 @@ $theme-colors: (
   --primary: #{tailwind-colors.$tw-blue-600};
   --primary-foreground: #{tailwind-colors.$tw-blue-50};
 
-  --accent: #{tailwind-colors.$tw-slate-600};
-  --accent-foreground: #{tailwind-colors.$tw-slate-50};
+  --accent: #{tailwind-colors.$tw-emerald-600};
+  --accent-foreground: #{tailwind-colors.$tw-emerald-50};
 
-  --neutral: #{tailwind-colors.$tw-gray-900};
-  --neutral-foreground: #{tailwind-colors.$tw-gray-50};
+  --neutral: #{tailwind-colors.$tw-slate-600};
+  --neutral-foreground: #{tailwind-colors.$tw-slate-50};
 
   --info: #{tailwind-colors.$tw-sky-600};
   --info-foreground: #{tailwind-colors.$tw-sky-50};
@@ -152,11 +152,11 @@ $theme-colors: (
   --primary: #{tailwind-colors.$tw-blue-400};
   --primary-foreground: #{tailwind-colors.$tw-blue-950};
 
-  --accent: #{tailwind-colors.$tw-slate-400};
-  --accent-foreground: #{tailwind-colors.$tw-slate-950};
+  --accent: #{tailwind-colors.$tw-emerald-400};
+  --accent-foreground: #{tailwind-colors.$tw-emerald-950};
 
-  --neutral: #{tailwind-colors.$tw-gray-100};
-  --neutral-foreground: #{tailwind-colors.$tw-gray-950};
+  --neutral: #{tailwind-colors.$tw-slate-400};
+  --neutral-foreground: #{tailwind-colors.$tw-slate-950};
 
   --info: #{tailwind-colors.$tw-sky-400};
   --info-foreground: #{tailwind-colors.$tw-sky-950};
