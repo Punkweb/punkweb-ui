@@ -192,6 +192,7 @@ input[type='reset'],
 input[type='button'],
 .pw-button,
 a.pw-button {
+  @include mixins.shadow-none;
   align-items: center;
   background-color: var(--button);
   border: var(--border-width) solid var(--button);
@@ -201,6 +202,13 @@ a.pw-button {
   gap: 0.5rem;
   justify-content: center;
   text-decoration: none;
+  transform: translateY(0px);
+  transition:
+    background-color 100ms ease,
+    border-color 100ms ease,
+    box-shadow 100ms ease,
+    color 100ms ease,
+    transform 100ms ease;
   vertical-align: middle;
 }
 
@@ -219,7 +227,9 @@ a.pw-button:hover,
 input[type='submit']:enabled:hover,
 input[type='reset']:enabled:hover,
 input[type='button']:enabled:hover {
-  background-color: functions.theme-darken(var(--button), 5%);
+  @include mixins.shadow-sm;
+  background-color: functions.theme-darken(var(--button), 10%);
+  border-color: functions.theme-darken(var(--button), 10%);
   color: var(--button-foreground);
 }
 
@@ -229,7 +239,11 @@ a.pw-button:active,
 input[type='submit']:enabled:active,
 input[type='reset']:enabled:active,
 input[type='button']:enabled:active {
-  background-color: var(--button);
+  @include mixins.shadow-none;
+  background-color: functions.theme-darken(var(--button), 5%);
+  border-color: functions.theme-darken(var(--button), 5%);
+  color: var(--button-foreground);
+  transform: translateY(1px);
 }
 
 input,

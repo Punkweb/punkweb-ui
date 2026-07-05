@@ -706,7 +706,7 @@ $font-weights: (
 .transition {
   transition-property:
     background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: ease;
   transition-duration: 150ms;
 
   &-none {
@@ -714,7 +714,7 @@ $font-weights: (
   }
   &-all {
     transition-property: all;
-    transition-timing-function: ease-in-out;
+    transition-timing-function: ease;
     transition-duration: 150ms;
   }
 }
@@ -735,6 +735,9 @@ $delay-intervals: (75, 100, 150, 200, 300, 500, 700, 1000);
 
 .ease-linear {
   transition-timing-function: linear;
+}
+.ease {
+  transition-timing-function: ease;
 }
 .ease-in {
   transition-timing-function: ease-in;

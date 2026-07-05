@@ -50,8 +50,8 @@ $theme-colors: (
   --success: #{tailwind-colors.$tw-green-600};
   --success-foreground: #{tailwind-colors.$tw-green-50};
 
-  --warning: #{tailwind-colors.$tw-amber-600};
-  --warning-foreground: #{tailwind-colors.$tw-amber-50};
+  --warning: #{tailwind-colors.$tw-yellow-600};
+  --warning-foreground: #{tailwind-colors.$tw-yellow-50};
 
   --error: #{tailwind-colors.$tw-red-600};
   --error-foreground: #{tailwind-colors.$tw-red-50};
@@ -164,8 +164,8 @@ $theme-colors: (
   --success: #{tailwind-colors.$tw-green-400};
   --success-foreground: #{tailwind-colors.$tw-green-950};
 
-  --warning: #{tailwind-colors.$tw-amber-400};
-  --warning-foreground: #{tailwind-colors.$tw-amber-950};
+  --warning: #{tailwind-colors.$tw-yellow-400};
+  --warning-foreground: #{tailwind-colors.$tw-yellow-950};
 
   --error: #{tailwind-colors.$tw-red-400};
   --error-foreground: #{tailwind-colors.$tw-red-950};
