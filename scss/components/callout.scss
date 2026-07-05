@@ -15,6 +15,14 @@
     --callout: var(--accent);
     --callout-foreground: var(--accent-foreground);
   }
+  &.neutral {
+    --callout: var(--neutral);
+    --callout-foreground: var(--neutral-foreground);
+  }
+  &.info {
+    --callout: var(--info);
+    --callout-foreground: var(--info-foreground);
+  }
   &.success {
     --callout: var(--success);
     --callout-foreground: var(--success-foreground);
@@ -26,9 +34,5 @@
   &.error {
     --callout: var(--error);
     --callout-foreground: var(--error-foreground);
-  }
-  &.info {
-    --callout: var(--info);
-    --callout-foreground: var(--info-foreground);
   }
 }

@@ -25,6 +25,14 @@
     --button: var(--accent);
     --button-foreground: var(--accent-foreground);
   }
+  &.neutral {
+    --button: var(--neutral);
+    --button-foreground: var(--neutral-foreground);
+  }
+  &.info {
+    --button: var(--info);
+    --button-foreground: var(--info-foreground);
+  }
   &.success {
     --button: var(--success);
     --button-foreground: var(--success-foreground);
@@ -36,10 +44,6 @@
   &.error {
     --button: var(--error);
     --button-foreground: var(--error-foreground);
-  }
-  &.info {
-    --button: var(--info);
-    --button-foreground: var(--info-foreground);
   }
 
   &.xs {

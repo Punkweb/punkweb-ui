@@ -20,6 +20,14 @@
     --badge: var(--accent);
     --badge-foreground: var(--accent-foreground);
   }
+  &.neutral {
+    --badge: var(--neutral);
+    --badge-foreground: var(--neutral-foreground);
+  }
+  &.info {
+    --badge: var(--info);
+    --badge-foreground: var(--info-foreground);
+  }
   &.success {
     --badge: var(--success);
     --badge-foreground: var(--success-foreground);
@@ -31,10 +39,6 @@
   &.error {
     --badge: var(--error);
     --badge-foreground: var(--error-foreground);
-  }
-  &.info {
-    --badge: var(--info);
-    --badge-foreground: var(--info-foreground);
   }
 
   &.xs {
