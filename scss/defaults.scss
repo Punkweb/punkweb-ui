@@ -146,21 +146,29 @@ cite {
   font-style: italic;
 }
 
-.pw-table-container {
-  overflow-x: auto;
-}
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  font-size: 1rem;
+  text-align: left;
   width: 100%;
+
+  :where(th, td) {
+    padding: 0.75rem 1rem;
+    vertical-align: middle;
+  }
 }
 
-td,
-th {
+thead tr {
   border-bottom: var(--border-width) solid var(--border);
-  padding: 0.75rem;
-  text-align: start;
+}
+
+tbody tr:not(:last-of-type) {
+  border-bottom: var(--border-width) solid var(--border);
+}
+
+tfoot tr {
+  border-top: var(--border-width) solid var(--border);
 }
 
 input:not([type='range']),
