@@ -34,9 +34,6 @@
   --accent: var(--nord8);
   --accent-foreground: var(--nord0);
 
-  --neutral: var(--nord0);
-  --neutral-foreground: var(--nord6);
-
   --info: var(--nord7);
   --info-foreground: var(--nord0);
 
@@ -60,7 +57,4 @@
   --foreground: var(--nord6);
   --muted-foreground: var(--nord4);
   --border: var(--nord2);
-
-  --neutral: var(--nord6);
-  --neutral-foreground: var(--nord0);
 }

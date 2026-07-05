@@ -20,10 +20,6 @@
     --badge: var(--accent);
     --badge-foreground: var(--accent-foreground);
   }
-  &.neutral {
-    --badge: var(--neutral);
-    --badge-foreground: var(--neutral-foreground);
-  }
   &.info {
     --badge: var(--info);
     --badge-foreground: var(--info-foreground);
