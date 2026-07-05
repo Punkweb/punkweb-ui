@@ -4,6 +4,7 @@
   @include mixins.rounded;
   align-items: center;
   background-color: var(--badge);
+  border: var(--border-width) solid var(--badge-border);
   color: var(--badge-foreground);
   display: inline-flex;
   font-size: 0.875rem;
@@ -14,26 +15,32 @@
 
   &.primary {
     --badge: var(--primary);
+    --badge-border: var(--primary);
     --badge-foreground: var(--primary-foreground);
   }
   &.accent {
     --badge: var(--accent);
+    --badge-border: var(--accent);
     --badge-foreground: var(--accent-foreground);
   }
   &.info {
     --badge: var(--info);
+    --badge-border: var(--info);
     --badge-foreground: var(--info-foreground);
   }
   &.success {
     --badge: var(--success);
+    --badge-border: var(--success);
     --badge-foreground: var(--success-foreground);
   }
   &.warning {
     --badge: var(--warning);
+    --badge-border: var(--warning);
     --badge-foreground: var(--warning-foreground);
   }
   &.error {
     --badge: var(--error);
+    --badge-border: var(--error);
     --badge-foreground: var(--error-foreground);
   }
 

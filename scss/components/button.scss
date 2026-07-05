@@ -19,30 +19,32 @@
 
   &.primary {
     --button: var(--primary);
+    --button-border: var(--primary);
     --button-foreground: var(--primary-foreground);
   }
   &.accent {
     --button: var(--accent);
+    --button-border: var(--accent);
     --button-foreground: var(--accent-foreground);
-  }
-  &.neutral {
-    --button: var(--neutral);
-    --button-foreground: var(--neutral-foreground);
   }
   &.info {
     --button: var(--info);
+    --button-border: var(--info);
     --button-foreground: var(--info-foreground);
   }
   &.success {
     --button: var(--success);
+    --button-border: var(--success);
     --button-foreground: var(--success-foreground);
   }
   &.warning {
     --button: var(--warning);
+    --button-border: var(--warning);
     --button-foreground: var(--warning-foreground);
   }
   &.error {
     --button: var(--error);
+    --button-border: var(--error);
     --button-foreground: var(--error-foreground);
   }
 

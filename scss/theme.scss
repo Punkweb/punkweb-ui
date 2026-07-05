@@ -88,7 +88,8 @@ $theme-colors: (
   --avatar-fallback: var(--muted);
   --avatar-fallback-foreground: var(--muted-foreground);
 
-  --badge: var(--muted);
+  --badge: var(--background);
+  --badge-border: var(--border);
   --badge-foreground: var(--foreground);
 
   --blockquote: var(--muted);
@@ -98,10 +99,12 @@ $theme-colors: (
   --cite-foreground: var(--muted-foreground);
   --cite-font-size: 0.875rem;
 
-  --button: var(--muted);
+  --button: var(--background);
+  --button-border: var(--border);
   --button-foreground: var(--foreground);
 
   --callout: var(--muted);
+  --callout-border: var(--border);
   --callout-foreground: var(--foreground);
 
   --card: var(--elevated);

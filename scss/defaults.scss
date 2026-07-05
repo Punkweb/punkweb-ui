@@ -200,7 +200,7 @@ a.pw-button {
   @include mixins.shadow-none;
   align-items: center;
   background-color: var(--button);
-  border: var(--border-width) solid var(--button);
+  border: var(--border-width) solid var(--button-border);
   color: var(--button-foreground);
   cursor: pointer;
   display: inline-flex;
@@ -235,7 +235,7 @@ input[type='reset']:enabled:hover,
 input[type='button']:enabled:hover {
   @include mixins.shadow-sm;
   background-color: functions.theme-darken(var(--button), 10%);
-  border-color: functions.theme-darken(var(--button), 10%);
+  border-color: functions.theme-darken(var(--button-border), 10%);
   color: var(--button-foreground);
 }
 
@@ -247,7 +247,7 @@ input[type='reset']:enabled:active,
 input[type='button']:enabled:active {
   @include mixins.shadow-none;
   background-color: functions.theme-darken(var(--button), 5%);
-  border-color: functions.theme-darken(var(--button), 5%);
+  border-color: functions.theme-darken(var(--button-border), 5%);
   color: var(--button-foreground);
   transform: translateY(1px);
 }
