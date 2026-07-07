@@ -1,7 +1,11 @@
-@function theme-lighten($color, $amount) {
-  @return color-mix(in srgb, $color, white $amount);
+@function lighten($color, $amount) {
+  @return color-mix(in oklab, $color, white $amount);
 }
 
-@function theme-darken($color, $amount) {
-  @return color-mix(in srgb, $color, black $amount);
+@function darken($color, $amount) {
+  @return color-mix(in oklab, $color, black $amount);
+}
+
+@function with-alpha($color, $amount) {
+  @return color-mix(in oklab, $color $amount, transparent);
 }
